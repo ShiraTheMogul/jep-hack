@@ -34,8 +34,9 @@
 
 ; ScrollingMenu items structure format
 	const_def 1
-	const SCROLLINGMENU_ITEMS_NORMAL
-	const SCROLLINGMENU_ITEMS_QUANTITY
+	const SCROLLINGMENU_ITEMS_NORMAL         ; 1
+	const SCROLLINGMENU_ITEMS_QUANTITY       ; 2
+	const SCROLLINGMENU_ITEMS_16BIT_QUANTITY ; 3
 
 ; MonMenuOptions indexes (see data/mon_menu.asm)
 ; used by PokemonActionSubmenu (see engine/pokemon/mon_menu.asm)

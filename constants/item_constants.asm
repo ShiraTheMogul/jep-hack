@@ -12,7 +12,7 @@
 	const GREAT_BALL   ; 04
 	const POKE_BALL    ; 05
 	const TOWN_MAP     ; 06
-	const BICYCLE      ; 07
+	;const BICYCLE      ; 07
 	const MOON_STONE   ; 08
 	const ANTIDOTE     ; 09
 	const BURN_HEAL    ; 0a
@@ -50,7 +50,7 @@
 	const SUPER_REPEL  ; 2a
 	const MAX_REPEL    ; 2b
 	const DIRE_HIT     ; 2c
-	const SAFARI_BALL  ; 2d
+	;const SAFARI_BALL  ; 2d
 	const FRESH_WATER  ; 2e
 	const SODA_POP     ; 2f
 	const LEMONADE     ; 30
@@ -59,24 +59,24 @@
 	const X_DEFEND     ; 33
 	const X_SPEED      ; 34
 	const X_SPECIAL    ; 35
-	const COIN_CASE    ; 36
-	const ITEMFINDER   ; 37
+	;const COIN_CASE    ; 36
+	;const ITEMFINDER   ; 37
 	const POKE_FLUTE   ; 38
-	const EXP_SHARE    ; 39
-	const OLD_ROD      ; 3a
-	const GOOD_ROD     ; 3b
+	;const EXP_SHARE    ; 39
+	;const OLD_ROD      ; 3a
+	;const GOOD_ROD     ; 3b
 	const SILVER_LEAF  ; 3c
-	const SUPER_ROD    ; 3d
+	;const SUPER_ROD    ; 3d
 	const PP_UP        ; 3e
 	const ETHER        ; 3f
 	const MAX_ETHER    ; 40
 	const ELIXER       ; 41
-	const RED_SCALE    ; 42
-	const SECRETPOTION ; 43
-	const S_S_TICKET   ; 44
-	const MYSTERY_EGG  ; 45
-	const CLEAR_BELL   ; 46 - can be removed given new progression
-	const SILVER_WING  ; 47
+	;const RED_SCALE    ; 42
+	;const SECRETPOTION ; 43
+	;const S_S_TICKET   ; 44
+	;const MYSTERY_EGG  ; 45
+	;const CLEAR_BELL   ; 46 - can be removed given new progression
+	;const SILVER_WING  ; 47
 	const MOOMOO_MILK  ; 48
 	const QUICK_CLAW   ; 49
 	const PSNCUREBERRY ; 4a
@@ -105,7 +105,7 @@
 	const WHT_APRICORN ; 61
 	const BLACKBELT_I  ; 62
 	const BLK_APRICORN ; 63
-	const HONEY_POT    ; 64
+	;const HONEY_POT    ; 64
 	const PNK_APRICORN ; 65
 	const BLACKGLASSES ; 66
 	const SLOWPOKETAIL ; 67
@@ -120,8 +120,8 @@
 	const EVERSTONE    ; 70
 	const SPELL_TAG    ; 71
 	const RAGECANDYBAR ; 72
-	const GS_BALL      ; 73
-	const BLUE_CARD    ; 74
+	;const GS_BALL      ; 73
+	;const BLUE_CARD    ; 74
 	const MIRACLE_SEED ; 75
 	const THICK_CLUB   ; 76
 	const FOCUS_BAND   ; 77
@@ -132,14 +132,14 @@
 	const REVIVAL_HERB ; 7c
 	const HARD_STONE   ; 7d
 	const LUCKY_EGG    ; 7e
-	const CARD_KEY     ; 7f
-	const MACHINE_PART ; 80
-	const EGG_TICKET   ; 81
-	const LOST_ITEM    ; 82
+	;const CARD_KEY     ; 7f
+	;const MACHINE_PART ; 80
+	;const EGG_TICKET   ; 81
+	;const LOST_ITEM    ; 82
 	const STARDUST     ; 83
 	const STAR_PIECE   ; 84
-	const BASEMENT_KEY ; 85
-	const PASS         ; 86
+	;const BASEMENT_KEY ; 85
+	;const PASS         ; 86
 	const HEART_STONE  ; 87
 	const POISON_STONE ; 88
 	const ICE_STONE    ; 89
@@ -180,10 +180,10 @@
 	const UP_GRADE     ; ac
 	const BERRY        ; ad
 	const GOLD_BERRY   ; ae
-	const SQUIRTBOTTLE ; af
+	;const SQUIRTBOTTLE ; af
 	const DUBIOUS_DISK ; b0
 	const PARK_BALL    ; b1
-	const RAINBOW_WING ; b2
+	;const RAINBOW_WING ; b2
 	const ITEM_B3      ; b3
 	const BRICK_PIECE  ; b4
 	const SURF_MAIL    ; b5
@@ -199,6 +199,54 @@
 	const DOME_FOSSIL  ; bf
 	const HELIX_FOSSIL ; c0
 	const WING_FOSSIL  ; c1
+DEF NUM_ITEM_POCKET EQU const_value - 1
+
+	const_align 8 ; Key items assume the value of HIGH(FIRST_KEY_ITEM) when storing in bag.
+DEF FIRST_KEY_ITEM EQU const_value
+	const BICYCLE      ; 0100
+	const COIN_CASE    ; 0101
+	const ITEMFINDER   ; 0102
+	const EXP_SHARE    ; 
+	const OLD_ROD      ; 0103
+	const GOOD_ROD     ; 0104
+	const SUPER_ROD    ; 0105
+	const RED_SCALE    ; 0106
+	const SECRETPOTION ; 0107
+	const S_S_TICKET   ; 0108
+	const MYSTERY_EGG  ; 0109
+	const CLEAR_BELL   ; 010A - can be removed given new progression
+	const SILVER_WING  ; 010B
+	const HONEY_POT    ; 
+	const GS_BALL      ; 010C
+	const BLUE_CARD    ; 010D
+	const CARD_KEY     ; 010E
+	const MACHINE_PART ; 010F
+	const EGG_TICKET   ; 0110
+	const LOST_ITEM    ; 0111
+	const BASEMENT_KEY ; 0112
+	const PASS         ; 0113
+	const SQUIRTBOTTLE ; 0114
+	const RAINBOW_WING ; 0115
+DEF NUM_KEY_ITEM_POCKET EQU const_value - FIRST_KEY_ITEM
+assert NUM_KEY_ITEM_POCKET <= $ff
+
+const_align 8; Ball items assume the value of HIGH(FIRST_BALL_ITEM) when storing in bag.
+DEF FIRST_BALL_ITEM EQU const_value
+	const MASTER_BALL  ; 0200
+	const ULTRA_BALL   ; 0201
+	const GREAT_BALL   ; 0202
+	const POKE_BALL    ; 0203
+	const SAFARI_BALL  ; 
+	const HEAVY_BALL   ; 0204
+	const LEVEL_BALL   ; 0205
+	const LURE_BALL    ; 0206
+	const FAST_BALL    ; 0207
+	const FRIEND_BALL  ; 0208
+	const MOON_BALL    ; 0209
+	const LOVE_BALL    ; 020A
+	const PARK_BALL    ; 020B
+DEF NUM_BALL_ITEM_POCKET EQU const_value - FIRST_BALL_ITEM
+assert NUM_BALL_ITEM_POCKET <= $ff
 DEF NUM_ITEMS EQU const_value - 1
 
 DEF __tmhm_value__ = 1
@@ -218,6 +266,8 @@ MACRO add_tm
 	add_tmnum \1
 ENDM
 
+	const_align 8 ; TMHM items assume the value of HIGH(FIRST_TMHM_ITEM) when storing in bag.
+DEF FIRST_TMHM_ITEM EQU const_value
 ; see data/moves/tmhm_moves.asm for moves
 DEF TM01 EQU const_value
 	add_tm DYNAMICPUNCH ; c2
@@ -299,6 +349,8 @@ DEF HM01 EQU const_value
 	add_hm WIND_RIDE ; ADDME: this is impossible to add until 16bit items exist. add once it's there.
 DEF NUM_HMS EQU __tmhm_value__ - NUM_TMS - 1
 
+assert (NUM_TMS + NUM_HMS) < $ff, "TMs/HMs can't exceed 255 due to GetTMHMNumber."
+
 MACRO add_mt
 ; Defines two constants:
 ; - \1_TMNUM: the learnable TM/HM flag, starting at 58
@@ -317,7 +369,7 @@ DEF NUM_TUTORS = __tmhm_value__ - NUM_TMS - NUM_HMS - 1
 DEF NUM_TM_HM_TUTOR EQU NUM_TMS + NUM_HMS + NUM_TUTORS
 
 DEF USE_SCRIPT_VAR EQU $00
-DEF ITEM_FROM_MEM  EQU $ff
+DEF ITEM_FROM_MEM  EQU $ffff
 
 ; leftovers from red
 DEF MOON_STONE_RED EQU $0a ; BURN_HEAL
