@@ -56,7 +56,15 @@ sBackupMysteryGiftItemEnd::
 	ds $30
 
 sRTCStatusFlags:: db
-	ds 7
+
+; Ingame Clock SRAM. Move this later?
+sRTCDayHi::   db
+sRTCDayLo::   db
+sRTCHours::   db
+sRTCMinutes:: db
+sRTCSeconds:: db
+; End Ingame Clock SRAM
+	ds 2 ; was 7
 sLuckyNumberDay:: db
 sLuckyIDNumber::  dw
 

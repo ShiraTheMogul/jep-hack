@@ -21,18 +21,6 @@ GameTimer::
 	pop af
 	ldh [rSVBK], a
 
-; Zeta's attempt at a non realtime clock. Probably from hell. Someone else can probably make this more efficient
-; Please do actually, this is running a second timer. I'm sure you can just hijack the main timer. I just don't know how.
-;	ldh a, [rSVBK]
-;	push af
-;	ld a, BANK(wGameTime)
-;	ldh [rSVBK], a
-;
-;	call .FunctionZ
-;
-;	pop af
-;	ldh [rSVBK], a
-; End Zetacode	
 	ret
 
 .Function:
@@ -49,10 +37,7 @@ GameTimer::
 	bit GAME_TIMER_PAUSED_F, [hl]
 	ret z
 
-; Is the timer already capped?
-	ld hl, wGameTimeCap
-	bit 0, [hl]
-	ret nz
+; Original timer cap check location
 
 ; +1 frame
 	ld hl, wGameTimeFrames
@@ -69,6 +54,12 @@ GameTimer::
 	xor a
 	ld [hl], a
 	call .FunctionZ
+	
+; Is the timer already capped? Confirm this being here doesnt cause issues.
+	ld hl, wGameTimeCap
+	bit 0, [hl]
+	ret nz
+
 
 ; +1 second
 	ld hl, wGameTimeSeconds

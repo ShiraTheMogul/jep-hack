@@ -90,10 +90,33 @@ SaveRTC:
 	xor a
 	ld [sRTCStatusFlags], a
 	call CloseSRAM
+	; Zetacode. I am in fear.
+	ld a, BANK(sRTCDayHi)
+	call OpenSRAM
+	; Save Seconds
+	ld hl, hRTCSeconds	; Load hRTCSeconds Byte into HL?
+	ld a, [hl]			; Load value at HL Byte into A?
+	ld hl, sRTCSeconds	; Load sRTCSeconds Byte into HL?
+	ld [hl], a			; Load value of A into HL Byte?
+	; The rest of these just repeat this process with the rest of the data.
+	; Save Minutes
+	ld hl, hRTCMinutes
+	ld a, [hl]
+	ld hl, sRTCMinutes
+	ld [hl], a
+	; Save Hours
+	ld hl, hRTCHours
+	ld a, [hl]
+	ld hl, sRTCHours
+	ld [hl], a
+	; continue with days once added.
+	call CloseSRAM
+	; End Clock Save Zetacode
 	ret
 
 StartClock::
 	;call GetClock
+	call _BootClock ; Zetacode, load clock data from SRAM
 	call _FixDays
 	call FixDays
 	jr nc, .skip_set
@@ -104,6 +127,31 @@ StartClock::
 .skip_set
 	call StartRTC
 	ret
+	
+; BEGIN CLOCK LOADING ZETACODE
+_BootClock:
+	ld a, BANK(sRTCDayHi) ; Load up the SRAM RTC bank
+	call OpenSRAM ; I dont know if I /need/ this. I'll use it to be safe, though.
+	; ALL THAT THE REST OF THIS SHOULD DO IS THE REVERSE OF THE SAVE CODE.
+	; Seconds
+	ld hl, sRTCSeconds	; Load sRTCSeconds Byte into HL?
+	ld a, [hl]			; Load value at HL Byte into A?
+	ld hl, hRTCSeconds	; Load hRTCSeconds Byte into HL?
+	ld [hl], a			; Load value of A into HL Byte?
+	; Minutes
+	ld hl, sRTCMinutes
+	ld a, [hl]
+	ld hl, hRTCMinutes
+	ld [hl], a
+	; Hours
+	ld hl, sRTCHours
+	ld a, [hl]
+	ld hl, hRTCHours
+	ld [hl], a
+	; continue with days once added.
+	call CloseSRAM
+	ret
+; END ZETACODE
 
 _FixDays:
 	ld hl, hRTCDayHi
