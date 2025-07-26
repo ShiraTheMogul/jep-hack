@@ -20,13 +20,13 @@ LatchClock::
 	ret
 
 UpdateTime::
-	call GetClock
+	;call GetClock
 	call FixDays
 	call FixTime
 	farcall GetTimeOfDay
 	ret
 
-GetClock::
+GetClock:: ; unreferenced now
 ; store clock data in hRTCDayHi-hRTCSeconds
 
 ; enable clock r/w

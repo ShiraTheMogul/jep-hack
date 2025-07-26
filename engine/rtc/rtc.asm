@@ -93,7 +93,7 @@ SaveRTC:
 	ret
 
 StartClock::
-	call GetClock
+	;call GetClock
 	call _FixDays
 	call FixDays
 	jr nc, .skip_set
@@ -156,7 +156,7 @@ ClockContinue:
 	ret
 
 _InitTime::
-	call GetClock
+	;call GetClock
 	call FixDays
 	ld hl, hRTCSeconds
 	ld de, wStartSecond

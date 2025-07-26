@@ -20,6 +20,19 @@ GameTimer::
 
 	pop af
 	ldh [rSVBK], a
+
+; Zeta's attempt at a non realtime clock. Probably from hell. Someone else can probably make this more efficient
+; Please do actually, this is running a second timer. I'm sure you can just hijack the main timer. I just don't know how.
+;	ldh a, [rSVBK]
+;	push af
+;	ld a, BANK(wGameTime)
+;	ldh [rSVBK], a
+;
+;	call .FunctionZ
+;
+;	pop af
+;	ldh [rSVBK], a
+; End Zetacode	
 	ret
 
 .Function:
@@ -55,6 +68,7 @@ GameTimer::
 .second
 	xor a
 	ld [hl], a
+	call .FunctionZ
 
 ; +1 second
 	ld hl, wGameTimeSeconds
@@ -115,4 +129,52 @@ GameTimer::
 	ld [wGameTimeHours], a
 	ld a, l
 	ld [wGameTimeHours + 1], a
+	ret
+
+; BEGIN ZETACODE
+.FunctionZ 
+; +1 frame
+	ld hl, hRTCSeconds
+	ld a, [hl]
+	add a, 12
+
+	cp 60 ; frames/second
+	jr nc, .zinutes
+
+	ld [hl], a
+	ret
+	
+.zinutes
+	xor a
+	ld [hl], a
+	
+; +1 minute
+	ld hl, hRTCMinutes
+	ld a, [hl]
+	inc a
+
+	cp 60 ; minutes/hour
+	jr nc, .zhour
+
+	ld [hl], a
+	ret
+	
+.zhour
+	xor a
+	ld [hl], a
+	
+; +1 hour
+	ld hl, hRTCHours
+	ld a, [hl]
+	inc a
+
+	cp 24 ; hours/day
+	jr nc, .zday
+
+	ld [hl], a
+	ret
+	
+.zday ; Unfinished
+	xor a
+	ld [hl], a
 	ret
