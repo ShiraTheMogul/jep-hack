@@ -8,12 +8,12 @@ DebugRoom_MapScripts:
 
 DebugPokemon1Script:
 	opentext
-	getmonname STRING_BUFFER_3, KLEAVOR
+	getmonname STRING_BUFFER_3, SHELLDER
 	writetext ReceivedDebugPokemonText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
-	givepoke KLEAVOR, 15
+	givepoke SHELLDER, 1
 	closetext
 	end
 
