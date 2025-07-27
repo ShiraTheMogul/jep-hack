@@ -2151,15 +2151,18 @@ ShellderEvosAttacks:
 	dbbw EVOLVE_ITEM, SLOWPOKETAIL, DISTURBAN
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, BUBBLE ; Clams emit bubbles when they are touched!
 	dbw 1, WITHDRAW
 	dbw 1, SMOKESCREEN ; RG proto
-	dbw 7, SUPERSONIC
-	dbw 12, AURORA_BEAM
-	dbw 18, SONICBOOM ; RG proto
+	dbw 5, SUPERSONIC
+	dbw 10, AURORA_BEAM
+	dbw 14, SONICBOOM ; RG proto
+	dbw 19, WATER_GUN ; Clams also squirt water as a defense and feeding mechanism!
 	dbw 23, LEER
-	dbw 27, ENDURE ; SW97
-	dbw 31, CLAMP
-	dbw 36, PROTECT
+	dbw 27, BUBBLEBEAM ; As above
+	dbw 30, ENDURE ; SW97
+	dbw 34, CLAMP
+	dbw 37, PROTECT
 	dbw 41, SCREECH ; RG proto
 	dbw 46, CONFUSE_RAY ; RG proto
 	dbw 51, ICE_BEAM
