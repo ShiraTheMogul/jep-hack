@@ -109,7 +109,18 @@ SaveRTC:
 	ld a, [hl]
 	ld hl, sRTCHours
 	ld [hl], a
-	; continue with days once added.
+	; Save Days
+	; Low
+	ld hl, hRTCDayLo
+	ld a, [hl]
+	ld hl, sRTCDayLo
+	ld [hl], a
+	; High
+	ld hl, hRTCDayHi
+	ld a, [hl]
+	ld hl, sRTCDayHi
+	ld [hl], a
+	; Close SRAM
 	call CloseSRAM
 	; End Clock Save Zetacode
 	ret
@@ -148,7 +159,18 @@ _BootClock:
 	ld a, [hl]
 	ld hl, hRTCHours
 	ld [hl], a
-	; continue with days once added.
+	; Save Days
+	; Low
+	ld hl, sRTCDayLo
+	ld a, [hl]
+	ld hl, hRTCDayLo
+	ld [hl], a
+	; High
+	ld hl, sRTCDayHi
+	ld a, [hl]
+	ld hl, hRTCDayHi
+	ld [hl], a
+	; Close SRAM
 	call CloseSRAM
 	ret
 ; END ZETACODE

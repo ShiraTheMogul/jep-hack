@@ -127,7 +127,7 @@ GameTimer::
 ; +1 frame
 	ld hl, hRTCSeconds
 	ld a, [hl]
-	add a, 12
+	add a, 12 ; This should be 60 / the number of seconds you want to pass per minute. (EX: 12 = 5s/min, 30 = 2s/min, etc.) Yes I'm aware this setup is stupid.
 
 	cp 60 ; frames/second
 	jr nc, .zinutes
@@ -165,7 +165,23 @@ GameTimer::
 	ld [hl], a
 	ret
 	
-.zday ; Unfinished
+.zday
+	xor a
+	ld [hl], a
+	
+; +1 day
+	ld hl, hRTCDayLo
+	ld a, [hl]
+	inc a
+
+	cp 140 ; rollover point. Vanilla seems to mod the day count by 140, so this is /probably/ appropriate? This isn't thoroughly tested.
+	jr nc, .zdayrollover
+
+	ld [hl], a
+	ret
+
+.zdayrollover
 	xor a
 	ld [hl], a
 	ret
+; END ZETACODE
