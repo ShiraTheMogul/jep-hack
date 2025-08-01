@@ -127,4 +127,5 @@ Music:
 	dba Music_FloodedShrine
 	dba Music_AlphalithBattle
 	dba Music_FortunaSF
+	dba Music_JasperForest
 	assert_table_length NUM_MUSIC_SONGS
