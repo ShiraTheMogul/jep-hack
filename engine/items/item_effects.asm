@@ -239,10 +239,12 @@ PokeBallEffect:
 	ld [wWildMon], a
 	ld a, [wBattleType]
 	cp BATTLETYPE_CONTEST	; Fixes the Park Ball corrupting graphics when used outside of a Contest
-	call nz, ReturnToBattle_UseBall
+	jp z, .skip_return_to_battle
 	cp BATTLETYPE_SAFARI
-	call nz, ReturnToBattle_UseBall
+	jp z, .skip_return_to_battle
+	call ReturnToBattle_UseBall
 
+.skip_return_to_battle
 	ld hl, wOptions
 	res NO_TEXT_SCROLL, [hl]
 	ld hl, ItemUsedText
