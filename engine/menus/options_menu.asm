@@ -114,9 +114,9 @@ GetOptionPointer:
 Options_TextSpeed:
 	call GetTextSpeed
 	ldh a, [hJoyPressed]
-	bit D_LEFT_F, a
-	jr nz, .LeftPressed
 	bit D_RIGHT_F, a
+	jr nz, .RightPressed
+	bit D_LEFT_F, a
 	jr z, .NonePressed
 	ld a, c ; right pressed
 	cp OPT_TEXT_SPEED_NONE
@@ -128,7 +128,7 @@ Options_TextSpeed:
 	ld a, e
 	jr .Save
 
-.LeftPressed:
+.RightPressed:
 	ld a, c
 	and a
 	jr nz, .Decrease
