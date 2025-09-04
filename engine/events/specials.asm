@@ -236,17 +236,26 @@ SetPlayerPalette:
 	ret
 
 GameCornerPrizeMonCheckDex:
+	xor a
+	ld [wPokedexShinyToggle], a
+	ld [wWasMonCaught], a
 	ld a, [wScriptVar]
 	call CheckCaughtMon
 	ret nz
-	ld a, [wScriptVar]
-	call SetSeenAndCaughtMon
+	ld a, 1
+	ld [wWasMonCaught], a
+	ret
+
+GameCornerPrizeMonShowDex:
+	ld a, [wWasMonCaught]
+	cp 0
+	ret z
 	call FadeToMenu
 	ld a, [wScriptVar]
 	ld [wNamedObjectIndex], a
 	farcall NewPokedexEntry
 	call ExitAllMenus
-	ret
+	ret	
 
 UnusedSetSeenMon:
 	ld a, [wScriptVar]

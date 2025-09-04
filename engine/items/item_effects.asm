@@ -532,6 +532,15 @@ PokeBallEffect:
 
 	ld a, [wEnemyMonSpecies]
 	ld [wTempSpecies], a
+	farcall BattleCheckEnemyShininess
+	jp c, .shiny
+	xor a
+	jp .shinycont
+.shiny
+	xor a
+	inc a
+.shinycont
+	ld [wPokedexShinyToggle], a
 	predef NewPokedexEntry
 
 .skip_pokedex

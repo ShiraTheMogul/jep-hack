@@ -210,8 +210,24 @@ endr
 	inc de
 	ld a, c
 	ld [de], a
-	inc de
 
+	; Set Shininess for New Dex Entry
+	dec de
+	ld b, d
+	ld c, e
+	farcall CheckShininess
+	jp c, .shiny
+	xor a
+	jp .shinycont
+.shiny
+	xor a
+	inc a
+.shinycont
+	ld [wPokedexShinyToggle], a
+	; Unclobber de
+	inc de
+	inc de
+	
 	; Initialize PP.
 	push hl
 	push de

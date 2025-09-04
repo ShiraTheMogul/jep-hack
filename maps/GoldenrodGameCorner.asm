@@ -190,6 +190,8 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	loadmonindex 1, ABRA
 	special GameCornerPrizeMonCheckDex
 	givepoke ABRA, 5
+	loadmonindex 1, ABRA
+	special GameCornerPrizeMonShowDex
 	takecoins GOLDENRODGAMECORNER_ABRA_COINS
 	sjump .loop
 
@@ -208,6 +210,8 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	loadmonindex 2, CUBONE
 	special GameCornerPrizeMonCheckDex
 	givepoke CUBONE, 15
+	loadmonindex 2, CUBONE
+	special GameCornerPrizeMonShowDex
 	takecoins GOLDENRODGAMECORNER_CUBONE_COINS
 	sjump .loop
 
@@ -226,6 +230,8 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	loadmonindex 3, WOBBUFFET
 	special GameCornerPrizeMonCheckDex
 	givepoke WOBBUFFET, 15
+	loadmonindex 3, WOBBUFFET
+	special GameCornerPrizeMonShowDex
 	takecoins GOLDENRODGAMECORNER_WOBBUFFET_COINS
 	sjump .loop
 
