@@ -108,7 +108,7 @@ JasmineGroup: ; Jasmine is going to use Egg Moves!
 	db 34
 	dw SKARMORY
 	dw DRILL_PECK, SAND_ATTACK, STEEL_WING, LEER
-	db 35 
+	; db 35 
 	; dw SHARPOON
 	; dw IRON_TAIL, BUBBLEBEAM, CRUNCH, SWORDS_DANCE
 	db 35 
