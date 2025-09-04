@@ -1,4 +1,13 @@
 NewPokedexEntry:
+	farcall BattleCheckEnemyShininess
+	jp c, .shiny
+	xor a
+	jp .cont
+.shiny
+	xor a
+	inc a
+.cont
+	ld [wPokedexShinyToggle], a
 	ldh a, [hMapAnims]
 	push af
 	xor a
