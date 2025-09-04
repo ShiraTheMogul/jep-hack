@@ -154,6 +154,8 @@ CeladonGameCornerPrizeRoomPokemonVendor:
 	loadmonindex 1, PIKACHU
 	special GameCornerPrizeMonCheckDex
 	givepoke PIKACHU, 25
+	loadmonindex 1, PIKACHU
+	special GameCornerPrizeMonShowDex
 	takecoins CELADONGAMECORNERPRIZEROOM_PIKACHU_COINS
 	sjump .loop
 
@@ -172,6 +174,8 @@ CeladonGameCornerPrizeRoomPokemonVendor:
 	loadmonindex 2, PORYGON
 	special GameCornerPrizeMonCheckDex
 	givepoke PORYGON, 15
+	loadmonindex 2, PORYGON
+	special GameCornerPrizeMonShowDex
 	takecoins CELADONGAMECORNERPRIZEROOM_PORYGON_COINS
 	sjump .loop
 
@@ -190,6 +194,8 @@ CeladonGameCornerPrizeRoomPokemonVendor:
 	loadmonindex 3, LARVITAR
 	special GameCornerPrizeMonCheckDex
 	givepoke LARVITAR, 40
+	loadmonindex 3, LARVITAR
+	special GameCornerPrizeMonShowDex
 	takecoins CELADONGAMECORNERPRIZEROOM_LARVITAR_COINS
 	sjump .loop
 
