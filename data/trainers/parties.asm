@@ -5431,30 +5431,40 @@ KimonoGirlGroup:
 
 	next_list_item ; KIMONO_GIRL (2)
 	db "NAOKO@", TRAINERTYPE_NORMAL
+	db 15
+	dw BELLOSSOM
 	db 17
 	dw FLAREON
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (3)
 	db "SAYO@", TRAINERTYPE_NORMAL
+	db 15
+	dw BELLOSSOM
 	db 17
 	dw ESPEON
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (4)
 	db "ZUKI@", TRAINERTYPE_NORMAL
+	db 15
+	dw BELLOSSOM
 	db 17
 	dw UMBREON
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (5)
 	db "KUNI@", TRAINERTYPE_NORMAL
+	db 15
+	dw BELLOSSOM
 	db 17
 	dw VAPOREON
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (6)
 	db "MIKI@", TRAINERTYPE_NORMAL
+	db 15
+	dw BELLOSSOM
 	db 17
 	dw JOLTEON
 	db -1 ; end
