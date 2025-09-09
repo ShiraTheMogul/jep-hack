@@ -108,7 +108,7 @@ JasmineGroup: ; Jasmine is going to use Egg Moves!
 	db 34
 	dw SKARMORY
 	dw DRILL_PECK, SAND_ATTACK, STEEL_WING, LEER
-	db 35 
+	; db 35 
 	; dw SHARPOON
 	; dw IRON_TAIL, BUBBLEBEAM, CRUNCH, SWORDS_DANCE
 	db 35 
@@ -5431,30 +5431,40 @@ KimonoGirlGroup:
 
 	next_list_item ; KIMONO_GIRL (2)
 	db "NAOKO@", TRAINERTYPE_NORMAL
+	db 15
+	dw BELLOSSOM
 	db 17
 	dw FLAREON
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (3)
 	db "SAYO@", TRAINERTYPE_NORMAL
+	db 15
+	dw BELLOSSOM
 	db 17
 	dw ESPEON
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (4)
 	db "ZUKI@", TRAINERTYPE_NORMAL
+	db 15
+	dw BELLOSSOM
 	db 17
 	dw UMBREON
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (5)
 	db "KUNI@", TRAINERTYPE_NORMAL
+	db 15
+	dw BELLOSSOM
 	db 17
 	dw VAPOREON
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (6)
 	db "MIKI@", TRAINERTYPE_NORMAL
+	db 15
+	dw BELLOSSOM
 	db 17
 	dw JOLTEON
 	db -1 ; end
