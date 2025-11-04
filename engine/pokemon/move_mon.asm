@@ -87,6 +87,10 @@ GeneratePartyMonStats:
 	ld e, l
 	ld d, h
 	push hl
+	; DE = wPartyMon Struct to fill
+	; HL = wPartyMon Struct to fill
+	; Stack:
+	;    > wPartyMon Struct to fill
 
 	; Initialize the species
 	ld a, [wCurPartySpecies]
@@ -95,6 +99,7 @@ GeneratePartyMonStats:
 	ld a, [wBaseSpecies]
 	ld [de], a
 	inc de
+	; DE = wPartyMonXItem
 
 	; Copy the item if it's a wild mon
 	ld a, [wBattleMode]
@@ -105,9 +110,13 @@ GeneratePartyMonStats:
 .skipitem
 	ld [de], a
 	inc de
+	; DE = wPartyMonXMoves
 
 	; Copy the moves if it's a wild mon
 	push de
+	; Stack:
+	;  > wPartyMonX
+	;  > wPartyMonXMoves
 	ld h, d
 	ld l, e
 	ld a, [wBattleMode]
@@ -128,7 +137,7 @@ endr
 
 .randomlygeneratemoves
 	xor a
-rept NUM_MOVES - 1
+rept NUM_MOVES
 	ld [hli], a
 endr
 	ld [hl], a
@@ -137,9 +146,11 @@ endr
 
 .next
 	pop de
+	; DE = wPartyMonXMoves
 rept NUM_MOVES
 	inc de
 endr
+	; DE = wPartyMonXID
 
 	; Initialize ID.
 	ld a, [wPlayerID]
@@ -148,6 +159,7 @@ endr
 	ld a, [wPlayerID + 1]
 	ld [de], a
 	inc de
+	; DE = wPartyMonXExp
 
 	; Initialize Exp.
 	push de
@@ -212,6 +224,8 @@ endr
 	ld [de], a
 
 	; Set Shininess for New Dex Entry
+	push hl
+	push de
 	dec de
 	ld b, d
 	ld c, e
@@ -224,18 +238,19 @@ endr
 	inc a
 .shinycont
 	ld [wPokedexShinyToggle], a
-	; Unclobber de
-	inc de
-	inc de
+	pop de
+	pop hl
+	inc de ; now at wPartyMonXPP
 	
 	; Initialize PP.
+.PPBugDebug
 	push hl
 	push de
 	inc hl
-	inc hl
+	inc hl ; now at wPartyMonXMoves
 	call FillPP
 	pop de
-	pop hl
+	pop hl ; now at wPartyMonX
 rept NUM_MOVES
 	inc de
 endr
@@ -270,8 +285,10 @@ endr
 	inc de
 
 	; Initialize HP.
+.HPBugDebug
 	ld bc, MON_STAT_EXP - 1
-	add hl, bc
+	;ld bc, 11
+	add hl, bc ; now wPartyMonXHPExp
 	ld a, 1
 	ld c, a
 	ld b, FALSE
@@ -391,11 +408,13 @@ endr
 	ret
 
 FillPP:
+	; HL = Mon Moves
+	; DE = Mon PP
 	push bc
 	ld b, NUM_MOVES
 .loop
 	ld a, [hli]
-	and a
+	and a  ; test if A == 0 without changing A
 	jr z, .next
 	push hl
 	push de
