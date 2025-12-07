@@ -3080,16 +3080,19 @@ DokuroarEvosAttacks:
 	dbw 1, SCRATCH
 	dbw 1, SCARY_FACE
 	dbw 1, BONE_CLUB
-	dbw 7, SPITE
-	dbw 14, NIGHT_SHADE
-	dbw 21, ANCIENTPOWER
-	dbw 28, BONEMERANG
-	dbw 35, SLASH
+	dbw 6, SPITE
+	dbw 12, NIGHT_SHADE
+	dbw 18, ANCIENTPOWER
+	dbw 24, ACID
+	dbw 30, BONEMERANG
+	dbw 36, SLASH
 	dbw 42, ROCK_HEAD
-	dbw 49, BONE_RUSH
-	dbw 56, DESTINY_BOND
-	dbw 63, TAKE_DOWN
-	dbw 70, ROCK_SLASH
+	dbw 48, BONE_RUSH
+	dbw 54, DESTINY_BOND
+	dbw 60, TAKE_DOWN
+	; signature move at 66?
+	dbw 72, SLUDGE_BOMB
+	dbw 78, ROCK_SLASH
 	db 0 ; no more level-up moves
 	
 AlphalithEvosAttacks:
@@ -3106,7 +3109,8 @@ AlphalithEvosAttacks:
 	dbw 49, GLARE
 	dbw 56, ROCK_SLIDE
 	dbw 63, MEAN_LOOK
-	dbw 70, ROCK_SLASH
+	; signature move at 70?
+	dbw 77, ROCK_SLASH
 	db 0 ; no more level-up moves
 
 ScreamTailEvosAttacks:
