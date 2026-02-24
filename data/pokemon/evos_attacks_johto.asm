@@ -706,6 +706,7 @@ PichuEvosAttacks:
 
 CleffaEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, CLEFAIRY
+	dbbbw EVOLVE_STAT, 15, ATK_EQ_DEF, PIXYTOP ; this will be really funny
 	db 0 ; no more evolutions
 	dbw 1, POUND
 	dbw 1, CHARM
