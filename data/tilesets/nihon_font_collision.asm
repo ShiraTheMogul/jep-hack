@@ -106,3 +106,11 @@
 	tilecoll WALL, WATER, WALL, WATER ; 69
 	tilecoll WATER, WATER, WATER, WATER ; 6a
 	tilecoll WARP_CARPET_LEFT, FLOOR, WARP_CARPET_LEFT, FLOOR ; 6b
+	tilecoll WATER, WATER, WATER, WATER ; 6c
+	tilecoll FLOOR, WALL, WALL, WALL ; 6d
+	tilecoll WARP_CARPET_DOWN, WARP_CARPET_DOWN, WALL, WALL ; 6e
+	tilecoll WALL, FLOOR, WALL, WALL ; 6f
+	tilecoll WALL, WALL, WATER, WATER ; 70
+	tilecoll WALL, WALL, WALL, WALL ; 71
+	tilecoll WALL, WALL, WALL, WALL ; 72
+	tilecoll WALL, WALL, WALL, WALL ; 73
