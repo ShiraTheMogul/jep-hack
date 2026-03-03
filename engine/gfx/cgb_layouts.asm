@@ -135,10 +135,25 @@ _CGB_FinishBattleScreenLayout:
 	lb bc, 5, 10
 	ld a, PAL_BATTLE_BG_PLAYER_HP
 	call FillBoxCGB
+; Zetacode, SGB mode should use hp color instead of XP
+	ld a, [wOptions2]
+	and 1 << MENU_ACCOUNT
+	jr z, .SGBxp
+; End Zetacode 1
 	hlcoord 10, 11, wAttrmap
 	lb bc, 1, 9
 	ld a, PAL_BATTLE_BG_EXP
 	call FillBoxCGB
+; Zetacode 2
+	jr .please_continue
+
+.SGBxp	
+	hlcoord 10, 11, wAttrmap
+	lb bc, 1, 9
+	ld a, PAL_BATTLE_BG_PLAYER_HP
+	call FillBoxCGB
+.please_continue
+; End Zetacode 2
 	hlcoord 0, 12, wAttrmap
 	ld bc, 6 * SCREEN_WIDTH
 	ld a, PAL_BATTLE_BG_TEXT
@@ -177,6 +192,9 @@ InitPartyMenuBGPal0:
 	ret
 
 _CGB_PokegearPals:
+	ld a, [wOptions2]
+	and 1 << MENU_ACCOUNT
+	jr z, .SGBmode
 	ld a, [wPlayerGender]
 	and a ; MALE
 	jr z, .male
@@ -197,8 +215,46 @@ _CGB_PokegearPals:
 	ld a, TRUE
 	ldh [hCGBPalUpdate], a
 	ret
+	
+.SGBmode
+	ld a, [wPlayerGender]
+	and a ; MALE
+	jr z, .male2
+	dec a ; FEMALE
+	jr z, .female
+	ld a, PREDEFPAL_POKEGEAR_TOPAZ ; topaz palette
+	jr .got_sgb_pal
+	
+.male2
+	ld a, PREDEFPAL_POKEGEAR ; default pokegear interface palette
+	jr .got_sgb_pal
+	
+.female
+	ld a, PREDEFPAL_POKEGEAR_KRIS ; kris palette
+	
+.got_sgb_pal
+	call GetPredefPal
+	ld de, wBGPals1 
+; Copy 8 BG palettes
+	ld b, 8
+.bg_loop
+	push hl
+	call LoadHLPaletteIntoDE
+	pop hl
+	dec b
+	jr nz, .bg_loop
+; Copy 6 OB palettes, should be pointing at code from loading the overworld object palettes
+	ld b, 6
+.ob_loop
+	call LoadHLOBPaletteIntoDE
+	dec b
+	jr nz, .ob_loop
+	ret
 
 _CGB_StatsScreenHPPals:
+	ld a, [wOptions2]
+	and 1 << MENU_ACCOUNT
+	jr z, .SGBStats
 	ld de, wBGPals1
 	ld a, [wCurHPPal]
 	ld l, a
@@ -220,7 +276,28 @@ _CGB_StatsScreenHPPals:
 	ld a, BANK(wBGPals1)
 	call FarCopyWRAM
 	call WipeAttrmap
+	jr .contattrmap
+	
+.SGBStats
+	ld de, wBGPals1
+	ld a, [wCurHPPal]
+	ld l, a
+	ld h, 0
+	add hl, hl
+	add hl, hl
+	ld bc, HPBarPals
+	add hl, bc
+	call LoadPalette_White_Col1_Col2_Black ; hp palette
+	ld a, [wCurPartySpecies]
+	ld bc, wTempMonDVs
+	call GetPlayerOrMonPalettePointer
+	call LoadPalette_White_Col1_Col2_Black ; mon palette
+	;ld a, BANK(wBGPals1)
+	;call FarCopyWRAM
+	call WipeAttrmap
+	jr .contattrmapSGB
 
+.contattrmap
 	hlcoord 0, 0, wAttrmap
 	lb bc, 8, SCREEN_WIDTH
 	ld a, $1 ; mon palette
@@ -257,6 +334,18 @@ _CGB_StatsScreenHPPals:
 	ldh [hCGBPalUpdate], a
 	ret
 
+.contattrmapSGB
+	hlcoord 0, 0, wAttrmap
+	lb bc, 8, 9
+	ld a, $1 ; mon palette
+	call FillBoxCGB
+
+	call ApplyAttrmap
+	call ApplyPals
+	ld a, TRUE
+	ldh [hCGBPalUpdate], a
+	ret
+	
 StatsScreenPagePals:
 INCLUDE "gfx/stats/pages.pal"
 
@@ -565,7 +654,7 @@ _CGB_MapPals:
 ; Copy PAL_BG_TEXT and 6 OB palettes
 	ld b, 7
 .ob_loop
-	call .LoadHLOBPaletteIntoDE
+	call LoadHLOBPaletteIntoDE
 	dec b
 	jr nz, .ob_loop
 ; Copy PAL_OW_TREE and PAL_OW_ROCK
@@ -589,12 +678,12 @@ _CGB_MapPals:
 	jr nc, .bg_darkness
 	inc hl
 	inc hl
-	call .LoadHLColorIntoDE
-	call .LoadHLColorIntoDE
+	call LoadHLColorIntoDE
+	call LoadHLColorIntoDE
 	dec hl
 	dec hl
-	call .LoadHLColorIntoDE
-	call .LoadHLColorIntoDE
+	call LoadHLColorIntoDE
+	call LoadHLColorIntoDE
 .bg_done
 	pop hl
 	ret
@@ -602,50 +691,50 @@ _CGB_MapPals:
 .bg_darkness
 	inc hl
 	inc hl
-	call .LoadHLColorIntoDE
+	call LoadHLColorIntoDE
 	inc hl
 	inc hl
-	call .LoadHLColorIntoDE
+	call LoadHLColorIntoDE
 	dec hl
 	dec hl
-	call .LoadHLColorIntoDE
+	call LoadHLColorIntoDE
 	dec hl
 	dec hl
-	call .LoadHLColorIntoDE
+	call LoadHLColorIntoDE
 	jr .bg_done
 .bg_morn_day
 ;		Lot of commented out code for spaceworld-style mornings.
 ;	ld a, [wTimeOfDayPal]
 ;	cp MORN_F
 ;	jr nz, .bg_day
-;	call .LoadHLColorIntoDE
+;	call LoadHLColorIntoDE
 ;	inc hl
 ;	inc hl
-;	call .LoadHLColorIntoDE
+;	call LoadHLColorIntoDE
 ;	dec hl
 ;	dec hl
-;	call .LoadHLColorIntoDE
-;	call .LoadHLColorIntoDE
+;	call LoadHLColorIntoDE
+;	call LoadHLColorIntoDE
 ;	jr .bg_done
 ;.bg_day
 	call LoadHLPaletteIntoDE
 	jr .bg_done
 
-.LoadHLOBPaletteIntoDE:
+LoadHLOBPaletteIntoDE:
 ; shades 0, 1, 2, 3 -> 0, 0, 1, 3
 	push hl
-	call .LoadHLColorIntoDE
+	call LoadHLColorIntoDE
 	dec hl
 	dec hl
-	call .LoadHLColorIntoDE
-	call .LoadHLColorIntoDE
+	call LoadHLColorIntoDE
+	call LoadHLColorIntoDE
 	inc hl
 	inc hl
-	call .LoadHLColorIntoDE
+	call LoadHLColorIntoDE
 	pop hl
 	ret
 
-.LoadHLColorIntoDE:
+LoadHLColorIntoDE:
 	ldh a, [rSVBK]
 	push af
 	ld a, BANK(wBGPals1)
@@ -664,7 +753,23 @@ _CGB_PartyMenu:
 	call CopyFourPalettes
 	call InitPartyMenuBGPal0
 	call InitPartyMenuBGPal7
+	ld a, [wOptions2]
+	and 1 << MENU_ACCOUNT
+	jr z, .SGBmode
 	call InitPartyMenuOBPals
+	call ApplyAttrmap
+	ret
+	
+.SGBmode
+	ld a, PREDEFPAL_PARTY_ICON ; SGB Party object Palette
+	call GetPredefPal
+	ld de, wOBPals1 
+; Copy 8 OB palettes
+	ld b, 8
+.ob_loop
+	call LoadHLOBPaletteIntoDE
+	dec b
+	jr nz, .ob_loop
 	call ApplyAttrmap
 	ret
 
@@ -752,6 +857,7 @@ _CGB_UnownPuzzle:
 _CGB_TrainerCard:
 	ld a, [wOptions2]
 	and 1 << MENU_ACCOUNT
+	jp z, .TrainercardSGB
 	ld de, wBGPals1
 	xor a ; CHRIS
 	call GetTrainerPalettePointer
@@ -873,9 +979,47 @@ _CGB_TrainerCard:
 .BadgePalettes:
 INCLUDE "gfx/trainer_card/badges.pal"
 
+.TrainercardSGB:
+	ld a, [wPlayerGender]
+	and a ; MALE
+	jr z, .male4
+	dec a ; FEMALE
+	jr z, .female4
+	ld a, PREDEFPAL_CGB_BADGE ; RB Grey Palette
+	jr .got_card_sgb_pal
+	
+.male4
+	ld a, PREDEFPAL_DIPLOMA ; RB Human Palette
+	jr .got_card_sgb_pal
+.female4
+	ld a, PREDEFPAL_YELLOW_HUMAN ; Yellow Human Palette
+	
+.got_card_sgb_pal
+	call GetPredefPal
+	ld de, wBGPals1 
+; Copy 8 BG palettes
+	ld b, 8
+.bg_loop
+	push hl
+	call LoadHLPaletteIntoDE
+	pop hl
+	dec b
+	jr nz, .bg_loop
+; Copy 8 OB palettes
+	ld b, 8
+.ob_loop
+	call LoadHLOBPaletteIntoDE
+	dec b
+	jr nz, .ob_loop
+	; Fix Attribute map
+	call WipeAttrmap
+	call ApplyAttrmap
+	ret
+
 _CGB_TrainerCardKanto:
 	ld a, [wOptions2]
 	and 1 << MENU_ACCOUNT
+	jp z, .TrainercardSGB2
 	ld de, wBGPals1
 	xor a ; CHRIS & MISTY
 	call GetTrainerPalettePointer
@@ -997,6 +1141,43 @@ _CGB_TrainerCardKanto:
 .KantoBadgePalettes:
 INCLUDE "gfx/trainer_card/kanto_badges.pal"
 
+.TrainercardSGB2:
+	ld a, [wPlayerGender]
+	and a ; MALE
+	jr z, .male4
+	dec a ; FEMALE
+	jr z, .female4
+	ld a, PREDEFPAL_CGB_BADGE ; RB Grey Palette
+	jr .got_card_sgb_pal2
+	
+.male4
+	ld a, PREDEFPAL_DIPLOMA ; RB Human Palette
+	jr .got_card_sgb_pal2
+.female4
+	ld a, PREDEFPAL_YELLOW_HUMAN ; Yellow Human Palette
+	
+.got_card_sgb_pal2
+	call GetPredefPal
+	ld de, wBGPals1 
+; Copy 8 BG palettes
+	ld b, 8
+.bg_loop
+	push hl
+	call LoadHLPaletteIntoDE
+	pop hl
+	dec b
+	jr nz, .bg_loop
+; Copy 8 OB palettes
+	ld b, 8
+.ob_loop
+	call LoadHLOBPaletteIntoDE
+	dec b
+	jr nz, .ob_loop
+	; Fix Attribute map
+	call WipeAttrmap
+	call ApplyAttrmap
+	ret
+
 _CGB_MoveList:
 	ld de, wBGPals1
 	ld a, PREDEFPAL_GOLDENROD
@@ -1045,6 +1226,10 @@ _CGB_PokedexSearchOption:
 
 _CGB_PackPals:
 ; pack pals
+	ld a, [wOptions2]	; Are we in SGB mode?
+	and 1 << MENU_ACCOUNT
+	jp z, .SGBpack		; Get SGB style palettes
+	
 	ld a, [wBattleType]
 	cp BATTLETYPE_TUTORIAL
 	jr z, .tutorial_male
@@ -1105,6 +1290,29 @@ INCLUDE "gfx/pack/pack_f.pal"
 
 .EnbyPackPals:
 INCLUDE "gfx/pack/pack_nb.pal"
+
+.SGBpack
+	ld a, PREDEFPAL_PACK ; SGB Pack Palette
+	call GetPredefPal
+	ld de, wBGPals1 
+; Copy 8 BG palettes
+	ld b, 8
+.bg_loop
+	push hl
+	call LoadHLPaletteIntoDE
+	pop hl
+	dec b
+	jr nz, .bg_loop
+; Copy 8 OB palettes
+	ld b, 8
+.ob_loop
+	call LoadHLOBPaletteIntoDE
+	dec b
+	jr nz, .ob_loop
+	; Fix Attribute map
+	call WipeAttrmap
+	call ApplyAttrmap
+	ret
 
 _CGB_Pokepic:
 	call _CGB_MapPals

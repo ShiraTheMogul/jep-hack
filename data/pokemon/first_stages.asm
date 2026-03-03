@@ -65,6 +65,8 @@ FirstEvoStages::
 	dw VENONAT
 	dw DIGLETT
 	dw DIGLETT
+	dw WIGLETT
+	dw WIGLETT
 	dw COINPUR
 	dw COINPUR
 	dw COINPUR
@@ -117,8 +119,9 @@ FirstEvoStages::
 	dw RIBBITO
 	dw FARFETCH_D
 	dw FARFETCH_D
-	dw DODUO
-	dw DODUO
+	dw DODAERIE
+	dw DODAERIE
+	dw DODAERIE
 	dw SEEL
 	dw SEEL
 	dw SMUJJ
@@ -151,17 +154,24 @@ FirstEvoStages::
 	dw KOFFING
 	dw RHYHORN
 	dw RHYHORN    ;70
+	dw RHYHORN
 	dw HAPPINY
 	dw HAPPINY
+	dw GORILLAIMO
+	dw CACTORMUS
 	dw BURGELA
 	dw BURGELA
 	dw BURGELA
 	dw BURGELA
+	dw RAMOOSE
 	dw KANGASKHAN
+	dw TRAMPEL
+	dw TRAMPEL
 	dw HORSEA
 	dw HORSEA
 	dw BLASTYKE
 	dw BLASTYKE
+	dw SHARPOON
 	dw ORFRY
 	dw ORFRY
 	dw ORFRY
@@ -191,7 +201,8 @@ FirstEvoStages::
 	dw EEVEE
 	dw EEVEE
 	dw EEVEE      ;88
-	dw PORYGON
+	dw PORYBIT
+	dw PORYBIT
 	dw OMANYTE
 	dw OMANYTE
 	dw KABUTO
@@ -200,6 +211,7 @@ FirstEvoStages::
 	dw FERADACTYL
 	dw DECILLA
 	dw DECILLA
+	dw OMEGADGE
 	dw MUNCHLAX
 	dw MUNCHLAX
 	dw ARTICUNO   ;90
@@ -213,6 +225,8 @@ FirstEvoStages::
 	dw DRATINI
 	dw MEWTWO
 	dw MEW
+	dw MELTAN
+	dw MELTAN
 	dw CHIKORITA  ;98
 	dw CHIKORITA
 	dw CHIKORITA
@@ -273,12 +287,13 @@ FirstEvoStages::
 	dw SUNKERN    ;c0
 	dw HIPPUNK
 	dw AERCROW
-	dw FOXFIRE
+	dw ZORRIEGO
 	dw YANMA
 	dw YANMA
 	dw YANMA
 	dw WOOPER
 	dw WOOPER
+	dw EEVEE
 	dw EEVEE
 	dw EEVEE
 	dw EEVEE
@@ -303,6 +318,7 @@ FirstEvoStages::
 	dw DUNSPARCE
 	dw DUNSPARCE
 	dw GLIGAR
+	dw GLIGAR
 	dw ONIX       ;d0
 	dw SNUBBULL
 	dw SNUBBULL
@@ -310,11 +326,15 @@ FirstEvoStages::
 	dw QWILFISH
 	dw QWILFISH
 	dw QWILFISH
+	dw SAILWING
 	dw SCYTHER
 	dw SHUCKLE
 	dw SHUCKLE
 	dw HERACROSS
 	dw SNEASEL
+	dw SNEASEL
+	dw WARFURS
+	dw WARFURS
 	dw TEDDIURSA  ;d8
 	dw TEDDIURSA
 	dw TEDDIURSA
@@ -344,6 +364,10 @@ FirstEvoStages::
 	dw STANTLER
 	dw SMEARGLE
 	dw GRENMAR
+	dw BUNICE
+	dw BUNICE
+	dw BUNICE
+	dw BUNICE
 	dw TYROGUE
 	dw TYROGUE
 	dw SMOOCHUM
@@ -372,11 +396,17 @@ FirstEvoStages::
 	dw WISPIRIT
 	dw COATL
 	dw MIMEAR
+	dw SNUZZLES
+	dw DRILLUSK
 	dw INOSHIKA
 	dw RUDDERNAUT
+	dw PIXYTOP
+	dw MAWTLE
+	dw EVOLOTTO
 	dw XYLODON
 	dw XYLODON
 	dw DOKUROAR
+	dw ALPHALITH
 	dw SCREAM_TAIL
 	dw SANDY_SHOCKS
 	dw GREAT_TUSK
@@ -398,4 +428,5 @@ FirstEvoStages::
 	dw HYOSHU_YANG
 	dw HYOSHU_YIN
 	dw CELEBI
+	dw DEOXYS
 	assert_table_length NUM_POKEMON

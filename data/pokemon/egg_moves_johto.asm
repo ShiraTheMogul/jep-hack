@@ -61,7 +61,7 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw HippunkEggMoves
 	dw AercrowEggMoves
-	dw FoxfireEggMoves
+	dw ZorriegoEggMoves
 	dw YanmaEggMoves
 	dw NoEggMoves2 ; Yanmega
 	dw NoEggMoves2 ; Oniyanma
@@ -72,6 +72,7 @@ EggMovePointers2::
 	dw NoEggMoves2 ; Leafeon
 	dw NoEggMoves2 ; Glaceon
 	dw NoEggMoves2 ; Sylveon
+	dw NoEggMoves2 ; Breezeon
 	dw MurkrowEggMoves
 	dw NoEggMoves2 ; Honchkrow
 	dw NoEggMoves2
@@ -91,6 +92,7 @@ EggMovePointers2::
 	dw DunsparceEggMoves
 	dw NoEggMoves2 ; Dudunsparce
 	dw GligarEggMoves
+	dw NoEggMoves2 ; Gliscor
 	dw NoEggMoves2
 	dw SnubbullEggMoves
 	dw NoEggMoves2
@@ -98,11 +100,15 @@ EggMovePointers2::
 	dw QwilfishEggMoves
 	dw NoEggMoves2 ; Kazappelin
 	dw NoEggMoves2 ; Qwilfather
+	dw SailwingEggMoves
 	dw NoEggMoves2
 	dw ShuckleEggMoves
 	dw NoEggMoves2
 	dw HeracrossEggMoves
 	dw SneaselEggMoves
+	dw NoEggMoves2 ; Weavile
+	dw WarfursEggMoves
+	dw NoEggMoves2 ; Wearlycan
 	dw TeddiursaEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2 ; Ursaluna
@@ -132,6 +138,10 @@ EggMovePointers2::
 	dw NoEggMoves2 ; Wyrdeer
 	dw NoEggMoves2
 	dw GrenmarEggMoves
+	dw BuniceEggMoves
+	dw NoEggMoves2 ; Bundra
+	dw NoEggMoves2 ; Bunberg
+	dw NoEggMoves2 ; Bundrake
 	dw TyrogueEggMoves
 	dw NoEggMoves2
 	dw SmoochumEggMoves
@@ -161,11 +171,17 @@ EggMovePointers2::
 	dw WispiritEggMoves
 	dw CoatlEggMoves
 	dw MimearEggMoves
+	dw SnuzzlesEggMoves
+	dw DrilluskEggMoves
 	dw InoshikaEggMoves
 	dw RuddernautEggMoves
+	dw PixytopEggMoves
+	dw MawtleEggMoves
+	dw NoEggMoves2 ; Evolotto
 	dw XylodonEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2 ; Dokuroar
+	dw NoEggMoves2 ; Alphalith
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw NoEggMoves2
@@ -187,6 +203,7 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw NoEggMoves2
+	dw NoEggMoves2 ; Deoxys
 .IndirectEnd::
 
 ChikoritaEggMoves:
@@ -388,7 +405,7 @@ AercrowEggMoves:
 	dw WHIRLWIND
 	dw -1 ; end
 
-FoxfireEggMoves:
+ZorriegoEggMoves:
 	dw CONFUSE_RAY
 	dw DISABLE
 	dw FAINT_ATTACK
@@ -487,6 +504,12 @@ QwilfishEggMoves:
 	dw BUBBLEBEAM
 	dw SUPERSONIC
 	dw -1 ; end
+	
+SailwingEggMoves:
+	dw AGILITY
+	dw AURORA_BEAM
+	dw GUST
+	dw TWISTER
 
 ShuckleEggMoves:
 	dw SWEET_SCENT
@@ -508,6 +531,15 @@ SneaselEggMoves:
 	dw FORESIGHT
 	dw REFLECT
 	dw BITE
+	dw -1 ; end
+	
+WarfursEggMoves:
+	dw BEAT_UP
+	dw BITE
+	dw CRUNCH
+	dw DIZZY_PUNCH
+	dw PURSUIT
+	dw RAGE
 	dw -1 ; end
 
 TeddiursaEggMoves:
@@ -611,6 +643,14 @@ GrenmarEggMoves:
 	dw SING
 	dw SLAM
 	dw -1
+	
+BuniceEggMoves:
+	dw CHARM
+	dw LIGHT_SCREEN
+	dw REFLECT
+	dw PETAL_DANCE
+	dw PRESENT
+	dw -1 ; end
 
 TyrogueEggMoves:
 	dw RAPID_SPIN
@@ -762,6 +802,18 @@ MimearEggMoves:
 	dw SWEET_KISS
 	dw BITE
 	dw -1 ;end 
+	
+SnuzzlesEggMoves:
+	dw FURY_ATTACK
+	dw PRESENT
+	dw SWEET_KISS
+	dw -1 ; end
+	
+DrilluskEggMoves:
+	dw FURY_ATTACK
+	dw SAND_ATTACK
+	dw FISSURE
+	dw -1 ; end
 
 InoshikaEggMoves:
 	dw FURY_ATTACK
@@ -777,6 +829,20 @@ RuddernautEggMoves:
 	dw PSYBEAM
 	dw SAFEGUARD
 	dw -1 ;end 
+	
+PixytopEggMoves:
+	dw DRAINING_KISS
+	dw REVERSAL
+	dw MEGA_KICK
+	dw SONICBOOM
+	dw -1 ; end
+	
+MawtleEggMoves:
+	dw PURSUIT
+	dw BIDE
+	dw RAPID_SPIN
+	dw SKULL_BASH
+	dw -1 ; end
 
 XylodonEggMoves:
 	dw BELLY_DRUM

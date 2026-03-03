@@ -65,4 +65,5 @@ Tilesets::
 	tileset TilesetNihonWhiteCity
 	tileset TilesetSevii
 	tileset TilesetLushCave
+	tileset TilesetNihonPowerPlant
 	assert_table_length NUM_TILESETS + 1

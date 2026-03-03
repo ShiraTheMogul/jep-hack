@@ -243,6 +243,7 @@ TilesetNihonHighTechAnim:
 TilesetNihonOldAnim:
 TilesetNihonSouthAnim:
 TilesetNihonWestAnim:
+TilesetNihonPowerPlantAnim:
 TilesetNihonWhiteCityAnim:
 	dw vTiles2 tile $14, AnimateWaterTile
 	dw NULL,  WaitTileAnimation

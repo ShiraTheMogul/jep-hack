@@ -66,6 +66,8 @@ KantoMonSpecials:
 	db  90 ; VENOMOTH
 	db  45 ; DIGLETT
 	db  70 ; DUGTRIO
+	db  35 ; WIGLETT
+	db  70 ; WUGTRIO
 	db  35 ; COINPUR
 	db  40 ; MEOWTH
 	db  65 ; PERSIAN
@@ -118,6 +120,7 @@ KantoMonSpecials:
 	db  75 ; CROAKOZUNA
 	db  58 ; FARFETCH_D
 	db  63 ; LUXWAN
+	db  15 ; DODAERIE
 	db  35 ; DODUO
 	db  60 ; DODRIO
 	db  70 ; SEEL
@@ -152,17 +155,24 @@ KantoMonSpecials:
 	db  85 ; WEEZING
 	db  30 ; RHYHORN
 	db  45 ; RHYDON
+	db  55 ; RHYPERIOR
 	db  65 ; HAPPINY
 	db 105 ; CHANSEY
+	db  40 ; GORILLAIMO
+	db  75 ; CACTORMUS
 	db  80 ; BURGELA
 	db 100 ; TANGELA
 	db 110 ; TANGROWTH
 	db 125 ; JUNGELA
+	db  90 ; RAMOOSE
 	db  40 ; KANGASKHAN
+	db  64 ; TRAMPEL
+	db  54 ; ARAPHANT
 	db  70 ; HORSEA
 	db  95 ; SEADRA
 	db  45 ; BLASTYKE
 	db  85 ; BLASTOISE
+	db  85 ; SHARPOON
 	db  20 ; ORFRY
 	db  50 ; GOLDEEN
 	db  80 ; SEAKING
@@ -192,6 +202,7 @@ KantoMonSpecials:
 	db 110 ; VAPOREON
 	db 110 ; JOLTEON
 	db 110 ; FLAREON
+	db  64 ; PORYBIT
 	db  75 ; PORYGON
 	db  90 ; OMANYTE
 	db 115 ; OMASTAR
@@ -201,6 +212,7 @@ KantoMonSpecials:
 	db  60 ; AERODACTYL
 	db  40 ; DECILLA
 	db  95 ; GAWARHED
+	db  95 ; OMEGADGE
 	db  40 ; MUNCHLAX
 	db  65 ; SNORLAX
 	db 125 ; ARTICUNO
@@ -214,4 +226,6 @@ KantoMonSpecials:
 	db 100 ; DRAGONITE
 	db 154 ; MEWTWO
 	db 100 ; MEW
+	db  35 ; MELTAN
+	db  65 ; MELMETAL
 	assert_table_length JOHTO_POKEMON - 1

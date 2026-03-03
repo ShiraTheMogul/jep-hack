@@ -63,7 +63,6 @@ ROMX $0d
 	"Effect Commands"
 ROMX $0e
 	"Enemy Trainers"
-	"Enemy Trainer Parties 2"
 ROMX $0f
 	"Battle Core"
 ROMX $10
@@ -319,6 +318,8 @@ ROMX $80
 	"Pic Pointers"
 ROMX $81
 	"Enemy Trainer Parties 4"
+ROMX $82
+	"Enemy Trainer Parties 2" ; moved up here, hope this doesn't break things
 WRAM0
 	"Stack"
 	"Audio RAM"

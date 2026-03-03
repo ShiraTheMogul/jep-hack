@@ -65,6 +65,8 @@ EggMovePointers1:
 	dw NoEggMoves1
 	dw DiglettEggMoves
 	dw NoEggMoves1
+	dw WiglettEggMoves
+	dw NoEggMoves1 ; Wugtrio
 	dw CoinpurEggMoves
 	dw NoEggMoves1
 	dw NoEggMoves1
@@ -117,7 +119,8 @@ EggMovePointers1:
 	dw NoEggMoves1 ; Croakozuna
 	dw FarfetchDEggMoves
 	dw NoEggMoves1 ; Luxwan
-	dw DoduoEggMoves
+	dw DodaerieEggMoves
+	dw NoEggMoves1
 	dw NoEggMoves1
 	dw SeelEggMoves
 	dw NoEggMoves1
@@ -151,17 +154,24 @@ EggMovePointers1:
 	dw NoEggMoves1
 	dw RhyhornEggMoves
 	dw NoEggMoves1
+	dw NoEggMoves1 ; Rhyperior
 	dw HappinyEggMoves
 	dw NoEggMoves1 ; Chansey
+	dw GorillaimoEggMoves
+	dw CactormusEggMoves
 	dw BurgelaEggMoves ; Burgela
 	dw NoEggMoves1
 	dw NoEggMoves1 ; Tangrowth
 	dw NoEggMoves1 ; Jungela
+	dw RamooseEggMoves
 	dw KangaskhanEggMoves
+	dw TrampelEggMoves
+	dw NoEggMoves1 ; Araphant
 	dw HorseaEggMoves
 	dw NoEggMoves1
 	dw BlastykeEggMoves ; Blastyke
 	dw NoEggMoves1 ; Blastoise
+	dw SharpoonEggMoves
 	dw OrfryEggMoves
 	dw NoEggMoves1
 	dw NoEggMoves1
@@ -191,6 +201,7 @@ EggMovePointers1:
 	dw NoEggMoves1
 	dw NoEggMoves1
 	dw NoEggMoves1
+	dw NoEggMoves1 ; Porybit
 	dw NoEggMoves1
 	dw OmanyteEggMoves
 	dw NoEggMoves1
@@ -200,6 +211,7 @@ EggMovePointers1:
 	dw NoEggMoves1 ; Aerodactyl
 	dw DecillaEggMoves
 	dw NoEggMoves1 ; Gawarhed
+	dw NoEggMoves1 ; Omegadge
 	dw MunchlaxEggMoves ; Munchlax
 	dw NoEggMoves1 ; Should this even exist?
 	dw NoEggMoves1
@@ -213,6 +225,8 @@ EggMovePointers1:
 	dw NoEggMoves1
 	dw NoEggMoves1
 	dw NoEggMoves1
+	dw NoEggMoves1 ; Meltan
+	dw NoEggMoves1 ; Melmetal
 .IndirectEnd::
 
 BulbasaurEggMoves:
@@ -350,6 +364,14 @@ VenonatEggMoves:
 	dw -1 ; end
 
 DiglettEggMoves:
+	dw FAINT_ATTACK
+	dw SCREECH
+	dw ANCIENTPOWER
+	dw PURSUIT
+	dw BEAT_UP
+	dw -1 ; end
+	
+WiglettEggMoves:
 	dw FAINT_ATTACK
 	dw SCREECH
 	dw ANCIENTPOWER
@@ -504,7 +526,7 @@ FarfetchDEggMoves:
 	dw FLAIL
 	dw -1 ; end
 
-DoduoEggMoves:
+DodaerieEggMoves:
 	dw QUICK_ATTACK
 	dw SUPERSONIC
 	dw HAZE
@@ -609,6 +631,21 @@ HappinyEggMoves:
 	dw METRONOME
 	dw HEAL_BELL
 	dw -1 ; end
+	
+GorillaimoEggMoves:
+	dw CROSS_CHOP
+	dw LICK
+	dw ROCK_SLIDE
+	dw THRASH
+	dw MEGA_PUNCH
+	dw PRESENT
+	dw -1 ; end
+	
+CactormusEggMoves:
+	dw SWORDS_DANCE
+	dw LEECH_SEED
+	dw RAPID_SPIN
+	dw -1 ; end
 
 BurgelaEggMoves:
 	dw FLAIL
@@ -616,6 +653,14 @@ BurgelaEggMoves:
 	dw MEGA_DRAIN
 	dw REFLECT
 	dw AMNESIA
+	dw -1 ; end
+	
+RamooseEggMoves:
+	dw QUICK_ATTACK
+	dw LEECH_SEED
+	dw STOMP
+	dw LIGHT_SCREEN
+	dw REFLECT
 	dw -1 ; end
 
 KangaskhanEggMoves:
@@ -626,6 +671,15 @@ KangaskhanEggMoves:
 	dw DISABLE
 	dw MEGAPHONE
 	dw -1 ; end
+	
+TrampelEggMoves:
+	dw COMET_PUNCH
+	dw THRASH
+	dw SCREECH
+	dw FOCUS_ENERGY
+	dw FORESIGHT
+	dw ROCK_SLIDE
+	dw -1 ; end 
 
 HorseaEggMoves:
 	dw FLAIL
@@ -643,6 +697,12 @@ BlastykeEggMoves:
 	dw CONFUSION
 	dw FORESIGHT
 	dw FLAIL
+	dw -1 ; end
+	
+SharpoonEggMoves:
+	dw THRASH
+	dw AGILITY
+	dw SWORDS_DANCE
 	dw -1 ; end
 
 OrfryEggMoves:

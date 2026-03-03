@@ -370,8 +370,10 @@ ApplyHPBarPals:
 	call FillBoxCGB
 	ret
 
-LoadStatsScreenPals:
-	call CheckCGB
+LoadStatsScreenPals:	; This bit of code colorizes the stats screen with the page colors. 
+	;call CheckCGB		; This was a check for if this is running on GBC, and fortunately I can very easily replace it with the SGB Color Mode check for similar results
+	ld a, [wOptions2]
+	and 1 << MENU_ACCOUNT
 	ret z
 	ld hl, StatsScreenPals
 	ld b, 0

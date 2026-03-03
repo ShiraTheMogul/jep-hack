@@ -175,6 +175,10 @@ INCLUDE "audio/music/SavoyCity.asm"
 INCLUDE "audio/music/FloodedShrine.asm"
 INCLUDE "audio/music/AlphalithBattle.asm"
 INCLUDE "audio/music/FortunaSF.asm"
+INCLUDE "audio/music/JasperForest.asm"
+INCLUDE "audio/music/sevii.asm"
+INCLUDE "audio/music/FourIsland.asm"
+INCLUDE "audio/music/SixIsland.asm"
 
 SECTION "Sound Effects", ROMX
 

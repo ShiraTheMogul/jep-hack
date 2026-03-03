@@ -64,6 +64,8 @@ FramesPointers:
 	dba VenomothFrames
 	dba DiglettFrames
 	dba DugtrioFrames
+	dba WiglettFrames
+	dba WugtrioFrames
 	dba CoinpurFrames
 	dba MeowthFrames
 	dba PersianFrames
@@ -116,6 +118,7 @@ FramesPointers:
 	dba CroakozunaFrames
 	dba FarfetchDFrames
 	dba LuxwanFrames
+	dba DodaerieFrames
 	dba DoduoFrames
 	dba DodrioFrames
 	dba SeelFrames
@@ -150,17 +153,24 @@ FramesPointers:
 	dba WeezingFrames
 	dba RhyhornFrames
 	dba RhydonFrames
+	dba RhyperiorFrames
 	dba HappinyFrames
 	dba ChanseyFrames
+	dba GorillaimoFrames
+	dba CactormusFrames
 	dba BurgelaFrames
 	dba TangelaFrames
 	dba TangrowthFrames
 	dba JungelaFrames
+	dba RamooseFrames
 	dba KangaskhanFrames
+	dba TrampelFrames
+	dba AraphantFrames
 	dba HorseaFrames
 	dba SeadraFrames
 	dba BlastykeFrames
 	dba BlastoiseFrames
+	dba SharpoonFrames
 	dba OrfryFrames
 	dba GoldeenFrames
 	dba SeakingFrames
@@ -190,6 +200,7 @@ FramesPointers:
 	dba VaporeonFrames
 	dba JolteonFrames
 	dba FlareonFrames
+	dba PorybitFrames
 	dba PorygonFrames
 	dba OmanyteFrames
 	dba OmastarFrames
@@ -199,6 +210,7 @@ FramesPointers:
 	dba AerodactylFrames
 	dba DecillaFrames
 	dba GawarhedFrames
+	dba OmegadgeFrames
 	dba MunchlaxFrames
 	dba SnorlaxFrames
 	dba ArticunoFrames
@@ -212,6 +224,8 @@ FramesPointers:
 	dba DragoniteFrames
 	dba MewtwoFrames
 	dba MewFrames
+	dba MeltanFrames
+	dba MelmetalFrames
 	dba ChikoritaFrames
 	dba BayleefFrames
 	dba MeganiumFrames
@@ -272,7 +286,7 @@ FramesPointers:
 	dba SunfloraFrames
 	dba HippunkFrames
 	dba AercrowFrames
-	dba FoxfireFrames
+	dba ZorriegoFrames
 	dba YanmaFrames
 	dba YanmegaFrames
 	dba OniyanmaFrames
@@ -283,6 +297,7 @@ FramesPointers:
 	dba LeafeonFrames
 	dba GlaceonFrames
 	dba SylveonFrames
+	dba BreezeonFrames
 	dba MurkrowFrames
 	dba HonchkrowFrames
 	dba SlowkingFrames
@@ -302,6 +317,7 @@ FramesPointers:
 	dba DunsparceFrames
 	dba DudunsparceFrames
 	dba GligarFrames
+	dba GliscorFrames
 	dba SteelixFrames
 	dba SnubbullFrames
 	dba GranbullFrames
@@ -309,11 +325,15 @@ FramesPointers:
 	dba QwilfishFrames
 	dba KazappelinFrames
 	dba QwilfatherFrames
+	dba SailwingFrames
 	dba ScizorFrames
 	dba ShuckleFrames
 	dba PockleFrames
 	dba HeracrossFrames
 	dba SneaselFrames
+	dba WeavileFrames
+	dba WarfursFrames
+	dba WearlycanFrames
 	dba TeddiursaFrames
 	dba UrsaringFrames
 	dba UrsalunaFrames
@@ -343,6 +363,10 @@ FramesPointers:
 	dba WyrdeerFrames
 	dba SmeargleFrames
 	dba GrenmarFrames
+	dba BuniceFrames
+	dba BundraFrames
+	dba BunbergFrames
+	dba BundrakeFrames
 	dba TyrogueFrames
 	dba HitmontopFrames
 	dba SmoochumFrames
@@ -372,11 +396,17 @@ FramesPointers:
 	dba WispiritFrames
 	dba CoatlFrames
 	dba MimearFrames
+	dba SnuzzlesFrames
+	dba DrilluskFrames
 	dba InoshikaFrames
 	dba RuddernautFrames
+	dba PixytopFrames
+	dba MawtleFrames
+	dba EvolottoFrames
 	dba XylodonFrames
 	dba XylofinFrames
 	dba DokuroarFrames
+	dba AlphalithFrames
 	dba ScreamTailFrames
 	dba SandyShocksFrames
 	dba GreatTuskFrames
@@ -399,4 +429,5 @@ FramesPointers:
 	dba HyoshuYangFrames
 	dba HyoshuYinFrames
 	dba CelebiFrames
+	dba DeoxysFrames
 	assert_table_length NUM_POKEMON

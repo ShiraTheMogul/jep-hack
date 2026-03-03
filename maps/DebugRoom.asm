@@ -8,23 +8,23 @@ DebugRoom_MapScripts:
 
 DebugPokemon1Script:
 	opentext
-	getmonname STRING_BUFFER_3, SHELLDER
+	getmonname STRING_BUFFER_3, WEARLYCAN
 	writetext ReceivedDebugPokemonText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
-	givepoke SHELLDER, 1
+	givepoke WEARLYCAN, 53, MASTER_BALL
 	closetext
 	end
 
 DebugPokemon2Script:
 	opentext
-	getmonname STRING_BUFFER_3, FOLAGE
+	getmonname STRING_BUFFER_3, EVOLOTTO
 	writetext ReceivedDebugPokemonText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
-	givepoke FOLAGE, 31, RARE_CANDY
+	givepoke EVOLOTTO, 31, RARE_CANDY
 	closetext
 	end
 
@@ -39,11 +39,11 @@ DebugPokemon3Script:
 	faceplayer
 	opentext
 	writetext DebugTextA
-	cry BELLSPROUT
+	cry DEOXYS
 	pause 15
 	closetext
-	loadvar VAR_BATTLETYPE, BATTLETYPE_INVERSE
-	loadwildmon BELLSPROUT, 10
+	loadvar VAR_BATTLETYPE, BATTLETYPE_SHINY
+	loadwildmon DEOXYS, 5
 	startbattle
 	reloadmapafterbattle
 	end
@@ -56,11 +56,11 @@ DebugPokemon4Script:
 	faceplayer
 	opentext
 	writetext DebugTextB
-	cry KLEAVOR
+	cry GOROCHU
 	pause 15
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SUICUNE
-	loadwildmon KLEAVOR, 10
+	loadwildmon DEOXYS, 70
 	startbattle
 	reloadmapafterbattle
 	end
@@ -418,7 +418,7 @@ DebugRoom_MapEvents:
 	warp_event 35, 17, SUNGLOW_CITY, 1 ; east warp
 	warp_event  5, 35, LAVENDER_TOWN, 1 ; southwest warp
 	warp_event 19, 34, KANTO_SAFARI_ZONE_CENTER, 1 ; southern warp
-	warp_event 33, 33, FOUR_ISLAND, 1 ; southeast warp
+	warp_event 33, 33, SIX_ISLAND, 1 ; southeast warp
 	warp_event  5,  3, HAUNTED_HOUSE_FOYER, 1
 	warp_event 34, 11, WINNERS_PATH, 3
 

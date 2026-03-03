@@ -65,6 +65,8 @@ EvosAttacksPointers1::
 	dw VenomothEvosAttacks
 	dw DiglettEvosAttacks
 	dw DugtrioEvosAttacks
+	dw WiglettEvosAttacks
+	dw WugtrioEvosAttacks
 	dw CoinpurEvosAttacks
 	dw MeowthEvosAttacks
 	dw PersianEvosAttacks
@@ -117,6 +119,7 @@ EvosAttacksPointers1::
 	dw CroakozunaEvosAttacks
 	dw FarfetchDEvosAttacks
 	dw LuxwanEvosAttacks
+	dw DodaerieEvosAttacks
 	dw DoduoEvosAttacks
 	dw DodrioEvosAttacks
 	dw SeelEvosAttacks
@@ -151,17 +154,24 @@ EvosAttacksPointers1::
 	dw WeezingEvosAttacks
 	dw RhyhornEvosAttacks
 	dw RhydonEvosAttacks
+	dw RhyperiorEvosAttacks
 	dw HappinyEvosAttacks
 	dw ChanseyEvosAttacks
+	dw GorillaimoEvosAttacks
+	dw CactormusEvosAttacks
 	dw BurgelaEvosAttacks
 	dw TangelaEvosAttacks
 	dw TangrowthEvosAttacks
 	dw JungelaEvosAttacks
+	dw RamooseEvosAttacks
 	dw KangaskhanEvosAttacks
+	dw TrampelEvosAttacks
+	dw AraphantEvosAttacks
 	dw HorseaEvosAttacks
 	dw SeadraEvosAttacks
 	dw BlastykeEvosAttacks
 	dw BlastoiseEvosAttacks
+	dw SharpoonEvosAttacks 
 	dw OrfryEvosAttacks
 	dw GoldeenEvosAttacks
 	dw SeakingEvosAttacks
@@ -191,6 +201,7 @@ EvosAttacksPointers1::
 	dw VaporeonEvosAttacks
 	dw JolteonEvosAttacks
 	dw FlareonEvosAttacks
+	dw PorybitEvosAttacks
 	dw PorygonEvosAttacks
 	dw OmanyteEvosAttacks
 	dw OmastarEvosAttacks
@@ -200,6 +211,7 @@ EvosAttacksPointers1::
 	dw AerodactylEvosAttacks
 	dw DecillaEvosAttacks
 	dw GawarhedEvosAttacks
+	dw OmegadgeEvosAttacks
 	dw MunchlaxEvosAttacks
 	dw SnorlaxEvosAttacks
 	dw ArticunoEvosAttacks
@@ -213,6 +225,8 @@ EvosAttacksPointers1::
 	dw DragoniteEvosAttacks
 	dw MewtwoEvosAttacks
 	dw MewEvosAttacks
+	dw MeltanEvosAttacks
+	dw MelmetalEvosAttacks
 .IndirectEnd::
 
 BulbasaurEvosAttacks:
@@ -1193,6 +1207,36 @@ DugtrioEvosAttacks:
 	dbw 49, SANDSTORM ; SW97
 	dbw 55, FISSURE
 	db 0 ; no more level-up moves
+	
+WiglettEvosAttacks:
+	dbbw EVOLVE_LEVEL, 26, WUGTRIO
+	db 0 ; no more evolutions
+	dbw 1, WATER_GUN
+	dbw 1, MUD_SLAP
+	dbw 9, WRAP
+	dbw 15, DIG
+	dbw 21, SLAM
+	dbw 27, SAND_ATTACK
+	dbw 33, HEADBUTT
+	dbw 39, FAINT_ATTACK
+	dbw 45, RAIN_DANCE
+	dbw 51, HYDRO_PUMP
+	db 0 ; no more level-up moves
+	
+WugtrioEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, WATER_GUN
+	dbw 1, MUD_SLAP
+	dbw 9, WRAP
+	dbw 15, DIG
+	dbw 21, SLAM
+	dbw 27, SAND_ATTACK
+	dbw 30, TRI_ATTACK
+	dbw 35, HEADBUTT
+	dbw 41, FAINT_ATTACK
+	dbw 49, RAIN_DANCE
+	dbw 55, HYDRO_PUMP
+	db 0 ; no more level-up moves
 
 CoinpurEvosAttacks:
 	dbbw EVOLVE_LEVEL, 14, MEOWTH
@@ -2034,6 +2078,22 @@ LuxwanEvosAttacks:
 	dbw 55, FALSE_SWIPE
 	db 0 ; no more level-up moves
 
+DodaerieEvosAttacks:
+	dbbw EVOLVE_LEVEL, 16, DODUO
+	db 0 ; no more evolutions
+	dbw 1, PECK
+	dbw 1, GROWL
+	dbw 9, PURSUIT
+	dbw 14, FURY_ATTACK
+	dbw 20, QUICK_ATTACK ; HGSS
+	dbw 24, RAGE
+	dbw 28, DRILL_PECK
+	dbw 33, TRI_ATTACK
+	dbw 37, AGILITY
+	dbw 42, THRASH ; LGPE
+	dbw 48, JUMP_KICK ; LGPE
+	db 0 ; no more level-up moves
+
 DoduoEvosAttacks:
 	dbbw EVOLVE_LEVEL, 31, DODRIO
 	db 0 ; no more evolutions
@@ -2326,10 +2386,11 @@ KinglerEvosAttacks:
 	dbw 53, FLAIL ; FRLG
 	db 0 ; no more level-up moves
 
-VoltorbEvosAttacks: ; spark and twave should be here somewhere
+VoltorbEvosAttacks:
 	dbbw EVOLVE_LEVEL, 30, ELECTRODE
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, THUNDERSHOCK
 	dbw 7, SCREECH
 	dbw 12, THUNDER_WAVE ; SW97
 	dbw 17, SONICBOOM
@@ -2346,6 +2407,7 @@ VoltorbEvosAttacks: ; spark and twave should be here somewhere
 ElectrodeEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, THUNDERSHOCK
 	dbw 7, SCREECH
 	dbw 12, THUNDER_WAVE ; SW97
 	dbw 17, SONICBOOM
@@ -2570,6 +2632,7 @@ RhyhornEvosAttacks:
 	db 0 ; no more level-up moves
 
 RhydonEvosAttacks:
+	dbbw EVOLVE_TRADE, DRAGON_SCALE, RHYPERIOR ; PLACEHOLDER
 	db 0 ; no more evolutions
 	dbw 1, HORN_ATTACK
 	dbw 1, TAIL_WHIP
@@ -2580,10 +2643,27 @@ RhydonEvosAttacks:
 	dbw 28, SCARY_FACE
 	dbw 32, MAGNITUDE ; Egg move
 	dbw 37, TAKE_DOWN
-	dbw 43, ROCK_HEAD
-	dbw 49, HORN_DRILL
-	dbw 55, EARTHQUAKE
-	dbw 61, MEGAHORN ; FRLG
+	dbw 45, ROCK_HEAD
+	dbw 51, HORN_DRILL
+	dbw 59, EARTHQUAKE
+	dbw 65, MEGAHORN ; FRLG
+	db 0 ; no more level-up moves
+	
+RhyperiorEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, HORN_ATTACK
+	dbw 1, TAIL_WHIP
+	dbw 7, MUD_SLAP ; SW97
+	dbw 13, STOMP
+	dbw 19, FURY_ATTACK
+	dbw 24, ENDURE ; SW97
+	dbw 28, SCARY_FACE
+	dbw 32, MAGNITUDE ; Egg move
+	dbw 37, TAKE_DOWN
+	dbw 45, ROCK_HEAD
+	dbw 51, HORN_DRILL
+	dbw 59, EARTHQUAKE
+	dbw 65, MEGAHORN ; FRLG
 	db 0 ; no more level-up moves
 
 HappinyEvosAttacks:
@@ -2611,6 +2691,38 @@ ChanseyEvosAttacks:
 	dbw 41, PAIN_SPLIT ; SW97
 	dbw 46, LIGHT_SCREEN
 	dbw 52, DOUBLE_EDGE
+	db 0 ; no more level-up moves
+	
+GorillaimoEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, COMET_PUNCH
+	dbw 1, GROWL
+	dbw 1, UPPERCUT
+	dbw 7, ROAR
+	dbw 13, BITE
+	dbw 19, SPARK
+	dbw 25, SEISMIC_TOSS
+	dbw 31, THUNDERPUNCH
+	dbw 37, BODY_SLAM
+	dbw 43, AMNESIA
+	dbw 49, SUBMISSION
+	dbw 55, DYNAMICPUNCH
+	db 0 ; no more level-up moves
+	
+CactormusEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, BARRAGE
+	dbw 1, SAND_ATTACK
+	dbw 6, VINE_WHIP
+	dbw 11, HORN_ATTACK
+	dbw 16, GROWTH
+	dbw 22, PIN_MISSILE
+	dbw 28, SPIKES
+	dbw 34, FURY_ATTACK
+	dbw 40, FAINT_ATTACK
+	dbw 45, SPIKE_CANNON
+	dbw 50, SANDSTORM
+	dbw 55, EXPLOSION
 	db 0 ; no more level-up moves
 
 BurgelaEvosAttacks:
@@ -2683,6 +2795,23 @@ JungelaEvosAttacks:
 	dbw 60, GIGA_DRAIN ; Later gen level-up & TM
 	dbw 65, CRUNCH
 	db 0 ; no more level-up moves
+	
+RamooseEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 4, SAND_ATTACK
+	dbw 9, CONFUSION
+	dbw 12, LEER
+	dbw 17, QUICK_ATTACK
+	dbw 23, RAZOR_LEAF
+	dbw 28, SUPERSONIC
+	dbw 33, HEADBUTT
+	dbw 38, JUMP_KICK
+	dbw 42, AGILITY
+	dbw 46, THRASH
+	dbw 50, GROWTH
+	dbw 56, DOUBLE_EDGE
+	db 0 ; no more level-up moves
 
 KangaskhanEvosAttacks:
 	db 0 ; no more evolutions
@@ -2697,6 +2826,41 @@ KangaskhanEvosAttacks:
 	dbw 49, MEGA_PUNCH
 	dbw 55, OUTRAGE ; LGPE
 	dbw 61, REVERSAL
+	db 0 ; no more level-up moves
+	
+TrampelEvosAttacks:
+	dbbw EVOLVE_TRADE, METAL_COAT, ARAPHANT
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 1, LEER
+	dbw 7, HORN_ATTACK
+	dbw 13, STOMP
+	dbw 19, MAGNITUDE
+	dbw 24, RAGE
+	dbw 29, FURY_ATTACK
+	dbw 34, BODY_SLAM
+	dbw 39, BELLY_DRUM
+	dbw 45, ROAR
+	dbw 51, EARTHQUAKE
+	dbw 57, FISSURE
+	db 0 ; no more level-up moves
+	
+AraphantEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 1, LEER
+	dbw 7, HORN_ATTACK
+	dbw 13, STOMP
+	dbw 19, HEADBUTT
+	dbw 24, HARDEN
+	dbw 29, FURY_ATTACK
+	dbw 34, METAL_CLAW
+	dbw 39, BELLY_DRUM
+	dbw 45, ROAR
+	dbw 51, DOUBLE_EDGE
+	dbw 57, HORN_DRILL
 	db 0 ; no more level-up moves
 
 HorseaEvosAttacks:
@@ -2768,6 +2932,22 @@ BlastoiseEvosAttacks:
 	dbw 54, SKULL_BASH
 	dbw 60, HYDRO_PUMP
 	dbw 65, HYPER_BEAM ; TM
+	db 0 ; no more level-up moves
+
+SharpoonEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, BITE
+	dbw 1, LEER
+	dbw 7, WATER_GUN
+	dbw 13, SCREECH
+	dbw 19, HORN_ATTACK
+	dbw 25, FURY_ATTACK
+	dbw 31, SHARPEN
+	dbw 37, HEADBUTT
+	dbw 42, CRUNCH
+	dbw 48, IRON_TAIL
+	dbw 54, HYDRO_PUMP
+	dbw 60, HORN_DRILL
 	db 0 ; no more level-up moves
 
 OrfryEvosAttacks:
@@ -3172,6 +3352,7 @@ EeveeEvosAttacks:
 	dbw 36, BATON_PASS
 	dbw 42, TAKE_DOWN
 	dbw 47, FOCUS_ENERGY ; RBY, GS
+	dbw 52, SWIFT ; LGPE
 	db 0 ; no more level-up moves
 
 VaporeonEvosAttacks:
@@ -3217,6 +3398,21 @@ FlareonEvosAttacks:
 	dbw 42, SMOG
 	dbw 47, LEER
 	dbw 52, FLAMETHROWER
+	db 0 ; no more level-up moves
+
+PorybitEvosAttacks:
+	dbbw EVOLVE_TRADE, UP_GRADE, PORYGON ; PLACEHOLDER
+	db 0 ; no more evolutions
+	dbw 1, CONVERSION2
+	dbw 1, TACKLE
+	dbw 1, CONVERSION
+	dbw 9, AGILITY
+	dbw 15, PSYBEAM
+	dbw 21, RECOVER
+	dbw 27, MINIMIZE
+	dbw 33, LOCK_ON
+	dbw 39, TRI_ATTACK
+	dbw 45, ZAP_CANNON
 	db 0 ; no more level-up moves
 
 PorygonEvosAttacks:
@@ -3370,6 +3566,24 @@ GawarhedEvosAttacks:
 	dbw 56, CURSE
 	dbw 63, SPIKES
 	dbw 70, ROCK_SLASH
+	dbw 77, HYPER_BEAM
+	db 0 ; no more level-up moves
+	
+OmegadgeEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, SUPERSONIC
+	dbw 1, LOCK_ON
+	dbw 7, THUNDERSHOCK
+	dbw 14, METAL_CLAW
+	dbw 21, SLAM
+	dbw 28, SCREECH
+	dbw 35, THUNDER_WAVE
+	dbw 42, IRON_TAIL
+	dbw 49, THUNDERBOLT
+	dbw 56, EXPLOSION
+	dbw 63, PROTECT
+	dbw 70, ZAP_CANNON
 	dbw 77, HYPER_BEAM
 	db 0 ; no more level-up moves
 
@@ -3580,4 +3794,33 @@ MewEvosAttacks:
 	dbw 30, METRONOME
 	dbw 40, PSYCHIC_M
 	dbw 50, ANCIENTPOWER
+	db 0 ; no more level-up moves
+	
+MeltanEvosAttacks:
+	dbbw EVOLVE_LEVEL, 45, MELMETAL ; PLACEHOLDER
+	db 0 ; no more evolutions
+	dbw 1, HEADBUTT
+	dbw 1, HARDEN
+	dbw 9, TAIL_WHIP
+	dbw 18, THUNDER_WAVE
+	dbw 27, THUNDERSHOCK
+	dbw 36, ACID_ARMOR
+	dbw 45, IRON_TAIL
+	db 0 ; no more level-up moves
+	
+MelmetalEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, HEADBUTT
+	dbw 1, HARDEN
+	dbw 1, THUNDERPUNCH
+	dbw 9, TAIL_WHIP
+	dbw 18, THUNDER_WAVE
+	dbw 27, THUNDERSHOCK
+	dbw 36, ACID_ARMOR
+	dbw 45, IRON_TAIL
+	dbw 54, MEGA_PUNCH
+	dbw 63, PROTECT
+	dbw 72, SUBMISSION
+	dbw 81, DYNAMICPUNCH
+	dbw 90, HYPER_BEAM
 	db 0 ; no more level-up moves

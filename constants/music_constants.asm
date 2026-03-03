@@ -125,15 +125,18 @@
 	const MUSIC_FLOODEDSHRINE				 ; 78
 	const MUSIC_ALPHALITHBATTLE				 ; 79
 	const MUSIC_FORTUNASF					 ; 7a
+	const MUSIC_JASPERFOREST				 ; 7b
+	const MUSIC_SEVII						 ; 7c
+	const MUSIC_FOURISLAND					 ; 7d
+	const MUSIC_SIXISLAND					 ; 7e
 DEF NUM_MUSIC_SONGS EQU const_value
 
-; GetMapMusic picks music for this value (see home/map.asm)
-DEF MUSIC_MAHOGANY_MART EQU $64
+; GetMapMusic picks music for these values (see home/map.asm)
+DEF MUSIC_MAHOGANY_MART EQU $fc
+DEF MUSIC_RADIO_TOWER   EQU $fd
 
 ; ExitPokegearRadio_HandleMusic uses these values
 DEF RESTART_MAP_MUSIC EQU $fe
 DEF ENTER_MAP_MUSIC   EQU $ff
 
-; GetMapMusic picks music for this bit flag
-DEF RADIO_TOWER_MUSIC_F EQU 7
-DEF RADIO_TOWER_MUSIC EQU 1 << RADIO_TOWER_MUSIC_F
+assert NUM_MUSIC_SONGS <= MUSIC_MAHOGANY_MART, "song IDs overlap special values"

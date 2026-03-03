@@ -10,13 +10,14 @@ Using the Kanto Expansion Pak's original criteria, the ethos of the Johto Expans
 
 What falls under "Johto- and Kanto-related" is a Pokemon is the following, so long as they are, in fact, related:
 - Is a regional variant (Eg. Hisuian Sneasel)
-- Evolves from or into a Pokemon (eg. Tangrowth, Honchkrow)
+- Evolves from or into a Pokemon (eg. Tangrowth, Honchkrow, Leafeon, Happiny)
+	- This includes Evolotto, a Pokemon from the RS Asset Leak that evolves into almost anything! Very much an edge case, but it is a nice addition to the Goldenrod Lottery feature.
 - Was cut from the final game (eg. Bellignan, Tricules, Phandarin; "beta" Pokemon) or cut from a future title while being related to a Kanto/Johto Pokemon (eg. Lizargun/Charmada)
-- Is a regional convergent (eg. Wugtrio, Toedscruel; "Okagyaradosu" qualifies for this)
+- Is a regional convergent (eg. Wugtrio, Toedscruel; "Okagyaradosu" qualified for this, which we named Terrados!)
 - Is a Paradox equivalent (eg. Walking Wake)
-- Would qualify for the Kanto Expansion Pak (eg. Omegadge, Melmetal)
+- Would qualify for the Kanto Expansion Pak (eg. Omegadge, Melmetal); we call these "KEP Veterans."
 
-Any Pokemon that you can think of that would come under this, is absolutely in. Dex total is 483!
+Any Pokemon that you can think of that would come under this, is absolutely in. Dex total is 484!
 
 Many prototype Pokemon have very little information around them: You'll be hard-pressed to find stats, cries, movesets, anything for some. With the Kanto Expansion Pak, we used all context clues available to try and formulate a picture-perfect, accurate representation to the best of our abilities. We've done this with the May 1998 Sprite Cache Pokemon, among others. Whenever something confirmed exists, it is used, and that then informs the interpretation. We also take Nob Ogasawara names as canon whenever they appear.
 
@@ -53,21 +54,14 @@ Mega Evolutions, Gigantamax forms, etc, are not in active consideration.
 	- Prototype GSC classes such as the Male Teacher, Sportsman, and Soldier
 	- The Painter from FRLG!
 	- The Elder from HGSS, featuring the NTSC Sage sprite.
-	- Decensor is applied to the Fisher, Beauty, Female Swimmer, Medium, and Sage sprites, to match the Japanese version. Let Tully have a puff!
+	- Decensoring is applied to the Fisher, Beauty, Female Swimmer, Medium, and Sage sprites, to match the Japanese version. Let Tully have a puff!
 - Many evolution stones have been added to accomodate the Pokemon featured here, including the Heart and Poison Stones from the SpaceWorld demo, and the Peat Block!
 - The Fairy Feather from Scarlet and Violet has been added to accomodate the Fairy type.
 - The Antique Pot has been added to accomodate a Shuckle evolution!
 - New Club and Wing Fossils; the former for Xylodon, a May98 Prototype Pokemon, and the latter for Feradactyl, (seemingly) an Aerodactyl pre-evolution from the same prototype.
 - The unused Honey Pot from prototype GSC has been added! 2 days after placing Sweet Honey, you can encounter either Munchlax, Beedrill, Ursaring, or Heracross!
 - Unused moves from the SpaceWorld demo have been re-implemented and distributed amongst the Pokemon. This includes the unused HMs, each with unique effects, sometimes calling back to other titles.
-
-## Technical Changes
-- Numerous important registers, such as map and Pokemon IDs, now support 16-bit IDs, allowing for significantly more additions to the game. This makes JEP possible.
-	- Important to note is the fact Crystal has ~30% free ROM space, which, given the sheer amount of content inside, makes this bountiful. This, too, makes JEP possible. Regardless, expanded ROMs can be played from good flash cartridges, so ROM space is not a concern to the team.
-- Tilesets now handle up to 255 titles (from 192), allowing for slightly nicer maps. We also have flipped tiles available for more complexity.
-- Can now have up to 17 object events.
-- Footprint pictures were optimised to make dex additions easier on memory. Before, they were mapped to a single bank - optimal for 8-bits, but not for 16!
-- Lots of unnecessary, unreferenced code was removed as and when it became necessary.
+- Pokemon all have unique party icons!
 
 ## QoL Changes
 - Fast text and stereo sound are now the default options.
@@ -116,8 +110,16 @@ Additionally, there have been many wild encounter tweaks. View this document for
 - Walls can be climbed using Strong Arm, functionality identical to HGSS Rock Climb.
 - Deep water now exists for Dive, with various locations across Johto, Kanto, and Nihon featuring it. 
 
+## Technical Changes
+- Numerous important registers, such as map and Pokemon IDs, now support 16-bit IDs, allowing for significantly more additions to the game. This makes JEP possible.
+	- Important to note is the fact Crystal has ~30% free ROM space, which, given the sheer amount of content inside, makes this bountiful. This, too, makes JEP possible. Regardless, expanded ROMs can be played from good flash cartridges, so ROM space is not a concern to the team.
+- Tilesets now handle up to 255 titles (from 192), allowing for slightly nicer maps. We also have flipped tiles available for more complexity and to modify vanilla tilesets with more content.
+- Maps can now have up to 17 object events.
+- Footprint pictures were optimised to make dex additions easier on memory. Before, they were mapped to a single bank - optimal for 8-bits, but not for 16!
+- Lots of unnecessary, unreferenced code was removed as and when it became necessary. This does not affect gameplay.
+
 # Credits
-As the open source nature of this project implies, people are free to reuse what's here for their own ends, **so long as credit is given to this hack and those who worked on what you reuse.** Additionally, we strongly urge you to make any projects using JEP's content open source. JEP strongly supports the [free software movement](https://www.fsf.org/about/) and its four essential freedoms. If you have any questions on the topic of content reuse, contact @ plague_von_karma on Discord.
+As the open source nature of this project implies, people are free to reuse what's here for their own ends, **so long as credit is given to this hack and those who worked on what you reuse.** Additionally, we strongly urge you to make any projects using JEP's content open source. JEP strongly supports the [free software movement](https://www.fsf.org/about/) and its four essential freedoms. If you have any questions on the topic of content reuse, contact the Expansion Pak Discord.
 
 If you use our implementations of anything at all, it is encouraged to submit Pull Requests for bug fixes if you find any issues! We very much appreciate them!
 
@@ -174,6 +176,7 @@ JEP-affiliated musicians require music to be used with direct credit for non-com
 
 ### Unaffiliated
 - FroggestSpirit: HGSS Poke Mart Demix
+- TempoQuill: Gen 1 Style Remixes of Lake of Rage, Azalea Town, and Violet City (used in the Sevii Islands)
 
 ## Other Sources
 - Nob Ogasawara (Many prototype Pokemon names)
@@ -192,8 +195,9 @@ JEP-affiliated musicians require music to be used with direct credit for non-com
 
 When naming Ajawalcan, we used academic sources compiling the grammar and vocabulary of Yucatan Mayan and Classical Mayan, aiming to represent indiginous Latin American cultures the best we could. The name literally translates to "Kingly serpent" or "Lordly serpent", where "Ajaw" was the name for a king or ruler, and "can" is the spelling for "serpent" used in Kukulcan, the deity worshipped by Mayans of the day.
 
-Original readme proceeding...
-# 16-bit index expansion for Crystal
+# On the 16-bit index expansion 
+
+This is taken from the original readme.
 
 This repository contains a modified Pokémon Crystal game, updated to handle 16-bit indexes. The main goal of this
 project is to create a reusable system that ROM hacks can use to bring 16-bit indexes into their games.  
@@ -213,53 +217,6 @@ history will be repeatedly rewritten, making merges impossible. If you do want t
 me know in advance so I can notify you of history rewrites.
 
 For further documentation, check out the [wiki].
-
-## Branches
-
-* `master`: (status: **stable**, last update: **2023-07-18**) Base branch. This branch contains a slightly modified
-  version of Pokémon Crystal, with some quality-of-life improvements intended to make development easier. These
-  improvements have been taken from the documentation in the [main disassembly repository][pokecrystal]. This branch
-  contains no 16-bit features and it is only intended as a reference.
-* `base-components`: (status: **stable**, last update: **2023-07-18**) This branch defines the basic components that
-  will comprise the 16-bit index table system, on top of which the remaining branches will be built. Since it only
-  defines macros (and a handful of WRAM locations to be shared by all index tables), it should build the same ROM as
-  `master`.
-* `expand-mon-ID`: (status: **stable**, last update: **2023-07-18**) This branch implements 16-bit indexes for Pokémon
-  species, thus allowing more than 253 species to be included in a single game.
-* `expand-move-ID`: (status: **stable**, last update: **2023-07-18**) This branch implements 16-bit indexes for moves,
-  on top of the existing 16-bit support for Pokémon species from the previous branch. (Interaction between the
-  branches is kept to a minimum, though.)
-* `newbox`: (status: **experimental**, last update: **2023-07-18**) This branch ports Rangi & FIQ's "newbox" from
-  Polished Crystal. Newbox is a complete overhaul to Bill's PC, and this branch ports the functionality on
-  top of the previous branches.
-* `pokecrystal`: (status: **N/A**, last update **2023-07-18**) This branch contains pret's vanilla pokecrystal and
-  should only be used to compare with the previous branches to view pokecrystal16 changes. **DO NOT USE THIS BRANCH!**
-
-To view the differences between any two branches (or any two commits in the repository), you can use GitHub's [tree
-comparison][compare] tool.
-
-## FAQs
-
-**Q1:** Will this engine include \<insert additional feature here\>?  
-**A1:** Unless the feature is specifically related to 16-bit indexing (or otherwise extending the range of possible
-index values), the answer is almost certainly "no". This repository's scope is limited to 16-bit indexes. If you
-already have a ROM hack that includes the features you like and you'd want it to have 16-bit indexes, the right course
-of action would be to port this engine to it. Otherwise, you can use this engine as a base to make your own ROM hack
-with all the features you want.
-
-**Q2:** Can I use this engine for my own ROM hack?  
-**A2:** Of course; that's what it was made for. I will try make it as easy as possible to port to existing or new ROM
-hacks; instructions to do so will be in the [wiki]. All I can ask you for is that, just like this engine was openly
-available for you to use, you make your hack's code openly available as well — quoting some of the text in
-[SQLite](https://sqlite.org)'s copyright disclaimer, "may you share freely, never taking more than you give".
-
-**Q3:** What's this engine's new limit on indexes?  
-**A3:** The theoretical limit is 65,534, minus a couple of "special" indexes used by the game for specific purposes
-(such as the value that indicates that a Pokémon is inside an egg). However, there are several limitations that will
-probably prevent you from ever reaching that limit. For starters, you can't fit 65,534 of _anything_ inside a ROM
-bank! The index work is done, and I'll try to remove any hurdles that would render that work useless; however, if you
-want to push the limits of the hardware and add 20,000 new Pokémon, you'll find yourself against a technical challenge
-that will go beyond indexes.
 
 [compare]: https://github.com/aaaaaa123456789/pokecrystal16/compare
 [pokecrystal]: https://github.com/pret/pokecrystal/

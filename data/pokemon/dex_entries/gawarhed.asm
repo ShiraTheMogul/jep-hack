@@ -1,5 +1,5 @@
 	db "CALAMITY@" ; species name
-	dw 82, 6900 ; height, weight
+	dw 802, 6900 ; height, weight
 
 	db   "Research is being"
 	next "conducted into"

@@ -220,7 +220,7 @@ NihonGrassWildMons:
 	dbw 35, WARUCHU
 	; nite
 	dbw 30, MURKROW
-	dbw 31, FOXFIRE
+	dbw 31, ZORRIEGO
 	dbw 30, MURKROW
 	dbw 31, SNEASEL
 	dbw 32, ARBOK
@@ -250,7 +250,7 @@ NihonGrassWildMons:
 	dbw 35, WARUCHU
 	; nite
 	dbw 30, MURKROW
-	dbw 31, FOXFIRE
+	dbw 31, ZORRIEGO
 	dbw 30, MURKROW
 	dbw 31, SNEASEL
 	dbw 32, ARBOK

@@ -668,3 +668,16 @@ INCBIN "data/tilesets/nihon_font_attributes.bin"
 
 TilesetNihonFontGFX::
 INCBIN "gfx/tilesets/nihon_font.2bpp.lz"
+
+TilesetNihonPowerPlantMeta::
+INCBIN "data/tilesets/nihon_powerplant_metatiles.bin"
+
+TilesetNihonPowerPlantColl::
+INCLUDE "data/tilesets/nihon_powerplant_collision.asm"
+
+TilesetNihonPowerPlantAttr::
+INCBIN "data/tilesets/nihon_powerplant_attributes.bin"
+
+TilesetNihonPowerPlantGFX::
+INCBIN "gfx/tilesets/nihon_powerplant.2bpp.lz"
+

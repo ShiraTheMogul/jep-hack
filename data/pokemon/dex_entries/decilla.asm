@@ -1,5 +1,5 @@
 	db "SHRIEKING@" ; species name
-	dw 37, 1400 ; height, weight
+	dw 307, 1400 ; height, weight
 
 	db   "It's weak, so its" ; this needs rewriting
 	next "mother has to"

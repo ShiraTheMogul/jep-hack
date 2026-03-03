@@ -83,6 +83,8 @@
 	const VENOMOTH   ; 31
 	const DIGLETT    ; 32
 	const DUGTRIO    ; 33
+	const WIGLETT
+	const WUGTRIO
 	const COINPUR
 	const MEOWTH     ; 34
 	const PERSIAN    ; 35
@@ -135,6 +137,7 @@
 	const CROAKOZUNA
 	const FARFETCH_D ; 53
 	const LUXWAN
+	const DODAERIE
 	const DODUO      ; 54
 	const DODRIO     ; 55
 	const SEEL       ; 56
@@ -169,17 +172,24 @@
 	const WEEZING    ; 6e
 	const RHYHORN    ; 6f
 	const RHYDON     ; 70
+	const RHYPERIOR
 	const HAPPINY
 	const CHANSEY    ; 71
+	const GORILLAIMO
+	const CACTORMUS
 	const BURGELA
 	const TANGELA    ; 72
 	const TANGROWTH
 	const JUNGELA
+	const RAMOOSE
 	const KANGASKHAN ; 73
+	const TRAMPEL
+	const ARAPHANT
 	const HORSEA     ; 74
 	const SEADRA     ; 75
 	const BLASTYKE
 	const BLASTOISE
+	const SHARPOON
 	const ORFRY
 	const GOLDEEN    ; 76
 	const SEAKING    ; 77
@@ -209,6 +219,7 @@
 	const VAPOREON   ; 86
 	const JOLTEON    ; 87
 	const FLAREON    ; 88
+	const PORYBIT
 	const PORYGON    ; 89
 	const OMANYTE    ; 8a
 	const OMASTAR    ; 8b
@@ -218,6 +229,7 @@
 	const AERODACTYL ; 8e
 	const DECILLA
 	const GAWARHED
+	const OMEGADGE
 	const MUNCHLAX
 	const SNORLAX    ; 8f
 	const ARTICUNO   ; 90
@@ -231,6 +243,8 @@
 	const DRAGONITE  ; 95
 	const MEWTWO     ; 96
 	const MEW        ; 97
+	const MELTAN
+	const MELMETAL
 DEF JOHTO_POKEMON EQU const_value
 	const CHIKORITA  ; 98
 	const BAYLEEF    ; 99
@@ -292,7 +306,7 @@ DEF JOHTO_POKEMON EQU const_value
 	const SUNFLORA   ; c0
 	const HIPPUNK
 	const AERCROW
-	const FOXFIRE
+	const ZORRIEGO
 	const YANMA      ; c1
 	const YANMEGA
 	const ONIYANMA
@@ -303,6 +317,7 @@ DEF JOHTO_POKEMON EQU const_value
 	const LEAFEON
 	const GLACEON
 	const SYLVEON
+	const BREEZEON
 	const MURKROW    ; c6
 	const HONCHKROW
 	const SLOWKING   ; c7
@@ -322,6 +337,7 @@ DEF JOHTO_POKEMON EQU const_value
 	const DUNSPARCE  ; ce
 	const DUDUNSPARCE
 	const GLIGAR     ; cf
+	const GLISCOR
 	const STEELIX    ; d0
 	const SNUBBULL   ; d1
 	const GRANBULL   ; d2
@@ -329,11 +345,15 @@ DEF JOHTO_POKEMON EQU const_value
 	const QWILFISH   ; d3
 	const KAZAPPELIN
 	const QWILFATHER
+	const SAILWING
 	const SCIZOR     ; d4
 	const SHUCKLE    ; d5
 	const POCKLE
 	const HERACROSS  ; d6
 	const SNEASEL    ; d7
+	const WEAVILE
+	const WARFURS
+	const WEARLYCAN
 	const TEDDIURSA  ; d8
 	const URSARING   ; d9
 	const URSALUNA
@@ -363,6 +383,10 @@ DEF JOHTO_POKEMON EQU const_value
 	const WYRDEER
 	const SMEARGLE   ; eb
 	const GRENMAR
+	const BUNICE
+	const BUNDRA
+	const BUNBERG
+	const BUNDRAKE
 	const TYROGUE    ; ec
 	const HITMONTOP  ; ed
 	const SMOOCHUM   ; ee
@@ -393,11 +417,17 @@ DEF JOHTO_POKEMON EQU const_value
 	const WISPIRIT
 	const COATL
 	const MIMEAR
+	const SNUZZLES
+	const DRILLUSK
 	const INOSHIKA
 	const RUDDERNAUT
+	const PIXYTOP
+	const MAWTLE
+	const EVOLOTTO
 	const XYLODON
 	const XYLOFIN
 	const DOKUROAR
+	const ALPHALITH
 	const SCREAM_TAIL
 	const SANDY_SHOCKS
 	const GREAT_TUSK
@@ -419,6 +449,7 @@ DEF JOHTO_POKEMON EQU const_value
 	const HYOSHU_YANG
 	const HYOSHU_YIN
 	const CELEBI     ; fb
+	const DEOXYS
 DEF NUM_POKEMON EQU const_value - 1
 
 DEF EGG EQU -3

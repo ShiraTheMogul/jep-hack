@@ -598,7 +598,7 @@ ENDM
 	endgroup
 	
 	newgroup FIVE_ISLAND ; 32
-	map_const FIVE_ISLAND,							10, 10 ; 1
+	map_const FIVE_ISLAND,							10, 9 ; 1
 	map_const FIVE_ISLAND_MEADOW,					10, 10 ; 2
 	map_const MEMORIAL_PILLAR,						10, 10 ; 3
 	map_const WATER_LABYRINTH,						10, 10 ; 4
@@ -607,7 +607,7 @@ ENDM
 	endgroup
 	
 	newgroup SIX_ISLAND ; 33
-	map_const SIX_ISLAND,							10, 10 ; 1
+	map_const SIX_ISLAND,							10, 18 ; 1
 	map_const WATER_PATH,							10, 10 ; 2
 	map_const RUIN_VALLEY,							10, 10 ; 3
 	map_const DOTTED_HOLE,							10, 10 ; 4
