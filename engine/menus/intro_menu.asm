@@ -1174,7 +1174,7 @@ TitleScreenTimer:
 
 ; Start a timer
 	ld hl, wTitleScreenTimer
-	ld de, 73 * 60 + 36
+	ld de, 75 * 60 + 40	; Was 73 * 60 + 36, I assume this is in frames so that would be 73 seconds and 36 frames? Had to tweak for beta song.
 	ld [hl], e
 	inc hl
 	ld [hl], d
