@@ -64,7 +64,8 @@ Route36NationalParkGateCheckIfContestAvailableCallback:
 Route36NationalParkGateLeavingContestEarlyScript:
 	turnobject PLAYER, UP
 	opentext
-	readvar VAR_CONTESTMINUTES
+	;readvar VAR_CONTESTMINUTES
+	callasm BugCatchingTimerFix
 	addval 1
 	getnum STRING_BUFFER_3
 	writetext Route36NationalParkGateOfficer1WantToFinishText
@@ -515,7 +516,7 @@ Route36NationalParkGateOfficer1ExplainsRulesText:
 	cont "est bug #MON"
 	cont "is the winner."
 
-	para "You have {d:BUG_CONTEST_MINUTES}"
+	para "You have 20"
 	line "minutes."
 
 	para "If you run out of"
@@ -850,6 +851,23 @@ Route36NationalParkGateOfficer1HeresThePrizeText:
 	line "we were holding"
 	cont "for you."
 	done
+
+BugCatchingTimerFix:	; uhhhh.... divide remaining bug contest minutes by 12...?
+	ld a, [wBugContestMinsRemaining]
+; ATTEMPT SIMPLEDIVIDE.	
+	ld c, 12
+	call SimpleDivide
+	ld a, b
+	ld [wScriptVar], a
+	ret
+; Divide version. inexcplicably bugged. Do not attempt to reason with it.
+;	ldh [hDividend], a
+;	ld a, 12	
+;	ldh [hDivisor], a
+;	call Divide
+;	ldh a, [hQuotient]
+;	ld [wScriptVar], a
+;	ret
 
 Route36NationalParkGate_MapEvents:
 	db 0, 0 ; filler

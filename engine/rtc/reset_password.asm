@@ -24,35 +24,37 @@ _ResetClock:
 	ld a, $80
 	ld [sRTCStatusFlags], a
 	call CloseSRAM
-	; Zetacode to reset clock variables
-	ld a, BANK(sRTCDayHi)
-	call OpenSRAM
-	; KILL SECONDS
-	ld hl, sRTCSeconds	; Load sRTCSeconds Byte into HL?
-	ld [hl], 0			; Set that to 0?
-	ld hl, hRTCSeconds	; Same with hRTC?
-	ld [hl], 0
-	; KILL MINUTES
-	ld hl, sRTCMinutes	; Load sRTCMinutes Byte into HL?
-	ld [hl], 0			; Set that to 0?
-	ld hl, hRTCMinutes	; Same with hRTC?
-	ld [hl], 0
-	; KILL HOURS
-	ld hl, sRTCHours	; Load sRTCHours Byte into HL?
-	ld [hl], 0			; Set that to 0?
-	ld hl, hRTCHours	; Same with hRTC?
-	ld [hl], 0
-	; KILL DAYS
-	ld hl, sRTCDayHi	; Load sRTCDayHi Byte into HL?
-	ld [hl], 0			; Set that to 0?
-	ld hl, hRTCDayHi	; Same with hRTC?
-	ld [hl], 0
-	ld hl, sRTCDayLo	; Load sRTCDayLo Byte into HL?
-	ld [hl], 0			; Set that to 0?
-	ld hl, hRTCDayLo	; Same with hRTC?
-	ld [hl], 0
-	call CloseSRAM
-	; End Zetacode
+	;; Zetacode to reset clock variables
+	;ld a, BANK(sRTCDayHi)
+	;call OpenSRAM
+	;; KILL SECONDS
+	;ld hl, sRTCSeconds	; Load sRTCSeconds Byte into HL?
+	;ld [hl], 0			; Set that to 0?
+	;ld hl, hRTCSeconds	; Same with hRTC?
+	;ld [hl], 0
+	;; KILL MINUTES
+	;ld hl, sRTCMinutes	; Load sRTCMinutes Byte into HL?
+	;ld [hl], 0			; Set that to 0?
+	;ld hl, hRTCMinutes	; Same with hRTC?
+	;ld [hl], 0
+	;; KILL HOURS
+	;ld hl, sRTCHours	; Load sRTCHours Byte into HL?
+	;ld [hl], 0			; Set that to 0?
+	;ld hl, hRTCHours	; Same with hRTC?
+	;ld [hl], 0
+	;; KILL DAYS
+	;ld hl, sRTCDayHi	; Load sRTCDayHi Byte into HL?
+	;ld [hl], 0			; Set that to 0?
+	;ld hl, hRTCDayHi	; Same with hRTC?
+	;ld [hl], 0
+	;ld hl, sRTCDayLo	; Load sRTCDayLo Byte into HL?
+	;ld [hl], 0			; Set that to 0?
+	;ld hl, hRTCDayLo	; Same with hRTC?
+	;ld [hl], 0
+	;call CloseSRAM
+	;; End Zetacode
+	; I dont think we needed any of that actually?? IIRC when you reset the time it'll just let you like. adjust the timers and shit. it keeps what was already there.
+	; also the day reset bit i did there would probably make the game think that 140 days passed lmao
 	ld hl, .PasswordAskResetText
 	call PrintText
 	ret
