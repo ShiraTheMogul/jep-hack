@@ -180,6 +180,7 @@ INCLUDE "audio/music/JasperForest.asm"
 INCLUDE "audio/music/sevii.asm"
 INCLUDE "audio/music/FourIsland.asm"
 INCLUDE "audio/music/SixIsland.asm"
+INCLUDE "audio/music/Stadium2TeamSelect.asm"
 
 SECTION "Sound Effects", ROMX
 

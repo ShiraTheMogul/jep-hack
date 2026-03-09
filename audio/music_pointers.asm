@@ -131,4 +131,5 @@ Music:
 	dba Music_Sevii
 	dba Music_FourIsland
 	dba Music_SixIsland
+	dba Music_Stadium2TeamSelect
 	assert_table_length NUM_MUSIC_SONGS
