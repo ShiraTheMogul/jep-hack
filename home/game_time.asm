@@ -20,6 +20,7 @@ GameTimer::
 
 	pop af
 	ldh [rSVBK], a
+
 	ret
 
 .Function:
@@ -36,10 +37,7 @@ GameTimer::
 	bit GAME_TIMER_PAUSED_F, [hl]
 	ret z
 
-; Is the timer already capped?
-	ld hl, wGameTimeCap
-	bit 0, [hl]
-	ret nz
+; Original timer cap check location
 
 ; +1 frame
 	ld hl, wGameTimeFrames
@@ -55,6 +53,13 @@ GameTimer::
 .second
 	xor a
 	ld [hl], a
+	call .FunctionZ
+	
+; Is the timer already capped? Confirm this being here doesnt cause issues.
+	ld hl, wGameTimeCap
+	bit 0, [hl]
+	ret nz
+
 
 ; +1 second
 	ld hl, wGameTimeSeconds
@@ -116,3 +121,67 @@ GameTimer::
 	ld a, l
 	ld [wGameTimeHours + 1], a
 	ret
+
+; BEGIN ZETACODE
+.FunctionZ 
+; +1 frame
+	ld hl, hRTCSeconds
+	ld a, [hl]
+	add a, 12 ; This should be 60 / the number of seconds you want to pass per minute. (EX: 12 = 5s/min, 30 = 2s/min, etc.) Yes I'm aware this setup is stupid.
+
+	cp 60 ; frames/second
+	jr nc, .zinutes
+
+	ld [hl], a
+	ret
+	
+.zinutes
+	xor a
+	ld [hl], a
+	
+; +1 minute
+	ld hl, hRTCMinutes
+	ld a, [hl]
+	inc a
+
+	cp 60 ; minutes/hour
+	jr nc, .zhour
+
+	ld [hl], a
+	ret
+	
+.zhour
+	xor a
+	ld [hl], a
+	
+; +1 hour
+	ld hl, hRTCHours
+	ld a, [hl]
+	inc a
+
+	cp 24 ; hours/day
+	jr nc, .zday
+
+	ld [hl], a
+	ret
+	
+.zday
+	xor a
+	ld [hl], a
+	
+; +1 day
+	ld hl, hRTCDayLo
+	ld a, [hl]
+	inc a
+
+	cp 140 ; rollover point. Vanilla seems to mod the day count by 140, so this is /probably/ appropriate? This isn't thoroughly tested.
+	jr nc, .zdayrollover
+
+	ld [hl], a
+	ret
+
+.zdayrollover
+	xor a
+	ld [hl], a
+	ret
+; END ZETACODE

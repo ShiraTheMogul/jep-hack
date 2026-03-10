@@ -20,13 +20,13 @@ LatchClock::
 	ret
 
 UpdateTime::
-	call GetClock
+	;call GetClock
 	call FixDays
 	call FixTime
 	farcall GetTimeOfDay
 	ret
 
-GetClock::
+GetClock:: ; unreferenced now
 ; store clock data in hRTCDayHi-hRTCSeconds
 
 ; enable clock r/w
@@ -65,7 +65,7 @@ GetClock::
 ; unlatch clock / disable clock r/w
 	jp CloseSRAM
 
-FixDays::
+FixDays::; I dont even know if this will *do* anything with my timer setup but :V
 ; fix day count
 ; mod by 140
 
@@ -116,7 +116,7 @@ FixDays::
 .set
 ; update clock with modded day value
 	push af
-	call SetClock
+	;call SetClock ; Zeta - I don't think we need this anymore?
 	pop af
 	scf
 	ret
