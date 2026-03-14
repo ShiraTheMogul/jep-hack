@@ -1,10 +1,10 @@
 	db "CALAMITY@" ; species name
 	dw 802, 6900 ; height, weight
 
-	db   "Research is being"
-	next "conducted into"
-	next "restoring"
+	db   "The apex predator"
+	next "of yesteryear."
+	next "Legends say that"
 
-	page "GAWARHED fossils"
-	next "by harnessing"
-	next "nuclear energy.@"
+	page "a few GAWARHED"
+	next "still control"
+	next "ecosystems today.@"

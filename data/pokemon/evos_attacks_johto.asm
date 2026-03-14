@@ -158,6 +158,7 @@ EvosAttacksPointers2::
 	dw TanobiEvosAttacks
 	dw TrustanEvosAttacks
 	dw KuwaguardEvosAttacks
+	dw PapyoEvosAttacks
 	dw TonquitoEvosAttacks
 	dw MolambinoEvosAttacks
 	dw LuanboEvosAttacks
@@ -179,6 +180,7 @@ EvosAttacksPointers2::
 	dw EvolottoEvosAttacks
 	dw XylodonEvosAttacks
 	dw XylofinEvosAttacks
+	dw AtlansteusEvosAttacks
 	dw DokuroarEvosAttacks
 	dw AlphalithEvosAttacks
 	dw ScreamTailEvosAttacks
@@ -2747,6 +2749,22 @@ KuwaguardEvosAttacks:
 	dbw 49, WING_ATTACK
 	dbw 55, CROSS_CUTTER
 	db 0 ; no more level-up moves
+	
+PapyoEvosAttacks:
+	dbbw EVOLVE_LEVEL, 20, TONQUITO
+	dbw 1, LEECH_LIFE
+	dbw 1, GROWTH
+	dbw 1, HARDEN
+	dbw 7, BUBBLE
+	dbw 13, SMOG
+	dbw 19, LEER
+	dbw 23, BUBBLEBEAM
+	dbw 29, MEGA_DRAIN
+	dbw 35, BATON_PASS
+	dbw 39, RAIN_DANCE
+	dbw 45, POISON_GAS
+	dbw 51, GIGA_DRAIN
+	db 0 ; no more level-up moves
 
 TonquitoEvosAttacks:
 	db 0 ; no more evolutions
@@ -3074,6 +3092,26 @@ XylofinEvosAttacks:
 	dbw 58, SCREECH
 	dbw 64, ROCK_SLIDE
 	dbw 70, HYDRO_PUMP
+	db 0 ; no more level-up moves
+	
+AtlansteusEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, POUND
+	dbw 1, DEFENSE_CURL
+	dbw 1, TAIL_WHIP
+	dbw 6, BITE
+	dbw 11, MIST
+	dbw 17, HEADBUTT
+	dbw 22, SAND_ATTACK
+	dbw 27, PURSUIT
+	dbw 32, ROCK_HEAD
+	dbw 38, AGILITY
+	dbw 40, IRON_TAIL ; IRON HEAD later?
+	dbw 46, ANCIENTPOWER
+	dbw 51, CRUNCH
+	dbw 58, HAZE
+	dbw 64, DOUBLE_EDGE
+	dbw 70, SKULL_BASH
 	db 0 ; no more level-up moves
 
 DokuroarEvosAttacks:

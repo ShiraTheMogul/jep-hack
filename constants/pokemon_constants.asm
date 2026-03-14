@@ -101,6 +101,7 @@
 	const POLIWAG    ; 3c
 	const POLIWHIRL  ; 3d
 	const POLIWRATH  ; 3e
+	const POLIWORTH
 	const ABRA       ; 3f
 	const KADABRA    ; 40
 	const ALAKAZAM   ; 41
@@ -151,6 +152,7 @@
 	const GASTLY     ; 5c
 	const HAUNTER    ; 5d
 	const GENGAR     ; 5e
+	const WRAKE
 	const ONIX       ; 5f
 	const DROWZEE    ; 60
 	const HYPNO      ; 61
@@ -190,6 +192,7 @@
 	const BLASTYKE
 	const BLASTOISE
 	const SHARPOON
+	const BUHI
 	const ORFRY
 	const GOLDEEN    ; 76
 	const SEAKING    ; 77
@@ -229,12 +232,14 @@
 	const AERODACTYL ; 8e
 	const DECILLA
 	const GAWARHED
+	const GODZILANTE
 	const OMEGADGE
 	const MUNCHLAX
 	const SNORLAX    ; 8f
 	const ARTICUNO   ; 90
 	const ZAPDOS     ; 91
 	const MOLTRES    ; 92
+	const DRACUATRO
 	const SQUEAMATA
 	const MINISTARE
 	const IGUANARCH
@@ -405,6 +410,7 @@ DEF JOHTO_POKEMON EQU const_value
 	const TANOBI
 	const TRUSTAN
 	const KUWAGUARD
+	const PAPYO
 	const TONQUITO
 	const MOLAMBINO
 	const LUANBO
@@ -426,6 +432,7 @@ DEF JOHTO_POKEMON EQU const_value
 	const EVOLOTTO
 	const XYLODON
 	const XYLOFIN
+	const ATLANSTEUS
 	const DOKUROAR
 	const ALPHALITH
 	const SCREAM_TAIL

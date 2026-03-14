@@ -159,7 +159,8 @@ EggMovePointers2::
 	dw TanobiEggMoves
 	dw TrustanEggMoves
 	dw KuwaguardEggMoves
-	dw TonquitoEggMoves
+	dw PapyoEggMoves
+	dw NoEggMoves2 ; Tonquito
 	dw MolambinoEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2
@@ -180,6 +181,7 @@ EggMovePointers2::
 	dw NoEggMoves2 ; Evolotto
 	dw XylodonEggMoves
 	dw NoEggMoves2
+	dw AtlansteusEggMoves
 	dw NoEggMoves2 ; Dokuroar
 	dw NoEggMoves2 ; Alphalith
 	dw NoEggMoves2
@@ -732,7 +734,7 @@ KuwaguardEggMoves:
 	dw WHIRLWIND
 	dw -1 ;end 
 
-TonquitoEggMoves:
+PapyoEggMoves:
 	dw MEGAPHONE
 	dw AGILITY
 	dw POISON_STING
@@ -852,6 +854,14 @@ XylodonEggMoves:
 	dw SLAM
 	dw THRASH
 	dw -1 ;end 
+	
+AtlansteusEggMoves:
+	dw GLARE
+	dw WATER_GUN
+	dw HYDRO_PUMP
+	dw FAINT_ATTACK
+	dw BUBBLEBEAM
+	dw -1 ; end
 
 LarvitarEggMoves:
 	dw PURSUIT

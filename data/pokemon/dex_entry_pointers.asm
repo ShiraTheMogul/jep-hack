@@ -83,6 +83,7 @@ PokedexDataPointerTable:
 	dba PoliwagPokedexEntry
 	dba PoliwhirlPokedexEntry
 	dba PoliwrathPokedexEntry
+	dba PoliworthPokedexEntry
 	dba AbraPokedexEntry
 	dba KadabraPokedexEntry
 	dba AlakazamPokedexEntry
@@ -133,6 +134,7 @@ PokedexDataPointerTable:
 	dba GastlyPokedexEntry
 	dba HaunterPokedexEntry
 	dba GengarPokedexEntry
+	dba WrakePokedexEntry
 	dba OnixPokedexEntry
 	dba DrowzeePokedexEntry
 	dba HypnoPokedexEntry
@@ -172,6 +174,7 @@ PokedexDataPointerTable:
 	dba BlastykePokedexEntry
 	dba BlastoisePokedexEntry
 	dba SharpoonPokedexEntry
+	dba BuhiPokedexEntry
 	dba OrfryPokedexEntry
 	dba GoldeenPokedexEntry
 	dba SeakingPokedexEntry
@@ -211,12 +214,14 @@ PokedexDataPointerTable:
 	dba AerodactylPokedexEntry
 	dba DecillaPokedexEntry
 	dba GawarhedPokedexEntry
+	dba GodzilantePokedexEntry
 	dba OmegadgePokedexEntry
 	dba MunchlaxPokedexEntry
 	dba SnorlaxPokedexEntry
 	dba ArticunoPokedexEntry
 	dba ZapdosPokedexEntry
 	dba MoltresPokedexEntry
+	dba DracuatroPokedexEntry
 	dba SqueamataPokedexEntry
 	dba MinistarePokedexEntry
 	dba IguanarchPokedexEntry
@@ -384,6 +389,7 @@ PokedexDataPointerTable:
 	dba TanobiPokedexEntry
 	dba TrustanPokedexEntry
 	dba KuwaguardPokedexEntry
+	dba PapyoPokedexEntry
 	dba TonquitoPokedexEntry
 	dba MolambinoPokedexEntry
 	dba LuanboPokedexEntry
@@ -405,6 +411,7 @@ PokedexDataPointerTable:
 	dba EvolottoPokedexEntry
 	dba XylodonPokedexEntry
 	dba XylofinPokedexEntry
+	dba AtlansteusPokedexEntry
 	dba DokuroarPokedexEntry
 	dba AlphalithPokedexEntry
 	dba ScreamTailPokedexEntry

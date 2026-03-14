@@ -82,6 +82,7 @@ AnimationPointers:
 	dw PoliwagAnimation
 	dw PoliwhirlAnimation
 	dw PoliwrathAnimation
+	dw PoliworthAnimation
 	dw AbraAnimation
 	dw KadabraAnimation
 	dw AlakazamAnimation
@@ -132,6 +133,7 @@ AnimationPointers:
 	dw GastlyAnimation
 	dw HaunterAnimation
 	dw GengarAnimation
+	dw WrakeAnimation
 	dw OnixAnimation
 	dw DrowzeeAnimation
 	dw HypnoAnimation
@@ -171,6 +173,7 @@ AnimationPointers:
 	dw BlastykeAnimation
 	dw BlastoiseAnimation
 	dw SharpoonAnimation
+	dw BuhiAnimation
 	dw OrfryAnimation
 	dw GoldeenAnimation
 	dw SeakingAnimation
@@ -210,12 +213,14 @@ AnimationPointers:
 	dw AerodactylAnimation
 	dw DecillaAnimation
 	dw GawarhedAnimation
+	dw GodzilanteAnimation
 	dw OmegadgeAnimation
 	dw MunchlaxAnimation
 	dw SnorlaxAnimation
 	dw ArticunoAnimation
 	dw ZapdosAnimation
 	dw MoltresAnimation
+	dw DracuatroAnimation
 	dw SqueamataAnimation
 	dw MinistareAnimation
 	dw IguanarchAnimation
@@ -384,6 +389,7 @@ AnimationPointers:
 	dw TanobiAnimation
 	dw TrustanAnimation
 	dw KuwaguardAnimation
+	dw PapyoAnimation
 	dw TonquitoAnimation
 	dw MolambinoAnimation
 	dw LuanboAnimation
@@ -405,6 +411,7 @@ AnimationPointers:
 	dw EvolottoAnimation
 	dw XylodonAnimation
 	dw XylofinAnimation
+	dw AtlansteusAnimation
 	dw DokuroarAnimation
 	dw AlphalithAnimation
 	dw ScreamTailAnimation

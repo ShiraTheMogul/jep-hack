@@ -127,7 +127,7 @@ If you use our implementations of anything at all, it is encouraged to submit Pu
 - Plague von Karma (Director, Kanto Expansion Pak Founder, Programming, Maps, Stat Exp. Display code)
 - Martha's Against Humanity (Kanto Expansion Pak ROM Hack Creator, Programmer, Spriter)
 - Zeta_Null (Repository Creator, Spriter, Programming, Music)
-- LadyMisticus (Documentation, Programming, Mapping, Spriter)
+- LadyMisticus (Writer, Documentation, Programming, Mapping, Spriter)
 - thornAvery (Programming)
 - LuciShrimp (Music, TBA)
 - pret et al (LOTS of [Tutorials](https://github.com/pret/pokecrystal/wiki) that we used to get this off the ground!)
@@ -138,6 +138,7 @@ If you use our implementations of anything at all, it is encouraged to submit Pu
 - Shellnuts (Optimizing the Footprints code)
 - Shawesome (Spriter)
 - zuperZACH (Spriter)
+- Kamidio (Spriter)
 
 ## Sprite Credits
 Individualised Pokemon sprite credits can be found within the respective Pokemon's folders. These exist to ensure any sprite imports come with an adequate level of credit for JEP's (and other unaffiliated) artists. 
