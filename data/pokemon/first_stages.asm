@@ -83,6 +83,7 @@ FirstEvoStages::
 	dw POLIWAG
 	dw POLIWAG
 	dw POLIWAG
+	dw POLIWAG
 	dw ABRA
 	dw ABRA       ;40
 	dw ABRA
@@ -133,6 +134,7 @@ FirstEvoStages::
 	dw GASTLY
 	dw GASTLY
 	dw GASTLY
+	dw WRAKE
 	dw ONIX
 	dw DROWZEE    ;60
 	dw DROWZEE
@@ -172,6 +174,7 @@ FirstEvoStages::
 	dw BLASTYKE
 	dw BLASTYKE
 	dw SHARPOON
+	dw BUHI
 	dw ORFRY
 	dw ORFRY
 	dw ORFRY
@@ -211,12 +214,14 @@ FirstEvoStages::
 	dw FERADACTYL
 	dw DECILLA
 	dw DECILLA
+	dw GODZILANTE
 	dw OMEGADGE
 	dw MUNCHLAX
 	dw MUNCHLAX
 	dw ARTICUNO   ;90
 	dw ZAPDOS
 	dw MOLTRES
+	dw DRACUATRO
 	dw SQUEAMATA
 	dw SQUEAMATA
 	dw SQUEAMATA
@@ -384,7 +389,8 @@ FirstEvoStages::
 	dw TANOBI
 	dw TRUSTAN
 	dw KUWAGUARD
-	dw TONQUITO
+	dw PAPYO
+	dw PAPYO
 	dw MOLAMBINO
 	dw MOLAMBINO
 	dw MOLAMBINO
@@ -405,6 +411,7 @@ FirstEvoStages::
 	dw EVOLOTTO
 	dw XYLODON
 	dw XYLODON
+	dw ATLANSTEUS
 	dw DOKUROAR
 	dw ALPHALITH
 	dw SCREAM_TAIL

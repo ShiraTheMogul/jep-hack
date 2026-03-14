@@ -17,6 +17,7 @@ AlphabeticalPokedexOrder:
 	dw ARCANINE
 	dw ARIADOS
 	dw ARTICUNO
+	dw ATLANSTEUS
 	dw AZUMARILL
 	dw AZURILL
 	dw BARREAU
@@ -36,6 +37,7 @@ AlphabeticalPokedexOrder:
 	dw BONSLY
 	dw BREEZEON
 	dw BRUINOUS
+	dw BUHI
 	dw BULBASAUR
 	dw BUNBERG
 	dw BUNDRA
@@ -85,6 +87,7 @@ AlphabeticalPokedexOrder:
 	dw DOKUROAR
 	dw DONMARIN
 	dw DONPHAN
+	dw DRACUATRO
 	dw DRAGONAIR
 	dw DRAGONITE
 	dw DRATINI
@@ -131,6 +134,7 @@ AlphabeticalPokedexOrder:
 	dw GLIGAR
 	dw GLISCOR
 	dw GLOOM
+	dw GODZILANTE
 	dw GOLBAT
 	dw GOLDEEN
 	dw GOLDUCK
@@ -269,6 +273,7 @@ AlphabeticalPokedexOrder:
 	dw ONIYANMA
 	dw ORFRY
 	dw PALSSIO
+	dw PAPYO
 	dw PARAS
 	dw PARASECT
 	dw PARASPOR
@@ -290,6 +295,7 @@ AlphabeticalPokedexOrder:
 	dw POLITOED
 	dw POLIWAG
 	dw POLIWHIRL
+	dw POLIWORTH
 	dw POLIWRATH
 	dw PONYTA
 	dw PORYBIT
@@ -419,6 +425,7 @@ AlphabeticalPokedexOrder:
 	dw WISPIRIT
 	dw WOBBUFFET
 	dw WOOPER
+	dw WRAKE
 	dw WUGTRIO
 	dw WYNAUT
 	dw WYRDEER

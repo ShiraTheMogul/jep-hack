@@ -84,6 +84,7 @@ KantoMonSpecials:
 	db  40 ; POLIWAG
 	db  50 ; POLIWHIRL
 	db  70 ; POLIWRATH
+	db  70 ; POLIWORTH
 	db 105 ; ABRA
 	db 120 ; KADABRA
 	db 135 ; ALAKAZAM
@@ -134,6 +135,7 @@ KantoMonSpecials:
 	db 100 ; GASTLY
 	db 115 ; HAUNTER
 	db 130 ; GENGAR
+	db 	50 ; WRAKE
 	db  30 ; ONIX
 	db  90 ; DROWZEE
 	db 115 ; HYPNO
@@ -173,6 +175,7 @@ KantoMonSpecials:
 	db  45 ; BLASTYKE
 	db  85 ; BLASTOISE
 	db  85 ; SHARPOON
+	db  55 ; BUHI
 	db  20 ; ORFRY
 	db  50 ; GOLDEEN
 	db  80 ; SEAKING
@@ -212,12 +215,14 @@ KantoMonSpecials:
 	db  60 ; AERODACTYL
 	db  40 ; DECILLA
 	db  95 ; GAWARHED
+	db 105 ; GODZILANTE
 	db  95 ; OMEGADGE
 	db  40 ; MUNCHLAX
 	db  65 ; SNORLAX
 	db 125 ; ARTICUNO
 	db 125 ; ZAPDOS
 	db 125 ; MOLTRES
+	db  55 ; DRACUATRO
 	db  71 ; SQUEAMATA
 	db  81 ; MINISTARE
 	db 121 ; IGUANARCH

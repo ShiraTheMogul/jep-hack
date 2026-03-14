@@ -177,6 +177,8 @@ PokemonPicPointers::
 	dba PoliwhirlBackpic
 	dba PoliwrathFrontpic
 	dba PoliwrathBackpic
+	dba PoliworthFrontpic
+	dba PoliworthBackpic
 	dba AbraFrontpic
 	dba AbraBackpic
 	dba KadabraFrontpic
@@ -277,6 +279,8 @@ PokemonPicPointers::
 	dba HaunterBackpic
 	dba GengarFrontpic
 	dba GengarBackpic
+	dba WrakeFrontpic
+	dba WrakeBackpic
 	dba OnixFrontpic
 	dba OnixBackpic
 	dba DrowzeeFrontpic
@@ -355,6 +359,8 @@ PokemonPicPointers::
 	dba BlastoiseBackpic
 	dba SharpoonFrontpic
 	dba SharpoonBackpic
+	dba BuhiFrontpic
+	dba BuhiBackpic
 	dba OrfryFrontpic
 	dba OrfryBackpic
 	dba GoldeenFrontpic
@@ -433,6 +439,8 @@ PokemonPicPointers::
 	dba DecillaBackpic
 	dba GawarhedFrontpic
 	dba GawarhedBackpic
+	dba GodzilanteFrontpic
+	dba GodzilanteBackpic
 	dba OmegadgeFrontpic
 	dba OmegadgeBackpic
 	dba MunchlaxFrontpic
@@ -445,6 +453,8 @@ PokemonPicPointers::
 	dba ZapdosBackpic
 	dba MoltresFrontpic
 	dba MoltresBackpic
+	dba DracuatroFrontpic
+	dba DracuatroBackpic
 	dba SqueamataFrontpic
 	dba SqueamataBackpic
 	dba MinistareFrontpic
@@ -782,6 +792,8 @@ PokemonPicPointers::
 	dba TrustanBackpic
 	dba KuwaguardFrontpic
 	dba KuwaguardBackpic
+	dba PapyoFrontpic
+	dba PapyoBackpic
 	dba TonquitoFrontpic
 	dba TonquitoBackpic
 	dba MolambinoFrontpic
@@ -824,6 +836,8 @@ PokemonPicPointers::
 	dba XylodonBackpic
 	dba XylofinFrontpic
 	dba XylofinBackpic
+	dba AtlansteusFrontpic
+	dba AtlansteusBackpic
 	dba DokuroarFrontpic
 	dba DokuroarBackpic
 	dba AlphalithFrontpic

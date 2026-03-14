@@ -81,6 +81,7 @@ NewPokedexOrder:
 	dw GASTLY
 	dw HAUNTER
 	dw GENGAR
+	dw WRAKE
 	dw UNOWN
 	dw ONIX
 	dw STEELIX
@@ -97,6 +98,7 @@ NewPokedexOrder:
 	dw POLIWAG
 	dw POLIWHIRL
 	dw POLIWRATH
+	dw POLIWORTH
 	dw POLITOED
 	dw REROAD
 	dw MAGIKARP
@@ -288,6 +290,7 @@ NewPokedexOrder:
 	dw BLASTYKE
 	dw BLASTOISE
 	dw SHARPOON
+	dw BUHI
 	dw GLIGAR
 	dw GLISCOR
 	dw DELIBIRD
@@ -350,6 +353,7 @@ NewPokedexOrder:
 	dw TANOBI
 	dw TRUSTAN
 	dw KUWAGUARD
+	dw PAPYO
 	dw TONQUITO
 	dw MOLAMBINO
 	dw LUANBO
@@ -371,6 +375,7 @@ NewPokedexOrder:
 	dw EVOLOTTO
 	dw XYLODON
 	dw XYLOFIN
+	dw ATLANSTEUS
 	dw DOKUROAR
 	dw ALPHALITH
 	dw LAPRAS
@@ -382,6 +387,7 @@ NewPokedexOrder:
 	dw AERODACTYL
 	dw DECILLA
 	dw GAWARHED
+	dw GODZILANTE
 	dw OMEGADGE
 	dw MUNCHLAX
 	dw SNORLAX
@@ -398,6 +404,7 @@ NewPokedexOrder:
 	dw ARTICUNO
 	dw ZAPDOS
 	dw MOLTRES
+	dw DRACUATRO
 	dw SCREAM_TAIL
 	dw SANDY_SHOCKS
 	dw GREAT_TUSK

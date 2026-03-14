@@ -82,6 +82,7 @@ AnimationIdlePointers:
 	dw PoliwagAnimationIdle
 	dw PoliwhirlAnimationIdle
 	dw PoliwrathAnimationIdle
+	dw PoliworthAnimationIdle
 	dw AbraAnimationIdle
 	dw KadabraAnimationIdle
 	dw AlakazamAnimationIdle
@@ -132,6 +133,7 @@ AnimationIdlePointers:
 	dw GastlyAnimationIdle
 	dw HaunterAnimationIdle
 	dw GengarAnimationIdle
+	dw WrakeAnimationIdle
 	dw OnixAnimationIdle
 	dw DrowzeeAnimationIdle
 	dw HypnoAnimationIdle
@@ -171,6 +173,7 @@ AnimationIdlePointers:
 	dw BlastykeAnimationIdle
 	dw BlastoiseAnimationIdle
 	dw SharpoonAnimationIdle
+	dw BuhiAnimationIdle
 	dw OrfryAnimationIdle
 	dw GoldeenAnimationIdle
 	dw SeakingAnimationIdle
@@ -210,12 +213,14 @@ AnimationIdlePointers:
 	dw AerodactylAnimationIdle
 	dw DecillaAnimationIdle
 	dw GawarhedAnimationIdle
+	dw GodzilanteAnimationIdle
 	dw OmegadgeAnimationIdle
 	dw MunchlaxAnimationIdle
 	dw SnorlaxAnimationIdle
 	dw ArticunoAnimationIdle
 	dw ZapdosAnimationIdle
 	dw MoltresAnimationIdle
+	dw DracuatroAnimationIdle
 	dw SqueamataAnimationIdle
 	dw MinistareAnimationIdle
 	dw IguanarchAnimationIdle
@@ -384,6 +389,7 @@ AnimationIdlePointers:
 	dw TanobiAnimationIdle
 	dw TrustanAnimationIdle
 	dw KuwaguardAnimationIdle
+	dw PapyoAnimationIdle
 	dw TonquitoAnimationIdle
 	dw MolambinoAnimationIdle
 	dw LuanboAnimationIdle
@@ -405,6 +411,7 @@ AnimationIdlePointers:
 	dw EvolottoAnimationIdle
 	dw XylodonAnimationIdle
 	dw XylofinAnimationIdle
+	dw AtlansteusAnimationIdle
 	dw DokuroarAnimationIdle
 	dw AlphalithAnimationIdle
 	dw ScreamTailAnimationIdle

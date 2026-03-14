@@ -82,6 +82,7 @@ FramesPointers:
 	dba PoliwagFrames
 	dba PoliwhirlFrames
 	dba PoliwrathFrames
+	dba PoliworthFrames
 	dba AbraFrames
 	dba KadabraFrames
 	dba AlakazamFrames
@@ -132,6 +133,7 @@ FramesPointers:
 	dba GastlyFrames
 	dba HaunterFrames
 	dba GengarFrames
+	dba WrakeFrames
 	dba OnixFrames
 	dba DrowzeeFrames
 	dba HypnoFrames
@@ -171,6 +173,7 @@ FramesPointers:
 	dba BlastykeFrames
 	dba BlastoiseFrames
 	dba SharpoonFrames
+	dba BuhiFrames
 	dba OrfryFrames
 	dba GoldeenFrames
 	dba SeakingFrames
@@ -210,12 +213,14 @@ FramesPointers:
 	dba AerodactylFrames
 	dba DecillaFrames
 	dba GawarhedFrames
+	dba GodzilanteFrames
 	dba OmegadgeFrames
 	dba MunchlaxFrames
 	dba SnorlaxFrames
 	dba ArticunoFrames
 	dba ZapdosFrames
 	dba MoltresFrames
+	dba DracuatroFrames
 	dba SqueamataFrames
 	dba MinistareFrames
 	dba IguanarchFrames
@@ -384,6 +389,7 @@ FramesPointers:
 	dba TanobiFrames
 	dba TrustanFrames
 	dba KuwaguardFrames
+	dba PapyoFrames
 	dba TonquitoFrames
 	dba MolambinoFrames
 	dba LuanboFrames
@@ -405,6 +411,7 @@ FramesPointers:
 	dba EvolottoFrames
 	dba XylodonFrames
 	dba XylofinFrames
+	dba AtlansteusFrames
 	dba DokuroarFrames
 	dba AlphalithFrames
 	dba ScreamTailFrames

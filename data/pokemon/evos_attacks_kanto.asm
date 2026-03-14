@@ -83,6 +83,7 @@ EvosAttacksPointers1::
 	dw PoliwagEvosAttacks
 	dw PoliwhirlEvosAttacks
 	dw PoliwrathEvosAttacks
+	dw PoliworthEvosAttacks
 	dw AbraEvosAttacks
 	dw KadabraEvosAttacks
 	dw AlakazamEvosAttacks
@@ -133,6 +134,7 @@ EvosAttacksPointers1::
 	dw GastlyEvosAttacks
 	dw HaunterEvosAttacks
 	dw GengarEvosAttacks
+	dw WrakeEvosAttacks
 	dw OnixEvosAttacks
 	dw DrowzeeEvosAttacks
 	dw HypnoEvosAttacks
@@ -171,7 +173,8 @@ EvosAttacksPointers1::
 	dw SeadraEvosAttacks
 	dw BlastykeEvosAttacks
 	dw BlastoiseEvosAttacks
-	dw SharpoonEvosAttacks 
+	dw SharpoonEvosAttacks
+	dw BuhiEvosAttacks
 	dw OrfryEvosAttacks
 	dw GoldeenEvosAttacks
 	dw SeakingEvosAttacks
@@ -211,12 +214,14 @@ EvosAttacksPointers1::
 	dw AerodactylEvosAttacks
 	dw DecillaEvosAttacks
 	dw GawarhedEvosAttacks
+	dw GodzilanteEvosAttacks
 	dw OmegadgeEvosAttacks
 	dw MunchlaxEvosAttacks
 	dw SnorlaxEvosAttacks
 	dw ArticunoEvosAttacks
 	dw ZapdosEvosAttacks
 	dw MoltresEvosAttacks
+	dw DracuatroEvosAttacks
 	dw SqueamataEvosAttacks
 	dw MinistareEvosAttacks
 	dw IguanarchEvosAttacks
@@ -1493,6 +1498,7 @@ PoliwhirlEvosAttacks:
 	db 0 ; no more level-up moves
 
 PoliwrathEvosAttacks:
+	dbbw EVOLVE_ITEM, HEART_STONE, POLIWORTH ; PLACEHOLDER
 	db 0 ; no more evolutions
 	dbw 1, WATER_GUN
 	dbw 1, HYPNOSIS
@@ -1501,6 +1507,21 @@ PoliwrathEvosAttacks:
 	dbw 35, SUBMISSION
 	dbw 43, DYNAMICPUNCH ; TM, later game learnsets
 	dbw 51, MIND_READER
+	db 0 ; no more level-up moves
+	
+PoliworthEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, WATER_GUN
+	dbw 1, HYPNOSIS
+	dbw 1, DOUBLESLAP
+	dbw 1, LOW_KICK ; SW97
+	dbw 35, SUBMISSION
+	dbw 43, DYNAMICPUNCH ; TM, later game learnsets
+	dbw 51, MIND_READER
+	dbw 55, BODY_SLAM
+	dbw 58, PROTECT
+	dbw 61, BELLY_DRUM
+	dbw 65, CROSS_CHOP
 	db 0 ; no more level-up moves
 
 AbraEvosAttacks:
@@ -2300,6 +2321,21 @@ GengarEvosAttacks:
 	dbw 55, SHADOW_BALL ; FRLG
 	db 0 ; no more level-up moves
 
+WrakeEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, SCRATCH
+	dbw 1, GROWL
+	dbw 6, BITE
+	dbw 12, PURSUIT
+	dbw 18, TWISTER
+	dbw 24, ROAR
+	dbw 30, DRAGONBREATH
+	dbw 36, SLASH
+	dbw 42, WHIRLWIND
+	dbw 48, CRUNCH
+	dbw 54, OUTRAGE
+	db 0 ; no more level-up moves
+
 OnixEvosAttacks:
 	dbbw EVOLVE_TRADE, METAL_COAT, STEELIX
 	dbbw EVOLVE_LEVEL, 38, STEELIX
@@ -2949,6 +2985,22 @@ SharpoonEvosAttacks:
 	dbw 54, HYDRO_PUMP
 	dbw 60, HORN_DRILL
 	db 0 ; no more level-up moves
+	
+BuhiEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, SCRATCH
+	dbw 1, LEER
+	dbw 7, LICK
+	dbw 13, SPITE
+	dbw 19, BITE
+	dbw 25, FURY_SWIPES
+	dbw 31, HYPNOSIS
+	dbw 37, SLASH
+	dbw 42, SHADOW_BALL
+	dbw 48, NIGHTMARE
+	dbw 54, FALSE_SWIPE
+	dbw 60, DESTINY_BOND
+	db 0 ; no more level-up moves
 
 OrfryEvosAttacks:
 	dbbw EVOLVE_LEVEL, 16, GOLDEEN
@@ -3569,6 +3621,25 @@ GawarhedEvosAttacks:
 	dbw 77, HYPER_BEAM
 	db 0 ; no more level-up moves
 	
+GodzilanteEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 1, MEGAPHONE
+	dbw 7, SMOG
+	dbw 14, SCREECH
+	dbw 21, ACID
+	dbw 28, DRAGONBREATH
+	dbw 35, ROAR
+	dbw 40, OUTRAGE
+	dbw 42, RECOVER
+	dbw 49, SELFDESTRUCT
+	dbw 56, CURSE
+	dbw 63, SLUDGE_BOMB
+	dbw 70, FIRE_BLAST
+	dbw 77, EXPLOSION
+	db 0 ; no more level-up moves
+	
 OmegadgeEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
@@ -3665,6 +3736,21 @@ MoltresEvosAttacks:
 	dbw 65, SAFEGUARD
 	dbw 75, SKY_ATTACK
 	dbw 85, SACRED_FIRE ; SW97
+	db 0 ; no more level-up moves
+	
+DracuatroEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, SCRATCH
+	dbw 1, EMBER
+	dbw 5, GROWL
+	dbw 15, DRAGON_RAGE
+	dbw 25, TAKE_DOWN
+	dbw 35, FLAMETHROWER
+	dbw 45, SMOKESCREEN
+	dbw 55, SLASH
+	dbw 65, OUTRAGE
+	dbw 75, DOUBLE_EDGE
+	dbw 85, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 SqueamataEvosAttacks:

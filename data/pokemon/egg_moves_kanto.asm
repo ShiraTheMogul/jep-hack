@@ -83,6 +83,7 @@ EggMovePointers1:
 	dw PoliwagEggMoves
 	dw NoEggMoves1
 	dw NoEggMoves1
+	dw NoEggMoves1 ; Poliworth
 	dw AbraEggMoves
 	dw NoEggMoves1
 	dw NoEggMoves1
@@ -133,6 +134,7 @@ EggMovePointers1:
 	dw GastlyEggMoves
 	dw NoEggMoves1
 	dw NoEggMoves1
+	dw WrakeEggMoves
 	dw OnixEggMoves
 	dw DrowzeeEggMoves
 	dw NoEggMoves1
@@ -172,6 +174,7 @@ EggMovePointers1:
 	dw BlastykeEggMoves ; Blastyke
 	dw NoEggMoves1 ; Blastoise
 	dw SharpoonEggMoves
+	dw BuhiEggMoves
 	dw OrfryEggMoves
 	dw NoEggMoves1
 	dw NoEggMoves1
@@ -211,12 +214,14 @@ EggMovePointers1:
 	dw NoEggMoves1 ; Aerodactyl
 	dw DecillaEggMoves
 	dw NoEggMoves1 ; Gawarhed
+	dw GodzilanteEggMoves
 	dw NoEggMoves1 ; Omegadge
 	dw MunchlaxEggMoves ; Munchlax
 	dw NoEggMoves1 ; Should this even exist?
 	dw NoEggMoves1
 	dw NoEggMoves1
 	dw NoEggMoves1
+	dw NoEggMoves1 ; Dracuatro
 	dw SqueamataEggMoves
 	dw NoEggMoves1 ; Ministare
 	dw NoEggMoves1 ; Iguanarch
@@ -564,6 +569,15 @@ GastlyEggMoves:
 	dw HAZE
 	dw -1 ; end
 
+WrakeEggMoves:
+	dw ACID
+	dw METAL_CLAW
+	dw RAGE
+	dw SCARY_FACE
+	dw SCREECH
+	dw SUBSTITUTE
+	dw -1 ; end
+
 OnixEggMoves:
 	dw ROCK_SLIDE
 	dw FLAIL
@@ -704,6 +718,13 @@ SharpoonEggMoves:
 	dw AGILITY
 	dw SWORDS_DANCE
 	dw -1 ; end
+	
+BuhiEggMoves:
+	dw PERISH_SONG
+	dw PAIN_SPLIT
+	dw BUBBLEBEAM
+	dw HEAL_BELL
+	dw -1 ; end
 
 OrfryEggMoves:
 	dw PSYBEAM
@@ -784,6 +805,13 @@ DecillaEggMoves:
 	dw STOMP
 	dw THRASH
 	dw LICK
+	dw -1 ; end
+	
+GodzilanteEggMoves:
+	dw CRUNCH
+	dw STOMP
+	dw THRASH
+	dw SLUDGE
 	dw -1 ; end
 
 MunchlaxEggMoves:
