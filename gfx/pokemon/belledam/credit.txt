@@ -1,2 +1,4 @@
 Sprited by Scarlax for Pokemon October.
 https://github.com/pokeachromicdevs/pokeoctober/tree/demo-2/gfx/pokemon/belledam
+
+Head edited by Zeta to better match the spaceworld sprite.
