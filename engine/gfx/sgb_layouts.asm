@@ -525,6 +525,20 @@ endr
 .GetMapPalsIndex:
 	ld a, [wTimeOfDayPal]
 	cp NITE_F
+	jr c, .duskcheck
+	ld a, PREDEFPAL_NITE
+	ret
+	
+.duskcheck
+	ld a, [wTimeOfDayPal]
+	cp DUSK_F
+	jr c, .darkcheck
+	ld a, PREDEFPAL_NITE
+	ret
+	
+.darkcheck
+	ld a, [wTimeOfDayPalset]
+	cp DARKNESS_PALSET
 	jr c, .morn_day
 	ld a, PREDEFPAL_NITE
 	ret

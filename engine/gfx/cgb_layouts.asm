@@ -665,17 +665,14 @@ _CGB_MapPals:
 	ret
 	
 .LoadHLBGPaletteIntoDE:
-; morn:     shades 0, 1, 2, 3 -> 0, 1, 2, 3
-; day:      shades 0, 1, 2, 3 -> 0, 2, 2, 3
+; morn/day: shades 0, 1, 2, 3 -> 0, 1, 2, 3
+; dusk:     shades 0, 1, 2, 3 -> 1, 1, 2, 3
 ; nite:     shades 0, 1, 2, 3 -> 1, 2, 2, 3
 ; darkness: shades 0, 1, 2, 3 -> 1, 3, 3, 3
 	push hl
 	ld a, [wTimeOfDayPal]
 	cp NITE_F
-	jr c, .bg_morn_day
-	ld a, [wTimeOfDayPal]
-	cp DARKNESS_F
-	jr nc, .bg_darkness
+	jr nz, .bg_morn_day_dusk
 	inc hl
 	inc hl
 	call LoadHLColorIntoDE
@@ -702,7 +699,7 @@ _CGB_MapPals:
 	dec hl
 	call LoadHLColorIntoDE
 	jr .bg_done
-.bg_morn_day
+;.bg_morn_day
 ;		Lot of commented out code for spaceworld-style mornings.
 ;	ld a, [wTimeOfDayPal]
 ;	cp MORN_F
@@ -716,7 +713,23 @@ _CGB_MapPals:
 ;	call LoadHLColorIntoDE
 ;	call LoadHLColorIntoDE
 ;	jr .bg_done
-;.bg_day
+.bg_morn_day_dusk
+	ld a, [wTimeOfDayPalset]
+	cp DARKNESS_PALSET
+	jr z, .bg_darkness
+	ld a, [wTimeOfDayPal]
+	cp DUSK_F
+	jr nz, .bg_day_morn
+	inc hl
+	inc hl
+	call LoadHLColorIntoDE
+	dec hl
+	dec hl
+	call LoadHLColorIntoDE
+	call LoadHLColorIntoDE
+	call LoadHLColorIntoDE
+	jr .bg_done
+.bg_day_morn
 	call LoadHLPaletteIntoDE
 	jr .bg_done
 

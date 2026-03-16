@@ -186,10 +186,21 @@ endr
 	ret
 
 ReplaceTimeOfDayPals:
+;	ld hl, .BrightnessLevels
+	ld a, [wMapTimeOfDay]
+;	cp PALETTE_DARK
+;	jr z, .NeedsFlash
+	bit IN_DARKNESS_F, a
+	jr z, .not_dark
+	ld a, [wStatusFlags]
+	bit STATUSFLAGS_FLASH_F, a
+	jr nz, .not_dark
+	ld a, DARKNESS_PALSET
+	jr .done
+
+.not_dark:
 	ld hl, .BrightnessLevels
 	ld a, [wMapTimeOfDay]
-	cp PALETTE_DARK
-	jr z, .NeedsFlash
 	maskbits NUM_MAP_PALETTES
 	add l
 	ld l, a
@@ -197,6 +208,7 @@ ReplaceTimeOfDayPals:
 	adc h
 	ld h, a
 	ld a, [hl]
+.done:
 	ld [wTimeOfDayPalset], a
 	ret
 
@@ -215,15 +227,15 @@ ReplaceTimeOfDayPals:
 
 .BrightnessLevels:
 ; actual palettes used when time is
-; DARKNESS_F, NITE_F, DAY_F, MORN_F
-	dc DARKNESS_F, NITE_F,     DAY_F,      MORN_F     ; PALETTE_AUTO
+; DUSK_F, NITE_F, DAY_F, MORN_F
+	dc DUSK_F,     NITE_F,     DAY_F,      MORN_F     ; PALETTE_AUTO
 	dc DAY_F,      DAY_F,      DAY_F,      DAY_F      ; PALETTE_DAY
 	dc NITE_F,     NITE_F,     NITE_F,     NITE_F     ; PALETTE_NITE
 	dc MORN_F,     MORN_F,     MORN_F,     MORN_F     ; PALETTE_MORN
-	dc DARKNESS_F, DARKNESS_F, DARKNESS_F, DARKNESS_F ; PALETTE_DARK
-	dc DARKNESS_F, NITE_F,     DAY_F,      MORN_F
-	dc DARKNESS_F, NITE_F,     DAY_F,      MORN_F
-	dc DARKNESS_F, NITE_F,     DAY_F,      MORN_F
+	dc DUSK_F,     DUSK_F,     DUSK_F,     DUSK_F     ; PALETTE_DUSK
+;	dc DUSK_F,     NITE_F,     DAY_F,      MORN_F
+;	dc DUSK_F,     NITE_F,     DAY_F,      MORN_F
+;	dc DUSK_F,     NITE_F,     DAY_F,      MORN_F
 
 GetTimePalette:
 	jumptable .TimePalettes, wTimeOfDay
@@ -232,7 +244,7 @@ GetTimePalette:
 	dw .MorningPalette  ; MORN_F
 	dw .DayPalette      ; DAY_F
 	dw .NitePalette     ; NITE_F
-	dw .DarknessPalette ; DARKNESS_F
+	dw .DuskPalette     ; DUSK_F
 
 .MorningPalette:
 	ld a, [wTimeOfDayPalset]
@@ -252,7 +264,7 @@ GetTimePalette:
 	swap a
 	ret
 
-.DarknessPalette:
+.DuskPalette:
 	ld a, [wTimeOfDayPalset]
 	and %11000000
 	rlca

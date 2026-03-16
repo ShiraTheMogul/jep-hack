@@ -30,7 +30,8 @@ DEF RTC_HALT_VALUE EQU $1234
 ; time of day boundaries
 DEF MORN_HOUR EQU 4  ; 4 AM
 DEF DAY_HOUR  EQU 10 ; 10 AM
-DEF NITE_HOUR EQU 18 ; 6 PM
+DEF DUSK_HOUR EQU 18 ; 6 PM - Starts when night originally started
+DEF NITE_HOUR EQU 20 ; 8 PM - Starts when night starts in gen 4. Interestingly the start of the other times of day are identical there.
 DEF NOON_HOUR EQU 12 ; 12 PM
 DEF MAX_HOUR  EQU 24 ; 12 AM
 

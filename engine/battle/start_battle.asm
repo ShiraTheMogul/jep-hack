@@ -78,7 +78,7 @@ PlayBattleMusic:
 	ld de, MUSIC_JOHTO_WILD_BATTLE
 	ld a, [wTimeOfDay]
 	cp NITE_F
-	jr nz, .gotodone
+	jr c, .gotodone
 	ld de, MUSIC_JOHTO_WILD_BATTLE_NIGHT
 	jr .done
 
