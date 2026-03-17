@@ -917,7 +917,7 @@ GetCallerRouteWildGrassMons:
 	call LookUpWildmonsForMapDE
 	ret nc ; no carry = no grass wild mons for that route
 .found
-	ld bc, 5 ; skip the map ID and encounter rates
+	ld bc, 6 ; skip the map ID and encounter rates
 	add hl, bc
 	; From evening tutorial
 	;call GetTimeOfDayNotEve
