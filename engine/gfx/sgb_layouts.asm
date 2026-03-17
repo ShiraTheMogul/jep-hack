@@ -525,7 +525,7 @@ endr
 .GetMapPalsIndex:
 	ld a, [wTimeOfDayPal]
 	cp NITE_F
-	jr c, .duskcheck
+	jr c, .darkcheck ; I think this should actually cover things if it's dusk too?
 	ld a, PREDEFPAL_NITE
 	ret
 	
@@ -539,7 +539,7 @@ endr
 .darkcheck
 	ld a, [wTimeOfDayPalset]
 	cp DARKNESS_PALSET
-	jr c, .morn_day
+	jr nz, .morn_day
 	ld a, PREDEFPAL_NITE
 	ret
 
