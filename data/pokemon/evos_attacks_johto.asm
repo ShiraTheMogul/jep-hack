@@ -1161,7 +1161,7 @@ SunfloraEvosAttacks:
 	db 0 ; no more level-up moves
 
 HippunkEvosAttacks:
-	dbbw EVOLVE_HAPPINESS, TR_NITE, DROWZEE ; I could make it anytime, but let's imagine the night making it tired enough to focus its powers. Drowzee was often placed as a nocturnal Pokemon in SW97...
+	dbbw EVOLVE_HAPPINESS, TR_EVENITE, DROWZEE ; I could make it anytime, but let's imagine the night making it tired enough to focus its powers. Drowzee was often placed as a nocturnal Pokemon in SW97...
 	db 0; no more evolutions
 	dbw 1, POUND
 	dbw 1, CHARM

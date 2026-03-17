@@ -253,6 +253,7 @@ CheckObjectTime::
 	db MORN
 	db DAY
 	db NITE
+	db DUSK
 
 .check_hour
 	ld hl, MAPOBJECT_HOUR_1

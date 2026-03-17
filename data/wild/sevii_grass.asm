@@ -8,7 +8,7 @@
 SeviiGrassWildMons:
 
 	def_grass_wildmons KINDLE_ROAD
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite/dusk
 	; morn
 	dbw 30, FEAROW
 	dbw 31, PERSIAN ; PERSIANA
@@ -26,6 +26,14 @@ SeviiGrassWildMons:
 	dbw 32, SLOWBRO
 	dbw 35, SLOWKING
 	; nite
+	dbw 30, NOCTOWL
+	dbw 31, PERSIAN
+	dbw 30, MURKROW
+	dbw 31, GRAVELER
+	dbw 32, RAPIDASH
+	dbw 32, SLOWBRO
+	dbw 35, SLOWKING
+	; dusk
 	dbw 30, NOCTOWL
 	dbw 31, PERSIAN
 	dbw 30, MURKROW

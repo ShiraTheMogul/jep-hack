@@ -212,10 +212,12 @@ OaksPKMNTalk4:
 	farcall LookUpGrassJohtoWildmons
 
 	; Generate a number, either 0, 1, or 2, to choose a time of day.
+	; Can't pick 3 since dusk does not have wild data.
+	; TODO: Add wild data.
 .loop2
 	call Random
 	maskbits NUM_DAYTIMES
-	cp DARKNESS_F
+	cp DUSK_F
 	jr z, .loop2
 	; Point hl to the list of Pokémon for that time of day, skipping the map ID and the percentages
 	ld bc, 5
@@ -1690,7 +1692,7 @@ BuenasPassword21:
 BuenasPasswordCheckTime:
 	call UpdateTime
 	ldh a, [hHours]
-	cp NITE_HOUR
+	cp DUSK_HOUR
 	ret
 
 BuenasPasswordChannelName:

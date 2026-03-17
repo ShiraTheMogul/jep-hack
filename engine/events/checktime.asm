@@ -14,6 +14,6 @@ CheckTime::
 .TimeOfDayTable:
 	db MORN_F, MORN
 	db DAY_F,  DAY
-	db NITE_F, NITE
+	db DUSK_F, DUSK
 	db NITE_F, NITE
 	db -1

@@ -351,8 +351,10 @@ OakText_ResponseToSetTime:
 	jr c, .nite
 	cp DAY_HOUR + 1
 	jr c, .morn
-	cp NITE_HOUR
+	cp DUSK_HOUR
 	jr c, .day
+	cp NITE_HOUR
+	jr c, .dusk
 .nite
 	ld hl, .OakTimeSoDarkText
 	ret
@@ -361,6 +363,9 @@ OakText_ResponseToSetTime:
 	ret
 .day
 	ld hl, .OakTimeYikesText
+	ret
+.dusk
+	ld hl, .OakTimeSoDarkText ; Ehhhh, let's reuse this for now. I'm a little unsure of the dialogue in the tutorial and we can always just add something else later.
 	ret
 
 .OakTimeOversleptText:
@@ -694,8 +699,10 @@ GetTimeOfDayString:
 	jr c, .nite
 	cp DAY_HOUR
 	jr c, .morn
-	cp NITE_HOUR
+	cp DUSK_HOUR
 	jr c, .day
+	cp NITE_HOUR
+	jr c, .dusk
 .nite
 	ld de, .nite_string
 	ret
@@ -705,10 +712,14 @@ GetTimeOfDayString:
 .day
 	ld de, .day_string
 	ret
+.dusk
+	ld de, .dusk_string
+	ret
 
 .nite_string: db "NITE@"
 .morn_string: db "MORN@"
 .day_string:  db "DAY@"
+.dusk_string: db "DUSK@"
 
 AdjustHourForAMorPM:
 ; Convert the hour stored in c (0-23) to a 1-12 value

@@ -5,6 +5,7 @@ LoadWildMonData:
 	xor a
 	ld [hli], a
 	ld [hli], a
+	ld [hli], a ; from the evening tutorial. probably necessary?
 	ld [hl], a
 	jr .done_copy
 
@@ -12,8 +13,12 @@ LoadWildMonData:
 	inc hl
 	inc hl
 	ld de, wMornEncounterRate
-	ld bc, 3
+	ld bc, 4
 	call CopyBytes
+	; from the evening tutorial.
+	;ld a, [wNiteEncounterRate] 
+	;ld [wDuskEncounterRate], a 
+	; I suspect this just makes the encounter rate the same as night at dusk.
 .done_copy
 	call _WaterWildmonLookup
 	ld a, 0
@@ -24,6 +29,15 @@ LoadWildMonData:
 .no_copy
 	ld [wWaterEncounterRate], a
 	ret
+
+; from the evening tutorial.
+; Todo: Make evening use unique encounter data.
+;GetTimeOfDayNotEve:
+;	ld a, [wTimeOfDay]
+;	cp DUSK_F
+;	ret nz
+;	ld a, NITE_F ; ld a, DAY_F to make evening use day encounters
+;	ret
 
 FindNest:
 ; Parameters:
@@ -90,7 +104,8 @@ FindNest:
 	inc hl
 	inc hl
 	inc hl
-	ld a, NUM_GRASSMON * 3
+	inc hl
+	ld a, NUM_GRASSMON * 4
 	call .SearchMapForMon
 	jr nc, .next_grass
 	ld [de], a
@@ -299,6 +314,9 @@ ChooseWildEncounter:
 	jr z, .watermon
 	inc hl
 	inc hl
+	inc hl
+	; From evening tutorial
+	;call GetTimeOfDayNotEve
 	ld a, [wTimeOfDay]
 	ld bc, NUM_GRASSMON * 3
 	call AddNTimes
@@ -899,8 +917,10 @@ GetCallerRouteWildGrassMons:
 	call LookUpWildmonsForMapDE
 	ret nc ; no carry = no grass wild mons for that route
 .found
-	ld bc, 5 ; skip the map ID and encounter rates
+	ld bc, 6 ; skip the map ID and encounter rates
 	add hl, bc
+	; From evening tutorial
+	;call GetTimeOfDayNotEve
 	ld a, [wTimeOfDay]
 	ld bc, NUM_GRASSMON * 3
 	call AddNTimes

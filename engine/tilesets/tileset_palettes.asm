@@ -1,4 +1,12 @@
 LoadSpecialMapPalette:
+	call GetMapTimeOfDay
+	bit IN_DARKNESS_F, a
+	jr z, .not_dark
+	ld a, [wStatusFlags]
+	bit STATUSFLAGS_FLASH_F, a
+	jr z, .darkness
+
+.not_dark
 	ld a, [wMapTileset]
 	cp TILESET_POKECOM_CENTER
 	jr z, .pokecom_2f
@@ -19,6 +27,10 @@ LoadSpecialMapPalette:
 	cp TILESET_NIHON_BIRDON
 	jr z, .desert
 	jr .do_nothing
+.darkness
+	call LoadDarknessPalette
+	scf
+	ret
 
 .pokecom_2f
 	call LoadPokeComPalette
@@ -168,6 +180,8 @@ LoadSnowyPalette:
 	jr z, .nite
 	cp DAY_F
 	jr z, .day
+	cp DUSK_F
+	jr z, .dusk
 	scf
 ;morn
 	ld a, BANK(wBGPals1)
@@ -190,7 +204,13 @@ LoadSnowyPalette:
 	ld bc, 8 palettes
 	jp FarCopyWRAM
 	ret
-
+.dusk
+	ld a, BANK(wBGPals1)
+	ld de, wBGPals1
+	ld hl, SnowyDuskPalette
+	ld bc, 8 palettes
+	jp FarCopyWRAM
+	ret
 INCLUDE "gfx/tilesets/snowy.pal"
 
 LoadCryptPalette:
@@ -206,6 +226,8 @@ INCLUDE "gfx/tilesets/lavendercrypt.pal"
 LoadDesertPalette:
 	cp DAY_F
 	jr z, .day
+	cp DUSK_F
+	jr z, .dusk
 	scf
 ;morn
 	ld a, BANK(wBGPals1)
@@ -221,5 +243,49 @@ LoadDesertPalette:
 	ld bc, 8 palettes
 	jp FarCopyWRAM
 	ret
+.dusk
+	ld a, BANK(wBGPals1)
+	ld de, wBGPals1
+	ld hl, DesertDuskPalette
+	ld bc, 8 palettes
+	jp FarCopyWRAM
+	ret
 
 INCLUDE "gfx/tilesets/desert.pal"
+
+LoadDarknessPalette:
+	ld a, BANK(wBGPals1)
+	ld de, wBGPals1
+	ld hl, DarknessPalette
+	ld bc, 8 palettes
+	jp FarCopyWRAM
+
+DarknessPalette:
+INCLUDE "gfx/tilesets/darkness.pal"
+
+LoadSpecialNPCPalette:
+	call GetMapTimeOfDay
+	bit IN_DARKNESS_F, a
+	jr z, .do_nothing
+	ld a, [wStatusFlags]
+	bit STATUSFLAGS_FLASH_F, a
+	jr nz, .do_nothing
+
+;darkness
+	call LoadNPCDarknessPalette
+	scf
+	ret
+
+.do_nothing
+	and a
+	ret
+
+LoadNPCDarknessPalette:
+	ld a, BANK(wOBPals1)
+	ld de, wOBPals1
+	ld hl, NPCDarknessPalette
+	ld bc, 8 palettes
+	jp FarCopyWRAM
+
+NPCDarknessPalette:
+INCLUDE "gfx/overworld/npc_sprites_darkness.pal"
