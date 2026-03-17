@@ -15,7 +15,7 @@
 JohtoGrassWildMons:
 
 	def_grass_wildmons SPROUT_TOWER_2F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 2 percent, 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 5, RATTATA
 	dbw 5, BELLSPROUT
@@ -32,7 +32,15 @@ JohtoGrassWildMons:
 	dbw 6, BELLSPROUT
 	dbw 6, COINPUR
 	dbw 7, COINPUR
-	; nite
+	; night
+	dbw 6, GASTLY
+	dbw 5, MOIBELLE
+	dbw 5, BIPULLA
+	dbw 7, GASTLY
+	dbw 6, BIPULLA
+	dbw 6, MOIBELLE
+	dbw 7, BIPULLA
+	; dusk
 	dbw 6, GASTLY
 	dbw 5, MOIBELLE
 	dbw 5, BIPULLA
@@ -43,7 +51,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons SPROUT_TOWER_3F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 2 percent, 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 5, RATTATA
 	dbw 5, BELLSPROUT
@@ -60,7 +68,15 @@ JohtoGrassWildMons:
 	dbw 6, BELLSPROUT
 	dbw 6, COINPUR
 	dbw 7, COINPUR
-	; nite
+	; night
+	dbw 6, GASTLY
+	dbw 5, MOIBELLE
+	dbw 5, BIPULLA
+	dbw 7, GASTLY
+	dbw 6, BIPULLA
+	dbw 6, MOIBELLE
+	dbw 7, BIPULLA
+	; dusk
 	dbw 6, GASTLY
 	dbw 5, MOIBELLE
 	dbw 5, BIPULLA
@@ -71,7 +87,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons TIN_TOWER_2F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 2 percent, 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 40, GROWLITHE
 	dbw 41, QATU
@@ -88,7 +104,15 @@ JohtoGrassWildMons:
 	dbw 43, SNEASEL
 	dbw 44, PERSIAN
 	dbw 44, ARCANINE
-	; nite
+	; night
+	dbw 40, GROWLITHE
+	dbw 41, HAUNTER
+	dbw 42, GROWLITHE
+	dbw 42, HAUNTER
+	dbw 43, PHANDARIN
+	dbw 44, BELLEDAM
+	dbw 44, ARCANINE
+	; dusk
 	dbw 40, GROWLITHE
 	dbw 41, HAUNTER
 	dbw 42, GROWLITHE
@@ -99,7 +123,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons TIN_TOWER_3F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 2 percent, 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 40, GROWLITHE
 	dbw 41, QATU
@@ -116,7 +140,15 @@ JohtoGrassWildMons:
 	dbw 43, SNEASEL
 	dbw 44, PERSIAN
 	dbw 44, ARCANINE
-	; nite
+	; night
+	dbw 40, GROWLITHE
+	dbw 41, HAUNTER
+	dbw 42, GROWLITHE
+	dbw 42, HAUNTER
+	dbw 43, PHANDARIN
+	dbw 44, BELLEDAM
+	dbw 44, ARCANINE
+	; dusk
 	dbw 40, GROWLITHE
 	dbw 41, HAUNTER
 	dbw 42, GROWLITHE
@@ -127,7 +159,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons TIN_TOWER_4F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 2 percent, 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 40, GROWLITHE
 	dbw 41, QATU
@@ -144,7 +176,15 @@ JohtoGrassWildMons:
 	dbw 43, SNEASEL
 	dbw 44, PERSIAN
 	dbw 44, ARCANINE
-	; nite
+	; night
+	dbw 40, GROWLITHE
+	dbw 41, HAUNTER
+	dbw 42, GROWLITHE
+	dbw 42, HAUNTER
+	dbw 43, PHANDARIN
+	dbw 44, BELLEDAM
+	dbw 44, ARCANINE
+	; dusk
 	dbw 40, GROWLITHE
 	dbw 41, HAUNTER
 	dbw 42, GROWLITHE
@@ -155,7 +195,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons TIN_TOWER_5F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 2 percent, 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 40, GROWLITHE
 	dbw 41, QATU
@@ -172,7 +212,15 @@ JohtoGrassWildMons:
 	dbw 43, SNEASEL
 	dbw 44, PERSIAN
 	dbw 44, ARCANINE
-	; nite
+	; night
+	dbw 40, GROWLITHE
+	dbw 41, HAUNTER
+	dbw 42, GROWLITHE
+	dbw 42, HAUNTER
+	dbw 43, PHANDARIN
+	dbw 44, BELLEDAM
+	dbw 44, ARCANINE
+	; dusk
 	dbw 40, GROWLITHE
 	dbw 41, HAUNTER
 	dbw 42, GROWLITHE
@@ -183,7 +231,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons TIN_TOWER_6F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 2 percent, 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 40, GROWLITHE
 	dbw 41, QATU
@@ -200,7 +248,15 @@ JohtoGrassWildMons:
 	dbw 43, SNEASEL
 	dbw 44, PERSIAN
 	dbw 44, ARCANINE
-	; nite
+	; night
+	dbw 40, GROWLITHE
+	dbw 41, HAUNTER
+	dbw 42, GROWLITHE
+	dbw 42, HAUNTER
+	dbw 43, PHANDARIN
+	dbw 44, BELLEDAM
+	dbw 44, ARCANINE
+	; dusk
 	dbw 40, GROWLITHE
 	dbw 41, HAUNTER
 	dbw 42, GROWLITHE
@@ -211,7 +267,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons TIN_TOWER_7F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 2 percent, 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 40, GROWLITHE
 	dbw 41, QATU
@@ -228,7 +284,15 @@ JohtoGrassWildMons:
 	dbw 43, SNEASEL
 	dbw 44, PERSIAN
 	dbw 44, ARCANINE
-	; nite
+	; night
+	dbw 40, GROWLITHE
+	dbw 41, HAUNTER
+	dbw 42, GROWLITHE
+	dbw 42, HAUNTER
+	dbw 43, PHANDARIN
+	dbw 44, BELLEDAM
+	dbw 44, ARCANINE
+	; dusk
 	dbw 40, GROWLITHE
 	dbw 41, HAUNTER
 	dbw 42, GROWLITHE
@@ -239,7 +303,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons TIN_TOWER_8F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 2 percent, 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 40, GROWLITHE
 	dbw 41, QATU
@@ -256,7 +320,15 @@ JohtoGrassWildMons:
 	dbw 43, SNEASEL
 	dbw 44, PERSIAN
 	dbw 44, ARCANINE
-	; nite
+	; night
+	dbw 40, GROWLITHE
+	dbw 41, HAUNTER
+	dbw 42, GROWLITHE
+	dbw 42, HAUNTER
+	dbw 43, PHANDARIN
+	dbw 44, BELLEDAM
+	dbw 44, ARCANINE
+	; dusk
 	dbw 40, GROWLITHE
 	dbw 41, HAUNTER
 	dbw 42, GROWLITHE
@@ -267,7 +339,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons TIN_TOWER_9F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 2 percent, 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 40, GROWLITHE
 	dbw 41, QATU
@@ -284,7 +356,15 @@ JohtoGrassWildMons:
 	dbw 43, SNEASEL
 	dbw 44, PERSIAN
 	dbw 44, ARCANINE
-	; nite
+	; night
+	dbw 40, GROWLITHE
+	dbw 41, HAUNTER
+	dbw 42, GROWLITHE
+	dbw 42, HAUNTER
+	dbw 43, PHANDARIN
+	dbw 44, BELLEDAM
+	dbw 44, ARCANINE
+	; dusk
 	dbw 40, GROWLITHE
 	dbw 41, HAUNTER
 	dbw 42, GROWLITHE
@@ -300,7 +380,7 @@ JohtoGrassWildMons:
 ; Did you know they removed Magmar in B1F in Crystal? For Weezing??
 ; The Rattata have been replaced with Vulpiii in 1F, and Pupperon in B1F.
 	def_grass_wildmons BURNED_TOWER_1F
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 16, VULPIII
 	dbw 17, KOFFING
@@ -317,7 +397,15 @@ JohtoGrassWildMons:
 	dbw 18, STROMEN
 	dbw 18, KOLTA
 	dbw 16, KOLTA
-	; nite
+	; night
+	dbw 15, VULPIII
+	dbw 17, KOFFING
+	dbw 16, VULPIII
+	dbw 16, ZUBAT
+	dbw 18, STROMEN
+	dbw 17, HOUNDOUR
+	dbw 18, HOUNDOUR
+	; dusk
 	dbw 15, VULPIII
 	dbw 17, KOFFING
 	dbw 16, VULPIII
@@ -328,7 +416,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons BURNED_TOWER_B1F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 16, PUPPERON
 	dbw 17, SLUGMA
@@ -345,7 +433,15 @@ JohtoGrassWildMons:
 	dbw 18, ZUBAT
 	dbw 18, MAGBY
 	dbw 19, MAGBY
-	; nite
+	; night
+	dbw 17, HOUNDOUR
+	dbw 16, SLUGMA
+	dbw 17, STROMEN
+	dbw 18, HOUNDOUR
+	dbw 16, ZUBAT
+	dbw 18, MAGMAR
+	dbw 19, MAGMAR
+	; dusk
 	dbw 17, HOUNDOUR
 	dbw 16, SLUGMA
 	dbw 17, STROMEN
@@ -356,7 +452,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons NATIONAL_PARK
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 15, NIDORAN_M
 	dbw 15, NIDORAN_F
@@ -373,7 +469,15 @@ JohtoGrassWildMons:
 	dbw 16, CATERPIE
 	dbw 16, WEEDLE
 	dbw 16, BALUMBA
-	; nite
+	; night
+	dbw 15, NIDORAN_M
+	dbw 15, NIDORAN_F
+	dbw 14, SPINARAK
+	dbw 14, HOOTHOOT
+	dbw 15, PSYDUCK
+	dbw 16, VENONAT
+	dbw 16, VENONAT
+	; dusk
 	dbw 15, NIDORAN_M
 	dbw 15, NIDORAN_F
 	dbw 14, SPINARAK
@@ -384,7 +488,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons RUINS_OF_ALPH_OUTSIDE
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 24, SMEARGLE
 	dbw 26, QATU
@@ -401,7 +505,15 @@ JohtoGrassWildMons:
 	dbw 25, SMEARGLE
 	dbw 25, GIRAFARIG
 	dbw 26, GIRAFARIG
-	; nite
+	; night
+	dbw 24, QUAGSIRE
+	dbw 26, QATU
+	dbw 24, WOOPER
+	dbw 27, QATU
+	dbw 25, QUAGSIRE
+	dbw 25, MISDREAVUS
+	dbw 26, MISDREAVUS
+	; dusk
 	dbw 24, QUAGSIRE
 	dbw 26, QATU
 	dbw 24, WOOPER
@@ -412,7 +524,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons RUINS_OF_ALPH_INNER_CHAMBER
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 10, UNOWN
 	dbw 10, UNOWN
@@ -429,7 +541,15 @@ JohtoGrassWildMons:
 	dbw 10, UNOWN
 	dbw 10, UNOWN
 	dbw 10, UNOWN
-	; nite
+	; night
+	dbw 10, UNOWN
+	dbw 10, UNOWN
+	dbw 10, UNOWN
+	dbw 10, UNOWN
+	dbw 10, UNOWN
+	dbw 10, UNOWN
+	dbw 10, UNOWN
+	; dusk
 	dbw 10, UNOWN
 	dbw 10, UNOWN
 	dbw 10, UNOWN
@@ -440,7 +560,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons UNION_CAVE_1F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 6, GEODUDE
 	dbw 6, SANDSHREW
@@ -457,7 +577,15 @@ JohtoGrassWildMons:
 	dbw 8, AZURILL
 	dbw 8, ONIX
 	dbw 9, ONIX
-	; nite
+	; night
+	dbw 6, GEODUDE
+	dbw 6, AZURILL
+	dbw 6, WOOPER
+	dbw 7, AZURILL
+	dbw 8, BITTYBAT
+	dbw 8, ONIX
+	dbw 9, ONIX
+	; dusk
 	dbw 6, GEODUDE
 	dbw 6, AZURILL
 	dbw 6, WOOPER
@@ -468,7 +596,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons UNION_CAVE_B1F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 8, GEODUDE
 	dbw 7, BITTYBAT
@@ -485,7 +613,15 @@ JohtoGrassWildMons:
 	dbw 7, WOOPER
 	dbw 8, WOOPER
 	dbw 9, AZURILL
-	; nite
+	; night
+	dbw 8, GEODUDE
+	dbw 7, BITTYBAT
+	dbw 8, WOOPER
+	dbw 10, ONIX
+	dbw 7, WOOPER
+	dbw 8, WOOPER
+	dbw 9, AZURILL
+	; dusk
 	dbw 8, GEODUDE
 	dbw 7, BITTYBAT
 	dbw 8, WOOPER
@@ -496,7 +632,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons UNION_CAVE_B2F
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 26, GRAVELER
 	dbw 25, GOLBAT
@@ -513,7 +649,15 @@ JohtoGrassWildMons:
 	dbw 25, GRAVELER
 	dbw 26, GRENMAR
 	dbw 27, GRENMAR
-	; nite
+	; night
+	dbw 26, GRAVELER
+	dbw 25, GOLBAT
+	dbw 24, QUAGSIRE
+	dbw 26, AZUMARILL
+	dbw 25, GRAVELER
+	dbw 26, GRENMAR
+	dbw 27, GRENMAR
+	; dusk
 	dbw 26, GRAVELER
 	dbw 25, GOLBAT
 	dbw 24, QUAGSIRE
@@ -524,7 +668,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons SLOWPOKE_WELL_B1F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 2 percent, 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 8, BITTYBAT
 	dbw 8, SLOWPOKE
@@ -541,7 +685,15 @@ JohtoGrassWildMons:
 	dbw 8, BITTYBAT
 	dbw 10, SLOWPOKE
 	dbw 10, SHELLDER
-	; nite
+	; night
+	dbw 8, BITTYBAT
+	dbw 8, SLOWPOKE
+	dbw 8, SLOWPOKE
+	dbw 9, SHELLDER
+	dbw 8, BITTYBAT
+	dbw 10, SLOWPOKE
+	dbw 10, SHELLDER
+	; dusk
 	dbw 8, BITTYBAT
 	dbw 8, SLOWPOKE
 	dbw 8, SLOWPOKE
@@ -552,7 +704,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons SLOWPOKE_WELL_B2F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 2 percent, 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 25, GOLBAT
 	dbw 23, SHELLDER
@@ -569,7 +721,15 @@ JohtoGrassWildMons:
 	dbw 23, GOLBAT
 	dbw 26, DISTURBAN
 	dbw 26, SLOWKING
-	; nite
+	; night
+	dbw 25, GOLBAT
+	dbw 23, SHELLDER
+	dbw 23, GOLBAT
+	dbw 24, SLOWPOKE
+	dbw 23, GOLBAT
+	dbw 26, DISTURBAN
+	dbw 26, SLOWKING
+	; dusk
 	dbw 25, GOLBAT
 	dbw 23, SHELLDER
 	dbw 23, GOLBAT
@@ -586,7 +746,7 @@ JohtoGrassWildMons:
 ; Headbutt makes Heracross, Folage, and Pineco accessible.
 ; Gentlarva appears less than the other bugs, as usual, replacing Pidgey. Yanma is the new predator.
 	def_grass_wildmons ILEX_FOREST
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 10, CATERPIE
 	dbw 10, WEEDLE
@@ -603,7 +763,15 @@ JohtoGrassWildMons:
 	dbw 10, GENTLARVA
 	dbw 11, YANMA
 	dbw 12, YANMA
-	; nite
+	; night
+	dbw 10, PARASPOR
+	dbw 10, PSYDUCK
+	dbw 11, SPINARAK
+	dbw 12, SPINARAK
+	dbw 10, HOOTHOOT
+	dbw 11, PARASPOR
+	dbw 12, KOTORA ; a la Pikachu, but night-locked. Just a lot we want in this place.
+	; dusk
 	dbw 10, PARASPOR
 	dbw 10, PSYDUCK
 	dbw 11, SPINARAK
@@ -616,7 +784,7 @@ JohtoGrassWildMons:
 ; Mt. Mortar now has consistent Marill access like GS.
 ; Zubats and Golbats are no longer outside during the day as their Pokedex data often says they hate light. Also, Kotora.
 	def_grass_wildmons MOUNT_MORTAR_1F_OUTSIDE
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 27, RATICATE
 	dbw 27, KOTORA
@@ -633,7 +801,15 @@ JohtoGrassWildMons:
 	dbw 28, GRAVELER
 	dbw 29, RATICATE
 	dbw 28, GRENMAR
-	; nite
+	; night
+	dbw 27, RATICATE
+	dbw 27, GOLBAT
+	dbw 26, MARILL
+	dbw 29, GOLBAT
+	dbw 28, GRAVELER
+	dbw 29, RATICATE
+	dbw 28, GRENMAR
+	; dusk
 	dbw 27, RATICATE
 	dbw 27, GOLBAT
 	dbw 26, MARILL
@@ -646,7 +822,7 @@ JohtoGrassWildMons:
 ; Also, Larvitar is available in the morning and daytime, unless it's B2F, wherein it's all-day.
 ; It's known to eat mountain soil, so it makes sense to me.
 	def_grass_wildmons MOUNT_MORTAR_1F_INSIDE
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 27, GRAVELER
 	dbw 29, RATICATE
@@ -663,7 +839,15 @@ JohtoGrassWildMons:
 	dbw 28, MARILL
 	dbw 25, LARVITAR
 	dbw 30, LARVITAR
-	; nite
+	; night
+	dbw 27, GRAVELER
+	dbw 29, RATICATE
+	dbw 30, GRENMAR
+	dbw 29, ZUBAT
+	dbw 29, MARILL
+	dbw 30, MARILL
+	dbw 30, GOLBAT
+	; dusk
 	dbw 27, GRAVELER
 	dbw 29, RATICATE
 	dbw 30, GRENMAR
@@ -674,7 +858,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons MOUNT_MORTAR_2F_INSIDE
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 41, GRAVELER
 	dbw 42, MACHOKE
@@ -691,7 +875,15 @@ JohtoGrassWildMons:
 	dbw 45, AZUMARILL
 	dbw 42, PUPITAR
 	dbw 43, PUPITAR
-	; nite
+	; night
+	dbw 41, GRAVELER
+	dbw 42, RATICATE
+	dbw 41, GRENMAR
+	dbw 42, GOLBAT
+	dbw 45, AZUMARILL
+	dbw 43, GOLBAT
+	dbw 44, GOLBAT
+	; dusk
 	dbw 41, GRAVELER
 	dbw 42, RATICATE
 	dbw 41, GRENMAR
@@ -702,7 +894,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons MOUNT_MORTAR_B1F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 28, GRAVELER
 	dbw 29, GRAVELER
@@ -719,7 +911,15 @@ JohtoGrassWildMons:
 	dbw 30, GRENMAR
 	dbw 30, LARVITAR
 	dbw 31, LARVITAR
-	; nite
+	; night
+	dbw 28, GRAVELER
+	dbw 29, GRAVELER
+	dbw 29, GOLBAT
+	dbw 31, AZUMARILL
+	dbw 30, GRENMAR
+	dbw 30, LARVITAR
+	dbw 31, LARVITAR
+	; dusk
 	dbw 28, GRAVELER
 	dbw 29, GRAVELER
 	dbw 29, GOLBAT
@@ -734,7 +934,7 @@ JohtoGrassWildMons:
 ; Changed so Sneasel exists all day in the Ice Path with higher frequency.
 ; Down the line, consider Buu, Bunice/Bundra, etc.
 	def_grass_wildmons ICE_PATH_1F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 2 percent, 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 34, SWINUB
 	dbw 35, BUNICE
@@ -751,7 +951,15 @@ JohtoGrassWildMons:
 	dbw 34, SNEASEL
 	dbw 35, SMOOCHUM
 	dbw 36, SMOOCHUM
-	; nite
+	; night
+	dbw 34, DELIBIRD
+	dbw 35, SNEASEL
+	dbw 36, GOLBAT
+	dbw 33, BUNICE
+	dbw 34, SNEASEL
+	dbw 35, WARFURS
+	dbw 36, WARFURS
+	; dusk
 	dbw 34, DELIBIRD
 	dbw 35, SNEASEL
 	dbw 36, GOLBAT
@@ -762,7 +970,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_B1F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 2 percent, 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 34, SWINUB
 	dbw 35, BUNICE
@@ -779,7 +987,15 @@ JohtoGrassWildMons:
 	dbw 34, SNEASEL
 	dbw 35, SMOOCHUM
 	dbw 36, SMOOCHUM
-	; nite
+	; night
+	dbw 34, DELIBIRD
+	dbw 35, SNEASEL
+	dbw 36, GOLBAT
+	dbw 33, BUNICE
+	dbw 34, SNEASEL
+	dbw 35, WARFURS
+	dbw 36, WARFURS
+	; dusk
 	dbw 34, DELIBIRD
 	dbw 35, SNEASEL
 	dbw 36, GOLBAT
@@ -790,7 +1006,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_B2F_MAHOGANY_SIDE
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 2 percent, 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 34, SWINUB
 	dbw 35, SNEASEL
@@ -807,7 +1023,15 @@ JohtoGrassWildMons:
 	dbw 36, SNEASEL
 	dbw 36, JYNX
 	dbw 37, JYNX
-	; nite
+	; night
+	dbw 34, WARFURS
+	dbw 35, SNEASEL
+	dbw 34, GOLBAT
+	dbw 35, DELIBIRD
+	dbw 36, SNEASEL
+	dbw 36, BUU
+	dbw 37, BUU
+	; dusk
 	dbw 34, WARFURS
 	dbw 35, SNEASEL
 	dbw 34, GOLBAT
@@ -818,7 +1042,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_B2F_BLACKTHORN_SIDE
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 2 percent, 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 34, SWINUB
 	dbw 35, SNEASEL
@@ -835,7 +1059,15 @@ JohtoGrassWildMons:
 	dbw 36, SNEASEL
 	dbw 36, JYNX
 	dbw 37, JYNX
-	; nite
+	; night
+	dbw 34, WARFURS
+	dbw 35, SNEASEL
+	dbw 34, GOLBAT
+	dbw 35, DELIBIRD
+	dbw 36, SNEASEL
+	dbw 36, BUU
+	dbw 37, BUU
+	; dusk
 	dbw 34, WARFURS
 	dbw 35, SNEASEL
 	dbw 34, GOLBAT
@@ -846,7 +1078,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_B3F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 2 percent, 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 34, WARFURS
 	dbw 35, SNEASEL
@@ -863,7 +1095,15 @@ JohtoGrassWildMons:
 	dbw 36, SNEASEL
 	dbw 36, JYNX
 	dbw 37, JYNX
-	; nite
+	; night
+	dbw 34, WARFURS
+	dbw 35, SNEASEL
+	dbw 35, GOLBAT
+	dbw 36, DELIBIRD
+	dbw 36, SNEASEL
+	dbw 36, BUU
+	dbw 37, BUU
+	; dusk
 	dbw 34, WARFURS
 	dbw 35, SNEASEL
 	dbw 35, GOLBAT
@@ -874,7 +1114,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_NW
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 42, CORSOLA
 	dbw 42, GOLBAT
@@ -891,7 +1131,15 @@ JohtoGrassWildMons:
 	dbw 45, GOLDUCK
 	dbw 45, GOLDUCK
 	dbw 45, SLOWBRO
-	; nite
+	; night
+	dbw 42, CORSOLA
+	dbw 42, GOLBAT
+	dbw 43, CORSOLA
+	dbw 44, QUAGSIRE
+	dbw 45, DISTURBAN
+	dbw 44, DISTURBAN
+	dbw 44, SLOWKING
+	; dusk
 	dbw 42, CORSOLA
 	dbw 42, GOLBAT
 	dbw 43, CORSOLA
@@ -902,7 +1150,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_NE
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 42, CORSOLA
 	dbw 42, GOLBAT
@@ -919,7 +1167,15 @@ JohtoGrassWildMons:
 	dbw 45, GOLDUCK
 	dbw 45, GOLDUCK
 	dbw 45, SLOWBRO
-	; nite
+	; night
+	dbw 42, CORSOLA
+	dbw 42, GOLBAT
+	dbw 43, CORSOLA
+	dbw 44, QUAGSIRE
+	dbw 45, DISTURBAN
+	dbw 44, DISTURBAN
+	dbw 44, SLOWKING
+	; dusk
 	dbw 42, CORSOLA
 	dbw 42, GOLBAT
 	dbw 43, CORSOLA
@@ -930,7 +1186,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_SW
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 42, CORSOLA
 	dbw 42, GOLBAT
@@ -947,7 +1203,15 @@ JohtoGrassWildMons:
 	dbw 45, GOLDUCK
 	dbw 45, GOLDUCK
 	dbw 45, SLOWBRO
-	; nite
+	; night
+	dbw 42, CORSOLA
+	dbw 42, GOLBAT
+	dbw 43, CORSOLA
+	dbw 44, QUAGSIRE
+	dbw 45, DISTURBAN
+	dbw 44, DISTURBAN
+	dbw 44, SLOWKING
+	; dusk
 	dbw 42, CORSOLA
 	dbw 42, GOLBAT
 	dbw 43, CORSOLA
@@ -958,7 +1222,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_CAVE
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 42, CORSOLA
 	dbw 42, GOLBAT
@@ -975,7 +1239,15 @@ JohtoGrassWildMons:
 	dbw 45, GOLDUCK
 	dbw 45, GOLDUCK
 	dbw 45, SLOWBRO
-	; nite
+	; night
+	dbw 42, CORSOLA
+	dbw 42, GOLBAT
+	dbw 43, CORSOLA
+	dbw 44, QUAGSIRE
+	dbw 45, DISTURBAN
+	dbw 44, DISTURBAN
+	dbw 44, SLOWKING
+	; dusk
 	dbw 42, CORSOLA
 	dbw 42, GOLBAT
 	dbw 43, CORSOLA
@@ -986,7 +1258,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_SE
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 42, CORSOLA
 	dbw 42, GOLBAT
@@ -1003,7 +1275,15 @@ JohtoGrassWildMons:
 	dbw 45, GOLDUCK
 	dbw 45, GOLDUCK
 	dbw 45, SLOWBRO
-	; nite
+	; night
+	dbw 42, CORSOLA
+	dbw 42, GOLBAT
+	dbw 43, CORSOLA
+	dbw 44, QUAGSIRE
+	dbw 45, DISTURBAN
+	dbw 44, DISTURBAN
+	dbw 44, SLOWKING
+	; dusk
 	dbw 42, CORSOLA
 	dbw 42, GOLBAT
 	dbw 43, CORSOLA
@@ -1014,7 +1294,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_B1F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 44, CORSOLA
 	dbw 43, GOLBAT
@@ -1031,7 +1311,15 @@ JohtoGrassWildMons:
 	dbw 46, GOLDUCK
 	dbw 46, GOLDUCK
 	dbw 47, SLOWBRO
-	; nite
+	; night
+	dbw 42, CORSOLA
+	dbw 42, GOLBAT
+	dbw 43, CORSOLA
+	dbw 44, QUAGSIRE
+	dbw 45, DISTURBAN
+	dbw 44, DISTURBAN
+	dbw 47, SLOWKING
+	; dusk
 	dbw 42, CORSOLA
 	dbw 42, GOLBAT
 	dbw 43, CORSOLA
@@ -1042,7 +1330,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_B2F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 42, CORSOLA
 	dbw 42, GOLBAT
@@ -1059,7 +1347,15 @@ JohtoGrassWildMons:
 	dbw 45, GOLDUCK
 	dbw 45, GOLDUCK
 	dbw 45, SLOWBRO
-	; nite
+	; night
+	dbw 42, CORSOLA
+	dbw 42, GOLBAT
+	dbw 43, CORSOLA
+	dbw 44, QUAGSIRE
+	dbw 45, DISTURBAN
+	dbw 44, DISTURBAN
+	dbw 44, SLOWKING
+	; dusk
 	dbw 42, CORSOLA
 	dbw 42, GOLBAT
 	dbw 43, CORSOLA
@@ -1070,7 +1366,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_LUGIA_CHAMBER
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 52, CORSOLA
 	dbw 52, GOLBAT
@@ -1087,7 +1383,15 @@ JohtoGrassWildMons:
 	dbw 55, GOLDUCK
 	dbw 55, GOLDUCK
 	dbw 55, SLOWBRO
-	; nite
+	; night
+	dbw 52, CORSOLA
+	dbw 52, GOLBAT
+	dbw 53, CORSOLA
+	dbw 54, QUAGSIRE
+	dbw 55, DISTURBAN
+	dbw 54, DISTURBAN
+	dbw 54, SLOWKING
+	; dusk
 	dbw 52, CORSOLA
 	dbw 52, GOLBAT
 	dbw 53, CORSOLA
@@ -1098,7 +1402,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons SILVER_CAVE_ROOM_1
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 43, GRAVELER
 	dbw 44, URSARING
@@ -1115,7 +1419,15 @@ JohtoGrassWildMons:
 	dbw 45, GOLBAT
 	dbw 20, LARVITAR
 	dbw 15, LARVITAR
-	; nite
+	; night
+	dbw 43, GRAVELER
+	dbw 44, GOLBAT
+	dbw 42, ONIX
+	dbw 42, GOLBAT
+	dbw 45, GOLDUCK
+	dbw 46, GOLBAT
+	dbw 46, GOLBAT
+	; dusk
 	dbw 43, GRAVELER
 	dbw 44, GOLBAT
 	dbw 42, ONIX
@@ -1126,7 +1438,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons SILVER_CAVE_ROOM_2
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 48, GOLBAT
 	dbw 48, MACHOKE
@@ -1143,7 +1455,15 @@ JohtoGrassWildMons:
 	dbw 48, PARASECT
 	dbw 15, LARVITAR
 	dbw 20, LARVITAR
-	; nite
+	; night
+	dbw 48, GOLBAT
+	dbw 48, GOLDUCK
+	dbw 46, GOLBAT
+	dbw 46, PARASECT
+	dbw 48, PARASECT
+	dbw 45, MISDREAVUS
+	dbw 45, MISDREAVUS
+	; dusk
 	dbw 48, GOLBAT
 	dbw 48, GOLDUCK
 	dbw 46, GOLBAT
@@ -1154,7 +1474,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons SILVER_CAVE_ROOM_3
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 51, GOLBAT
 	dbw 48, ONIX
@@ -1171,7 +1491,15 @@ JohtoGrassWildMons:
 	dbw 20, LARVITAR
 	dbw 15, LARVITAR
 	dbw 20, PUPITAR
-	; nite
+	; night
+	dbw 51, GOLBAT
+	dbw 48, ONIX
+	dbw 48, GRAVELER
+	dbw 49, GOLBAT
+	dbw 45, GOLDUCK
+	dbw 53, GOLBAT
+	dbw 53, GOLBAT
+	; dusk
 	dbw 51, GOLBAT
 	dbw 48, ONIX
 	dbw 48, GRAVELER
@@ -1182,7 +1510,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons SILVER_CAVE_ITEM_ROOMS
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 48, GOLBAT
 	dbw 46, GOLBAT
@@ -1199,7 +1527,15 @@ JohtoGrassWildMons:
 	dbw 48, PARASECT
 	dbw 50, PARASECT
 	dbw 52, PARASECT
-	; nite
+	; night
+	dbw 45, MISDREAVUS
+	dbw 48, GOLBAT
+	dbw 50, GOLBAT
+	dbw 46, PARASECT
+	dbw 48, PARASECT
+	dbw 50, PARASECT
+	dbw 52, PARASECT
+	; dusk
 	dbw 45, MISDREAVUS
 	dbw 48, GOLBAT
 	dbw 50, GOLBAT
@@ -1210,7 +1546,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons DARK_CAVE_VIOLET_ENTRANCE
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 5, PHANPY
 	dbw 5, BITTYBAT
@@ -1227,7 +1563,15 @@ JohtoGrassWildMons:
 	dbw 6, BITTYBAT
 	dbw 7, BITTYBAT
 	dbw 7, DUNSPARCE
-	; nite
+	; night
+	dbw 5, GEODUDE
+	dbw 5, BITTYBAT
+	dbw 6, GEODUDE
+	dbw 6, BIPULLA
+	dbw 7, WYNAUT
+	dbw 6, BITTYBAT
+	dbw 7, DUNSPARCE
+	; dusk
 	dbw 5, GEODUDE
 	dbw 5, BITTYBAT
 	dbw 6, GEODUDE
@@ -1238,7 +1582,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons DARK_CAVE_BLACKTHORN_ENTRANCE
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 31, DONPHAN
 	dbw 34, GOLBAT
@@ -1255,7 +1599,15 @@ JohtoGrassWildMons:
 	dbw 34, URSARING
 	dbw 33, DUDUNSPARCE
 	dbw 34, DUDUNSPARCE
-	; nite
+	; night
+	dbw 33, GRAVELER
+	dbw 31, GOLBAT
+	dbw 32, GRAVELER
+	dbw 33, WOBBUFFET
+	dbw 35, WOBBUFFET
+	dbw 33, DUDUNSPARCE
+	dbw 34, DUDUNSPARCE
+	; dusk
 	dbw 33, GRAVELER
 	dbw 31, GOLBAT
 	dbw 32, GRAVELER
@@ -1266,7 +1618,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_29
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 2, PIDGEY
 	dbw 2, SENTRET
@@ -1283,7 +1635,15 @@ JohtoGrassWildMons:
 	dbw 3, RATTATA
 	dbw 3, HOPPIP
 	dbw 4, HOPPIP
-	; nite
+	; night
+	dbw 2, HOOTHOOT
+	dbw 2, RATTATA
+	dbw 3, HOOTHOOT
+	dbw 3, RATTATA
+	dbw 4, RATTATA
+	dbw 3, COINPUR
+	dbw 4, COINPUR
+	; dusk
 	dbw 2, HOOTHOOT
 	dbw 2, RATTATA
 	dbw 3, HOOTHOOT
@@ -1294,7 +1654,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_30
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 3, LEDYBA
 	dbw 3, CATERPIE
@@ -1311,7 +1671,15 @@ JohtoGrassWildMons:
 	dbw 3, GENTLARVA
 	dbw 4, HOPPIP
 	dbw 5, HOPPIP
-	; nite
+	; night
+	dbw 3, SPINARAK
+	dbw 3, HOOTHOOT
+	dbw 4, POLIWAG
+	dbw 4, HOOTHOOT
+	dbw 3, BITTYBAT
+	dbw 5, HOOTHOOT
+	dbw 5, COINPUR
+	; dusk
 	dbw 3, SPINARAK
 	dbw 3, HOOTHOOT
 	dbw 4, POLIWAG
@@ -1326,7 +1694,7 @@ JohtoGrassWildMons:
 ; Gastly will remain in Sprout Tower for choice purposes.
 ; This is technically a nerf: Gastly is wayyy stronger.
 	def_grass_wildmons ROUTE_31
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 5, LEDYBA
 	dbw 4, CATERPIE
@@ -1343,7 +1711,15 @@ JohtoGrassWildMons:
 	dbw 4, WEEDLE
 	dbw 6, BELLSPROUT
 	dbw 5, HOPPIP
-	; nite
+	; night
+	dbw 5, SPINARAK
+	dbw 4, POLIWAG
+	dbw 5, MOIBELLE
+	dbw 5, HOOTHOOT
+	dbw 4, SPINARAK
+	dbw 6, MOIBELLE
+	dbw 5, MISDREAVUS
+	; dusk
 	dbw 5, SPINARAK
 	dbw 4, POLIWAG
 	dbw 5, MOIBELLE
@@ -1354,7 +1730,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_32
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 5, EKANS
 	dbw 6, SENTRET
@@ -1371,7 +1747,15 @@ JohtoGrassWildMons:
 	dbw 8, MAREEP
 	dbw 7, AZURILL
 	dbw 8, AZURILL
-	; nite
+	; night
+	dbw 5, WOOPER
+	dbw 6, MOIBELLE
+	dbw 8, WOOPER
+	dbw 7, MAREEP ; From Gold
+	dbw 8, HOOTHOOT
+	dbw 7, MISDREAVUS
+	dbw 8, MISDREAVUS
+	; dusk
 	dbw 5, WOOPER
 	dbw 6, MOIBELLE
 	dbw 8, WOOPER
@@ -1382,7 +1766,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_33
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 7, RATTATA
 	dbw 8, SPEAROW
@@ -1399,7 +1783,15 @@ JohtoGrassWildMons:
 	dbw 8, EKANS
 	dbw 8, AZURILL
 	dbw 9, AZURILL
-	; nite
+	; night
+	dbw 7, MOIBELLE
+	dbw 7, BITTYBAT
+	dbw 7, GEODUDE
+	dbw 8, BIPULLA
+	dbw 8, MOIBELLE
+	dbw 9, HIPPUNK
+	dbw 10, HIPPUNK
+	; dusk
 	dbw 7, MOIBELLE
 	dbw 7, BITTYBAT
 	dbw 7, GEODUDE
@@ -1410,7 +1802,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_34
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 11, SNUBBULL
 	dbw 11, PICHU
@@ -1427,7 +1819,15 @@ JohtoGrassWildMons:
 	dbw 12, HAPPINY
 	dbw 12, CARETORKER
 	dbw 13, CARETORKER
-	; nite
+	; night
+	dbw 12, DROWZEE
+	dbw 11, CLEFFA
+	dbw 13, HOOTHOOT
+	dbw 11, ABRA
+	dbw 12, HOOTHOOT
+	dbw 12, DITTO
+	dbw 13, DITTO
+	; dusk
 	dbw 12, DROWZEE
 	dbw 11, CLEFFA
 	dbw 13, HOOTHOOT
@@ -1438,7 +1838,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_35
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 12, SNUBBULL
 	dbw 14, PUPPERON
@@ -1455,7 +1855,15 @@ JohtoGrassWildMons:
 	dbw 12, PUPPERON
 	dbw 12, ELEBEBI
 	dbw 15, YANMA
-	; nite
+	; night
+	dbw 12, DROWZEE
+	dbw 14, VULPIII
+	dbw 13, DROWZEE
+	dbw 12, MIME_JR_
+	dbw 13, HOOTHOOT
+	dbw 12, HOOTHOOT
+	dbw 15, ARIADOS ; Crystal has these laying around Ecruteak and it seemed cool alongside Yanma
+	; dusk
 	dbw 12, DROWZEE
 	dbw 14, VULPIII
 	dbw 13, DROWZEE
@@ -1466,7 +1874,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_36
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 5, LEDYBA
 	dbw 6, BELLSPROUT
@@ -1483,7 +1891,15 @@ JohtoGrassWildMons:
 	dbw 6, PUPPERON
 	dbw 6, NATU
 	dbw 7, FARFETCH_D
-	; nite
+	; night
+	dbw 5, SPINARAK
+	dbw 6, HOOTHOOT
+	dbw 6, ODDISH
+	dbw 5, VULPIII ; Silver data, but specifically at night
+	dbw 5, HOOTHOOT
+	dbw 6, MISDREAVUS
+	dbw 7, MISDREAVUS
+	; dusk
 	dbw 5, SPINARAK
 	dbw 6, HOOTHOOT
 	dbw 6, ODDISH
@@ -1497,7 +1913,7 @@ JohtoGrassWildMons:
 ; Removing it was a blunder but Crystal does get Ledian and Ariados right.
 ; Murkrow is here too, 10%.
 	def_grass_wildmons ROUTE_37
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 16, ZORRIEGO
 	dbw 18, STANTLER
@@ -1514,7 +1930,15 @@ JohtoGrassWildMons:
 	dbw 15, BONSLY
 	dbw 17, KOLTA
 	dbw 18, KOLTA
-	; nite
+	; night
+	dbw 16, ZORRIEGO
+	dbw 18, STANTLER
+	dbw 17, HOOTHOOT
+	dbw 16, MURKROW
+	dbw 18, MURKROW
+	dbw 16, ARIADOS
+	dbw 19, ARIADOS
+	; dusk
 	dbw 16, ZORRIEGO
 	dbw 18, STANTLER
 	dbw 17, HOOTHOOT
@@ -1527,7 +1951,7 @@ JohtoGrassWildMons:
 ; Made Murkrow a 10% night time encounter for increased Johto frequency.
 ; Built off Silver data to add Snubbull and have Meowth in the daytime.
 	def_grass_wildmons ROUTE_38
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 22, MEOWTH
 	dbw 20, SNUBBULL
@@ -1544,7 +1968,15 @@ JohtoGrassWildMons:
 	dbw 23, MILTANK
 	dbw 23, TAUROS
 	dbw 21, SNUBBULL
-	; nite
+	; night
+	dbw 22, MOIBELLE
+	dbw 21, RATICATE
+	dbw 23, MAGNEMITE
+	dbw 22, MOIBELLE
+	dbw 21, MURKROW ; Replacing Tauros and Miltank at night to replicate Crystal's idea.
+	dbw 21, MURKROW ; To me, the bovines sleeping makes sense.
+	dbw 23, NOCTOWL
+	; dusk
 	dbw 22, MOIBELLE
 	dbw 21, RATICATE
 	dbw 23, MAGNEMITE
@@ -1555,7 +1987,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_39
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 2 percent, 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 21, FURRET
 	dbw 22, FURRET
@@ -1572,7 +2004,15 @@ JohtoGrassWildMons:
 	dbw 24, MILTANK
 	dbw 24, TAUROS
 	dbw 24, TAUROS
-	; nite
+	; night
+	dbw 23, MOIBELLE
+	dbw 21, RATICATE
+	dbw 22, MAGNETITE
+	dbw 22, MOIBELLE
+	dbw 21, MURKROW
+	dbw 21, MURKROW
+	dbw 24, NOCTOWL
+	; dusk
 	dbw 23, MOIBELLE
 	dbw 21, RATICATE
 	dbw 22, MAGNETITE
@@ -1585,7 +2025,7 @@ JohtoGrassWildMons:
 ; Uses Wild Data from Gold version, but with Ekans over Mareep.
 ; At night, Hoothoot is seen instead of Zubat, and Murkrow is a 10% encounter.
 	def_grass_wildmons ROUTE_42
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 28, MANKEY
 	dbw 28, ARBOK
@@ -1602,7 +2042,15 @@ JohtoGrassWildMons:
 	dbw 28, FLAAFFY
 	dbw 29, FLAAFFY
 	dbw 31, FLAAFFY
-	; nite
+	; night
+	dbw 29, MANKEY
+	dbw 28, ARBOK
+	dbw 28, NOCTOWL
+	dbw 29, MURKROW
+	dbw 28, MURKROW
+	dbw 30, FLAAFFY
+	dbw 31, FLAAFFY
+	; dusk
 	dbw 29, MANKEY
 	dbw 28, ARBOK
 	dbw 28, NOCTOWL
@@ -1613,7 +2061,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_43
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 31, FLAAFFY ; From Gold
 	dbw 30, GIRAFARIG ; From Gold
@@ -1630,7 +2078,15 @@ JohtoGrassWildMons:
 	dbw 33, FURRET
 	dbw 32, TANGELA
 	dbw 34, TANGELA
-	; nite
+	; night
+	dbw 31, FLAAFFY ; From Gold
+	dbw 30, GIRAFARIG ; From Gold
+	dbw 33, NOCTOWL ; From Gold
+	dbw 32, VENONAT
+	dbw 32, RATICATE
+	dbw 32, VENOMOTH
+	dbw 34, VENOMOTH
+	; dusk
 	dbw 31, FLAAFFY ; From Gold
 	dbw 30, GIRAFARIG ; From Gold
 	dbw 33, NOCTOWL ; From Gold
@@ -1641,7 +2097,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_44
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 33, TANGELA
 	dbw 33, LICKITUNG
@@ -1658,7 +2114,15 @@ JohtoGrassWildMons:
 	dbw 32, LICKITUNG
 	dbw 32, BUNICE
 	dbw 35, DELIBIRD
-	; nite
+	; night
+	dbw 33, TANGELA
+	dbw 33, POLIWHIRL
+	dbw 33, BUNICE
+	dbw 34, GLOOM
+	dbw 32, POLIWHIRL
+	dbw 32, BUNICE
+	dbw 35, DELIBIRD
+	; dusk
 	dbw 33, TANGELA
 	dbw 33, POLIWHIRL
 	dbw 33, BUNICE
@@ -1669,7 +2133,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_45
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 36, DONPHAN
 	dbw 35, GRAVELER
@@ -1686,7 +2150,15 @@ JohtoGrassWildMons:
 	dbw 36, GLIGAR
 	dbw 37, SKARMORY
 	dbw 38, SKARMORY
-	; nite
+	; night
+	dbw 36, DONPHAN
+	dbw 35, GRAVELER
+	dbw 35, GLIGAR
+	dbw 35, URSARING
+	dbw 36, GLIGAR
+	dbw 37, SKARMORY
+	dbw 38, SKARMORY
+	; dusk
 	dbw 36, DONPHAN
 	dbw 35, GRAVELER
 	dbw 35, GLIGAR
@@ -1702,7 +2174,7 @@ JohtoGrassWildMons:
 ; Overall, increased Johto frequency that matches early advertising for the game.
 ; Coinpur replaces Sentret at night.
 	def_grass_wildmons ROUTE_46
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 3, PHANPY
 	dbw 3, SPEAROW
@@ -1719,7 +2191,15 @@ JohtoGrassWildMons:
 	dbw 4, SENTRET
 	dbw 3, IGGLYBUFF
 	dbw 3, IGGLYBUFF
-	; nite
+	; night
+	dbw 3, GEODUDE
+	dbw 3, HOOTHOOT
+	dbw 4, GEODUDE
+	dbw 3, COINPUR
+	dbw 4, COINPUR
+	dbw 3, IGGLYBUFF
+	dbw 3, IGGLYBUFF
+	; dusk
 	dbw 3, GEODUDE
 	dbw 3, HOOTHOOT
 	dbw 4, GEODUDE
@@ -1730,7 +2210,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons SILVER_CAVE_OUTSIDE
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 41, TANGELA
 	dbw 42, PONYTA
@@ -1747,7 +2227,15 @@ JohtoGrassWildMons:
 	dbw 41, DODUO
 	dbw 43, DODRIO
 	dbw 43, DODRIO
-	; nite
+	; night
+	dbw 41, TANGELA
+	dbw 42, POLIWHIRL
+	dbw 42, GOLBAT
+	dbw 44, POLIWHIRL
+	dbw 40, GOLBAT
+	dbw 44, GOLBAT
+	dbw 44, GOLBAT
+	; dusk
 	dbw 41, TANGELA
 	dbw 42, POLIWHIRL
 	dbw 42, GOLBAT
@@ -1758,7 +2246,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons CLIFF_CAVE
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 30, ONIX
 	dbw 31, GOLBAT
@@ -1775,7 +2263,15 @@ JohtoGrassWildMons:
 	dbw 32, QUAGSIRE
 	dbw 32, QUAGSIRE
 	dbw 35, STEELIX
-	; nite
+	; night
+	dbw 30, ONIX
+	dbw 31, GOLBAT
+	dbw 30, MACHOKE
+	dbw 31, KINGLER
+	dbw 32, MISDREAVUS
+	dbw 32, MISDREAVUS
+	dbw 35, STEELIX
+	; dusk
 	dbw 30, ONIX
 	dbw 31, GOLBAT
 	dbw 30, MACHOKE
@@ -1786,7 +2282,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_48
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 20, GIRAFARIG
 	dbw 21, FEAROW
@@ -1803,7 +2299,15 @@ JohtoGrassWildMons:
 	dbw 22, SKIPLOOM
 	dbw 23, MILTANK
 	dbw 25, TAUROS
-	; nite
+	; night
+	dbw 20, GIRAFARIG
+	dbw 21, GROWLITHE
+	dbw 20, VULPIX
+	dbw 21, GIRAFARIG
+	dbw 22, GLOOM
+	dbw 23, NOCTOWL
+	dbw 25, MURKROW
+	; dusk
 	dbw 20, GIRAFARIG
 	dbw 21, GROWLITHE
 	dbw 20, VULPIX
@@ -1814,7 +2318,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 	
 	def_grass_wildmons HAUNTED_HOUSE_FOYER
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 2 percent, 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 36, MISDREAVUS
 	dbw 37, MISDREAVUS
@@ -1831,7 +2335,15 @@ JohtoGrassWildMons:
 	dbw 37, WISPIRIT
 	dbw 37, HAUNTER
 	dbw 38, HAUNTER
-	; nite
+	; night
+	dbw 36, MISDREAVUS
+	dbw 35, MISDREAVUS
+	dbw 36, GASTLY
+	dbw 37, BELLEDAM
+	dbw 37, WISPIRIT
+	dbw 38, HAUNTER
+	dbw 40, GENGAR
+	; dusk
 	dbw 36, MISDREAVUS
 	dbw 35, MISDREAVUS
 	dbw 36, GASTLY
@@ -1842,7 +2354,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 	
 	def_grass_wildmons HAUNTED_HOUSE_1F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 2 percent, 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 36, MISDREAVUS
 	dbw 37, MISDREAVUS
@@ -1859,7 +2371,15 @@ JohtoGrassWildMons:
 	dbw 37, WISPIRIT
 	dbw 37, HAUNTER
 	dbw 38, HAUNTER
-	; nite
+	; night
+	dbw 36, MISDREAVUS
+	dbw 35, MISDREAVUS
+	dbw 36, GASTLY
+	dbw 37, BELLEDAM
+	dbw 37, WISPIRIT
+	dbw 38, HAUNTER
+	dbw 40, GENGAR
+	; dusk
 	dbw 36, MISDREAVUS
 	dbw 35, MISDREAVUS
 	dbw 36, GASTLY
@@ -1870,7 +2390,7 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 	
 	def_grass_wildmons HAUNTED_HOUSE_2F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 2 percent, 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/night/dusk
 	; morn
 	dbw 36, MISDREAVUS
 	dbw 37, MISDREAVUS
@@ -1887,7 +2407,15 @@ JohtoGrassWildMons:
 	dbw 37, WISPIRIT
 	dbw 37, HAUNTER
 	dbw 38, HAUNTER
-	; nite
+	; night
+	dbw 36, MISDREAVUS
+	dbw 35, MISDREAVUS
+	dbw 36, GASTLY
+	dbw 37, BELLEDAM
+	dbw 37, WISPIRIT
+	dbw 38, HAUNTER
+	dbw 40, GENGAR
+	; dusk
 	dbw 36, MISDREAVUS
 	dbw 35, MISDREAVUS
 	dbw 36, GASTLY
