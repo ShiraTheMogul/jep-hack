@@ -19,12 +19,12 @@ DebugPokemon1Script:
 
 DebugPokemon2Script:
 	opentext
-	getmonname STRING_BUFFER_3, BELLEDAM
+	getmonname STRING_BUFFER_3, KUWAGUARD
 	writetext ReceivedDebugPokemonText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
-	givepoke BELLEDAM, 31, HEART_STONE
+	givepoke KUWAGUARD, 31, HEART_STONE
 	closetext
 	end
 
@@ -39,11 +39,11 @@ DebugPokemon3Script:
 	faceplayer
 	opentext
 	writetext DebugTextA
-	cry MOIBELLE
+	cry KUWAGUARD
 	pause 15
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SHINY
-	loadwildmon MOIBELLE, 5
+	loadwildmon KUWAGUARD, 5
 	startbattle
 	reloadmapafterbattle
 	end
@@ -56,11 +56,11 @@ DebugPokemon4Script:
 	faceplayer
 	opentext
 	writetext DebugTextB
-	cry BELLEDAM
+	cry KUWAGUARD
 	pause 15
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SUICUNE
-	loadwildmon BELLEDAM, 70
+	loadwildmon KUWAGUARD, 70
 	startbattle
 	reloadmapafterbattle
 	end
