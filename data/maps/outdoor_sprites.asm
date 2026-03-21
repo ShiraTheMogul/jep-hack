@@ -53,14 +53,32 @@ OutdoorSprites:
 ; Since these areas aren't done yet, their outdoor sprites will just use Pallet's.
 ; Change as apt later. Right now, it's a space-saver.
 CitrineGroupSprites:
-OneIslandGroupSprites:
-TwoIslandGroupSprites:
-ThreeIslandGroupSprites:
-FourIslandGroupSprites:
-FiveIslandGroupSprites:
-SixIslandGroupSprites:
-SevenIslandGroupSprites:
 PalletGroupSprites:
+	db SPRITE_SUICUNE
+	db SPRITE_SILVER_TROPHY
+	db SPRITE_FAMICOM
+	db SPRITE_POKEDEX
+	db SPRITE_WILL
+	db SPRITE_KAREN
+	db SPRITE_NURSE
+	db SPRITE_OLD_LINK_RECEPTIONIST
+	db SPRITE_BIG_LAPRAS
+	db SPRITE_BIG_ONIX
+	db SPRITE_SUDOWOODO
+	db SPRITE_BIG_SNORLAX
+	db SPRITE_TEACHER
+	db SPRITE_FISHER
+	db SPRITE_YOUNGSTER
+	db SPRITE_BLUE
+	db SPRITE_GRAMPS
+	db SPRITE_BUG_CATCHER
+	db SPRITE_COOLTRAINER_F
+	db SPRITE_SWIMMER_GIRL
+	db SPRITE_SWIMMER_GUY
+	db SPRITE_POKE_BALL
+	db SPRITE_FRUIT_TREE
+
+;Sevii islands can probably share these for now? I'm sure we dont need all of them.	
 	db SPRITE_SUICUNE
 	db SPRITE_SILVER_TROPHY
 	db SPRITE_FAMICOM
@@ -702,6 +720,38 @@ CableClubGroupSprites:
 	db SPRITE_FISHING_GURU
 	db SPRITE_POKE_BALL
 	db SPRITE_POKEDEX
+
+OneIslandGroupSprites:
+TwoIslandGroupSprites:
+ThreeIslandGroupSprites:
+FourIslandGroupSprites:
+FiveIslandGroupSprites:
+SixIslandGroupSprites:
+SevenIslandGroupSprites:
+;Sevii islands can probably share these for now? I'm sure we dont need all of them.	
+	db SPRITE_SUICUNE
+	db SPRITE_SILVER_TROPHY
+	db SPRITE_FAMICOM
+	db SPRITE_POKEDEX
+	db SPRITE_WILL
+	db SPRITE_KAREN
+	db SPRITE_NURSE
+	db SPRITE_OLD_LINK_RECEPTIONIST
+	db SPRITE_BIG_LAPRAS
+	db SPRITE_BIG_ONIX
+	db SPRITE_SUDOWOODO
+	db SPRITE_BIG_SNORLAX
+	db SPRITE_TEACHER
+	db SPRITE_FISHER
+	db SPRITE_YOUNGSTER
+	db SPRITE_SAILOR
+	db SPRITE_GRAMPS
+	db SPRITE_BUG_CATCHER
+	db SPRITE_COOLTRAINER_F
+	db SPRITE_SWIMMER_GIRL
+	db SPRITE_SWIMMER_GUY
+	db SPRITE_POKE_BALL
+	db SPRITE_FRUIT_TREE
 
 SilentHillsGroupSprites:
 	; 12 non-walking filler sprites

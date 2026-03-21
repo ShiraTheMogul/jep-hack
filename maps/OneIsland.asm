@@ -42,16 +42,16 @@ OneIsland_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 14, 19, DEBUG_ROOM, 1 ; port
-	warp_event 15, 19, DEBUG_ROOM, 1 ; port
+	warp_event 10, 23, DEBUG_ROOM, 1 ; port
+	warp_event 11, 23, DEBUG_ROOM, 1 ; port
 	
-	warp_event 17,  6, DEBUG_ROOM, 1 ; pokecenter
-	warp_event 11, 13, DEBUG_ROOM, 1 ; left house
-	warp_event 21, 11, DEBUG_ROOM, 1 ; right house
+	warp_event 11,  8, DEBUG_ROOM, 1 ; pokecenter
+	warp_event  7, 15, DEBUG_ROOM, 1 ; left house
+	warp_event 15, 13, DEBUG_ROOM, 1 ; right house
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event 19, 23, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OneIslandSailorScript, -1
+	object_event 11, 21, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OneIslandSailorScript, -1

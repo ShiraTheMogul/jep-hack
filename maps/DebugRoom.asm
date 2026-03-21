@@ -418,7 +418,7 @@ DebugRoom_MapEvents:
 	warp_event 35, 17, SUNGLOW_CITY, 1 ; east warp
 	warp_event  5, 35, LAVENDER_TOWN, 1 ; southwest warp
 	warp_event 19, 34, KANTO_SAFARI_ZONE_CENTER, 1 ; southern warp
-	warp_event 33, 33, SIX_ISLAND, 1 ; southeast warp
+	warp_event 33, 33, ONE_ISLAND, 1 ; southeast warp
 	warp_event  5,  3, HAUNTED_HOUSE_FOYER, 1
 	warp_event 34, 11, WINNERS_PATH, 3
 
