@@ -269,11 +269,11 @@ LoadNthMiddleBGPal:
 	ret
 
 LoadBetaPokerPalettes: ; unreferenced
-	ldh a, [hCGB]
-	and a
-	jr nz, .cgb
-	ld hl, wBetaPokerSGBPals
-	jp PushSGBPals
+;	ldh a, [hCGB]
+;	and a
+;	jr nz, .cgb
+;	ld hl, wBetaPokerSGBPals
+;	jp PushSGBPals
 
 .cgb
 	ld a, [wBetaPokerSGBCol]

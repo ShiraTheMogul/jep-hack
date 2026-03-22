@@ -583,14 +583,14 @@ ENDM
 	endgroup
 	
 	newgroup THREE_ISLAND ; 30
-	map_const THREE_ISLAND_PORT,					20, 9 ; 1
+	map_const THREE_ISLAND_PORT,					20, 9  ; 1
 	map_const THREE_ISLAND,							10, 18 ; 2
-	map_const BOND_BRIDGE,							50, 16 ; 3
+	map_const BOND_BRIDGE,							36, 10 ; 3
 	map_const BERRY_FOREST,							17, 15 ; 4
 	endgroup
 	
 	newgroup FOUR_ISLAND ; 31
-	map_const FOUR_ISLAND,							25, 20 ; 1
+	map_const FOUR_ISLAND,							25, 18 ; 1
 	map_const ICEFALL_CAVE_ENTRANCE,				10, 10 ; 2
 	map_const ICEFALL_CAVE_1F,						10, 10 ; 3
 	map_const ICEFALL_CAVE_B1F,						10, 10 ; 4
@@ -598,11 +598,11 @@ ENDM
 	endgroup
 	
 	newgroup FIVE_ISLAND ; 32
-	map_const FIVE_ISLAND,							10, 9 ; 1
-	map_const FIVE_ISLAND_MEADOW,					10, 10 ; 2
-	map_const MEMORIAL_PILLAR,						10, 10 ; 3
-	map_const WATER_LABYRINTH,						10, 10 ; 4
-	map_const RESORT_GORGEOUS,						10, 10 ; 5
+	map_const FIVE_ISLAND,							10, 9  ; 1
+	map_const FIVE_ISLAND_MEADOW,					10, 18 ; 2
+	map_const MEMORIAL_PILLAR,						10, 27 ; 3
+	map_const WATER_LABYRINTH,						30, 9  ; 4
+	map_const RESORT_GORGEOUS,						30, 9  ; 5
 	map_const LOST_CAVE,							10, 10 ; 7 Programming this as one map. Not wasting precious space on this awful map...
 	endgroup
 	
@@ -623,10 +623,13 @@ ENDM
 	map_const SEVAULT_CANYON,						10, 10 ; 3
 	map_const TANOBY_RUINS,							10, 10 ; 4
 	map_const TANOBY_CHAMBERS,						10, 10 ; 5
-	map_const NAVAL_ROCK_EXTERIOR,					10, 10 ; 6
-	map_const NAVAL_ROCK_1F,						10, 10 ; 7
-	map_const NAVAL_ROCK_2F,						10, 10 ; 8
-	map_const NAVAL_ROCK_B1F,						10, 10 ; 9
+	endgroup
+	
+	newgroup NAVEL_ROCK	; all of the below maps have typos whoops lol
+	map_const NAVAL_ROCK_EXTERIOR,					10, 18 ; 1
+	map_const NAVAL_ROCK_1F,						10, 10 ; 2
+	map_const NAVAL_ROCK_2F,						10, 10 ; 3
+	map_const NAVAL_ROCK_B1F,						10, 10 ; 4
 	endgroup
 	
 	newgroup SILENT_HILLS                                         ; 35

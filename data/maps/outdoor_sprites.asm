@@ -38,6 +38,7 @@ OutdoorSprites:
 	dw FiveIslandGroupSprites
 	dw SixIslandGroupSprites
 	dw SevenIslandGroupSprites
+	dw NavelRockGroupSprites
 	dw SilentHillsGroupSprites
 	dw OldCityGroupSprites
 	dw SavoyCityGroupSprites
@@ -728,6 +729,7 @@ FourIslandGroupSprites:
 FiveIslandGroupSprites:
 SixIslandGroupSprites:
 SevenIslandGroupSprites:
+NavelRockGroupSprites:
 ;Sevii islands can probably share these for now? I'm sure we dont need all of them.	
 	db SPRITE_SUICUNE
 	db SPRITE_SILVER_TROPHY

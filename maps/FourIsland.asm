@@ -14,8 +14,8 @@ FourIsland_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 12, 29, DEBUG_ROOM, 1
-	warp_event 13, 29, DEBUG_ROOM, 1
+	warp_event 12, 25, DEBUG_ROOM, 1
+	warp_event 13, 25, DEBUG_ROOM, 1
 	def_coord_events
 
 	def_bg_events

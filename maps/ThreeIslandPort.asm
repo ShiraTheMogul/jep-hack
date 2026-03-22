@@ -9,8 +9,8 @@ ThreeIslandPort_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  8,  9, DEBUG_ROOM, 1
-	warp_event  9,  9, DEBUG_ROOM, 1
+	warp_event 10, 11, DEBUG_ROOM, 1
+	warp_event 11, 11, DEBUG_ROOM, 1
 
 	def_coord_events
 

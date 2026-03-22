@@ -9,8 +9,8 @@ BondBridge_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  9,  8, BERRY_FOREST, 1 ; BOND_BRIDGE
-	warp_event  8,  8, BERRY_FOREST, 2 ; BOND_BRIDGE
+	warp_event  5,  4, BERRY_FOREST, 1 ; BOND_BRIDGE
+	warp_event  4,  4, BERRY_FOREST, 2 ; BOND_BRIDGE
 
 	def_coord_events
 

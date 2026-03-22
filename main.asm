@@ -24,6 +24,8 @@ INCLUDE "engine/math/sine.asm"
 SECTION "bank2.5", ROMX
 
 INCLUDE "engine/predef.asm"
+
+SECTION "bank2.75", ROMX ; dear god this thing is too fucking big, help
 INCLUDE "engine/gfx/color.asm"
 
 

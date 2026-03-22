@@ -14,8 +14,8 @@ TwoIsland_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  8,  7, DEBUG_ROOM, 1
-	warp_event  9,  7, DEBUG_ROOM, 1
+	warp_event  6,  9, DEBUG_ROOM, 1
+	warp_event  7,  9, DEBUG_ROOM, 1
 
 	def_coord_events
 

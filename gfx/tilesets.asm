@@ -596,18 +596,6 @@ INCLUDE "data/tilesets/tower_collision.asm"
 TilesetTowerAttr::
 INCBIN "data/tilesets/tower_attributes.bin"
 
-TilesetSeviiGFX::
-INCBIN "gfx/tilesets/sevii.2bpp.lz"
-
-TilesetSeviiMeta::
-INCBIN "data/tilesets/sevii_metatiles.bin"
-
-TilesetSeviiColl::
-INCLUDE "data/tilesets/sevii_collision.asm"
-
-TilesetSeviiAttr::
-INCBIN "data/tilesets/sevii_attributes.bin"
-
 TilesetLushCaveGFX::
 INCBIN "gfx/tilesets/lushcave.2bpp.lz"
 
@@ -680,4 +668,18 @@ INCBIN "data/tilesets/nihon_powerplant_attributes.bin"
 
 TilesetNihonPowerPlantGFX::
 INCBIN "gfx/tilesets/nihon_powerplant.2bpp.lz"
+
+SECTION "Tileset Data 18", ROMX
+
+TilesetSeviiGFX::
+INCBIN "gfx/tilesets/sevii.2bpp.lz"
+
+TilesetSeviiMeta::
+INCBIN "data/tilesets/sevii_metatiles.bin"
+
+TilesetSeviiColl::
+INCLUDE "data/tilesets/sevii_collision.asm"
+
+TilesetSeviiAttr::
+INCBIN "data/tilesets/sevii_attributes.bin"
 
