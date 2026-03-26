@@ -144,3 +144,13 @@
 	tilecoll WALL, WALL, WALL, WALL ; 8f
 	tilecoll WALL, WALL, WALL, WALL ; 90
 	tilecoll WALL, WALL, WALL, WALL ; 91
+	tilecoll FLOOR, FLOOR, FLOOR, WALL ; 92
+	tilecoll FLOOR, WALL, WALL, WALL ; 93
+	tilecoll FLOOR, WALL, FLOOR, WALL ; 94
+	tilecoll UP_WALL, WALL, FLOOR, WALL ; 95
+	tilecoll FLOOR, WALL, WALL, WALL ; 96
+	tilecoll FLOOR, FLOOR, HEADBUTT_TREE, HEADBUTT_TREE ; 97
+	tilecoll HEADBUTT_TREE, HEADBUTT_TREE, FLOOR, FLOOR ; 98
+	tilecoll FLOOR, WALL, FLOOR, FLOOR ; 99
+	tilecoll WALL, WALL, WALL, WALL ; 9a
+	tilecoll WALL, WALL, WALL, WALL ; 9b
