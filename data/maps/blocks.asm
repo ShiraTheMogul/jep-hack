@@ -1112,24 +1112,6 @@ IcefallCaveB1F_Blocks:
 IcefallCaveBack_Blocks:
 	INCBIN "maps/IcefallCaveBack.ablk"
 
-FiveIsland_Blocks:
-	INCBIN "maps/FiveIsland.ablk"
-
-FiveIslandMeadow_Blocks:
-	INCBIN "maps/FiveIslandMeadow.ablk"
-
-MemorialPillar_Blocks:
-	INCBIN "maps/MemorialPillar.ablk"
-
-WaterLabyrinth_Blocks:
-	INCBIN "maps/WaterLabyrinth.ablk"
-
-ResortGorgeous_Blocks:
-	INCBIN "maps/ResortGorgeous.ablk"
-
-LostCave_Blocks:
-	INCBIN "maps/LostCave.ablk"
-
 SixIsland_Blocks:
 	INCBIN "maps/SixIsland.ablk"
 
@@ -1212,6 +1194,24 @@ ThreeIslandPort_Blocks:
 	INCBIN "maps/ThreeIslandPort.ablk"
 
 SECTION "Map Blocks 4", ROMX
+
+FiveIsland_Blocks:
+	INCBIN "maps/FiveIsland.ablk"
+
+FiveIslandMeadow_Blocks:
+	INCBIN "maps/FiveIslandMeadow.ablk"
+
+MemorialPillar_Blocks:
+	INCBIN "maps/MemorialPillar.ablk"
+
+WaterLabyrinth_Blocks:
+	INCBIN "maps/WaterLabyrinth.ablk"
+
+ResortGorgeous_Blocks:
+	INCBIN "maps/ResortGorgeous.ablk"
+
+LostCave_Blocks:
+	INCBIN "maps/LostCave.ablk"
 
 SinjohRuinsExterior_Blocks:
 	INCBIN "maps/SinjohRuinsExterior.ablk"

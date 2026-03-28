@@ -66,4 +66,5 @@ Tilesets::
 	tileset TilesetSevii
 	tileset TilesetLushCave
 	tileset TilesetNihonPowerPlant
+	tileset TilesetShipDeck
 	assert_table_length NUM_TILESETS + 1

@@ -54,6 +54,7 @@
 	const TILESET_SEVII				   ; 34
 	const TILESET_LUSHCAVE			   ; 35
 	const TILESET_NIHON_POWERPLANT     ; 36
+	const TILESET_SHIP_DECK			   ; 37
 DEF NUM_TILESETS EQU const_value - 1
 
 ; wTileset struct size

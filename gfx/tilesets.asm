@@ -351,9 +351,6 @@ INCBIN "data/tilesets/players_house_attributes.bin"
 TilesetPokecenterAttr::
 INCBIN "data/tilesets/pokecenter_attributes.bin"
 
-TilesetGateAttr::
-INCBIN "data/tilesets/gate_attributes.bin"
-
 TilesetPortAttr::
 INCBIN "data/tilesets/port_attributes.bin"
 
@@ -682,4 +679,19 @@ INCLUDE "data/tilesets/sevii_collision.asm"
 
 TilesetSeviiAttr::
 INCBIN "data/tilesets/sevii_attributes.bin"
+
+TilesetGateAttr:: ; bank got too big
+INCBIN "data/tilesets/gate_attributes.bin"
+
+TilesetShipDeckGFX::
+INCBIN "gfx/tilesets/ship_deck.2bpp.lz"
+
+TilesetShipDeckMeta::
+INCBIN "data/tilesets/ship_deck_metatiles.bin"
+
+TilesetShipDeckColl::
+INCLUDE "data/tilesets/ship_deck_collision.asm"
+
+TilesetShipDeckAttr::
+INCBIN "data/tilesets/ship_deck_attributes.bin"
 
