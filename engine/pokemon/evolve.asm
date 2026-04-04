@@ -64,7 +64,7 @@ EvolveAfterBattle_MasterLoop:
 	ld b, a
 
 	cp EVOLVE_TRADE
-	jr z, .trade
+	jp z, .trade
 
 	ld a, [wLinkMode]
 	and a
@@ -84,6 +84,15 @@ EvolveAfterBattle_MasterLoop:
 
 	cp EVOLVE_HAPPINESS
 	jr z, .happiness
+	
+	cp EVOLVE_LEVEL_NIHON
+	jp z, .level_nihon
+	
+	cp EVOLVE_LEVEL_SEVII
+	jp z, .level_sevii
+	
+	cp EVOLVE_LEVEL_SINJOH
+	jp z, .level_sinjoh
 
 ; EVOLVE_STAT
 	call GetNextEvoAttackByte
@@ -123,7 +132,7 @@ EvolveAfterBattle_MasterLoop:
 
 	call GetNextEvoAttackByte
 	cp TR_ANYTIME
-	jr z, .proceed
+	jp z, .proceed
 	cp TR_MORNDAY
 	jr z, .happiness_daylight
 
@@ -131,13 +140,13 @@ EvolveAfterBattle_MasterLoop:
 	ld a, [wTimeOfDay]
 	cp NITE_F
 	jp c, .skip_evolution_species
-	jr .proceed
+	jp .proceed
 
 .happiness_daylight
 	ld a, [wTimeOfDay]
 	cp NITE_F
 	jp nc, .skip_evolution_species
-	jr .proceed
+	jp .proceed
 
 .trade
 	ld a, [wLinkMode]
@@ -150,7 +159,7 @@ EvolveAfterBattle_MasterLoop:
 	call GetNextEvoAttackByte
 	ld b, a
 	inc a
-	jr z, .proceed
+	jp z, .proceed
 
 	ld a, [wLinkMode]
 	cp LINK_TIMECAPSULE
@@ -179,6 +188,60 @@ EvolveAfterBattle_MasterLoop:
 	jp nz, .skip_evolution_species
 	jr .proceed
 
+.level_sinjoh
+	;oh boy here we go lets test the fucking MAP GROUPS i guess. this is going to be fucky.
+	; Check Blue Forest? Nearby area probably.
+	ld a, [wMapGroup]
+	cp MAPGROUP_BLUE_FOREST
+	jp z, .level
+	; Check North? Nearby area probably.
+	ld a, [wMapGroup]
+	cp MAPGROUP_BLUE_FOREST ; Placeholder. We dont have the actual group.
+	jp z, .level
+	; Check if we're in Sinjoh.
+	ld a, [wMapGroup]
+	cp MAPGROUP_BLUE_FOREST ; Placeholder. We dont have the actual group.
+	jp z, .level
+	jp .skip_evolution_species_parameter ; ...hopefully this is correct??
+
+.level_nihon
+	; my own attempt at a region check for this shit, based on what i did for the route color check
+	;push hl ; tutorial does this. not 100% sure we need it, may be redundant with GetWorldMapLocation.
+	; get the world map location
+	ld a, [wMapGroup]
+	ld b, a
+	ld a, [wMapNumber]
+	ld c, a
+	call GetWorldMapLocation
+	; check if we're in nihon
+	cp NIHON_LANDMARK ; Need to check for off by 1 errors.
+	
+	;pop hl ; tutorial does this. not 100% sure we need it, may be redundant with GetWorldMapLocation.
+
+	jr nc, .level ; if we're in nihon, evolve.
+
+	jp .skip_evolution_species_parameter ; ...hopefully this is correct??
+
+.level_sevii
+	; Load up our map location shit
+	ld a, [wMapGroup]
+	ld b, a
+	ld a, [wMapNumber]
+	ld c, a
+	call GetWorldMapLocation
+	ld b, a ; Is this needed? I dont know if cp messes with the value of a.
+	
+	; check if we could be in sevii
+	cp SEVII_LANDMARK_1 ; Need to check for off by 1 errors.
+	jp c, .skip_evolution_species_parameter ; again, hoping this is correct.
+	
+	; check if we're actually in nihon
+	ld a, b ; put that back
+	cp NIHON_LANDMARK ; Need to check for off by 1 errors.
+	jp nc, .skip_evolution_species_parameter
+	
+	; fallthrough to .level
+	
 .level
 	call GetNextEvoAttackByte
 	ld b, a
