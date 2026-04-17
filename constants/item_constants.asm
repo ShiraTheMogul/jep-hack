@@ -169,7 +169,7 @@
 	;const FAST_BALL    ; a1
 	const ITEM_A2      ; a2
 	const LIGHT_BALL   ; a3
-	const FRIEND_BALL  ; a4
+	;const FRIEND_BALL  ; a4
 	;const MOON_BALL    ; a5
 	;const LOVE_BALL    ; a6
 	const NORMAL_BOX   ; a7

@@ -1,12 +1,12 @@
 ItemNames::
 	list_start ItemNames
-	li "MASTER BALL"
-	li "ULTRA BALL"
+	;li "MASTER BALL"
+	;li "ULTRA BALL"
 	li "BRIGHTPOWDER"
-	li "GREAT BALL"
-	li "# BALL"
+	;li "GREAT BALL"
+	;li "# BALL"
 	li "TERU-SAMA"
-	li "BICYCLE"
+	;li "BICYCLE"
 	li "MOON STONE"
 	li "ANTIDOTE"
 	li "BURN HEAL"
@@ -44,7 +44,7 @@ ItemNames::
 	li "SUPER REPEL"
 	li "MAX REPEL"
 	li "DIRE HIT"
-	li "SAFARI BALL"
+	;li "SAFARI BALL"
 	li "FRESH WATER"
 	li "SODA POP"
 	li "LEMONADE"
@@ -53,24 +53,24 @@ ItemNames::
 	li "X DEFEND"
 	li "X SPEED"
 	li "X SPECIAL"
-	li "COIN CASE"
-	li "ITEMFINDER"
+	;li "COIN CASE"
+	;li "ITEMFINDER"
 	li "TERU-SAMA"
 	li "EXP.SHARE"
-	li "OLD ROD"
-	li "GOOD ROD"
+	;li "OLD ROD"
+	;li "GOOD ROD"
 	li "SILVER LEAF"
-	li "SUPER ROD"
+	;li "SUPER ROD"
 	li "PP UP"
 	li "ETHER"
 	li "MAX ETHER"
 	li "ELIXER"
-	li "RED SCALE"
-	li "SECRETPOTION"
-	li "S.S.TICKET"
-	li "MYSTERY EGG"
-	li "CLEAR BELL"
-	li "SILVER WING"
+	;li "RED SCALE"
+	;li "SECRETPOTION"
+	;li "S.S.TICKET"
+	;li "MYSTERY EGG"
+	;li "CLEAR BELL"
+	;li "SILVER WING"
 	li "MOOMOO MILK"
 	li "QUICK CLAW"
 	li "PSNCUREBERRY"
@@ -99,7 +99,7 @@ ItemNames::
 	li "WHT APRICORN"
 	li "BLACKBELT"
 	li "BLK APRICORN"
-	li "HONEY POT"
+	;li "HONEY POT"
 	li "PNK APRICORN"
 	li "BLACKGLASSES"
 	li "SLOWPOKETAIL"
@@ -114,8 +114,8 @@ ItemNames::
 	li "EVERSTONE"
 	li "SPELL TAG"
 	li "RAGECANDYBAR"
-	li "GS BALL"
-	li "BLUE CARD"
+	;li "GS BALL"
+	;li "BLUE CARD"
 	li "MIRACLE SEED"
 	li "THICK CLUB"
 	li "FOCUS BAND"
@@ -126,14 +126,14 @@ ItemNames::
 	li "REVIVAL HERB"
 	li "HARD STONE"
 	li "LUCKY EGG"
-	li "CARD KEY"
-	li "MACHINE PART"
-	li "EGG TICKET"
-	li "LOST ITEM"
+	;li "CARD KEY"
+	;li "MACHINE PART"
+	;li "EGG TICKET"
+	;li "LOST ITEM"
 	li "STARDUST"
 	li "STAR PIECE"
-	li "BASEMENT KEY"
-	li "PASS"
+	;li "BASEMENT KEY"
+	;li "PASS"
 	li "HEART STONE"
 	li "POISON STONE"
 	li "ICE STONE"
@@ -156,16 +156,16 @@ ItemNames::
 	li "TERU-SAMA"
 	li "TERU-SAMA"
 	li "SACRED ASH"
-	li "HEAVY BALL"
+	;li "HEAVY BALL"
 	li "FLOWER MAIL"
-	li "LEVEL BALL"
-	li "LURE BALL"
-	li "FAST BALL"
+	;li "LEVEL BALL"
+	;li "LURE BALL"
+	;li "FAST BALL"
 	li "TERU-SAMA"
 	li "LIGHT BALL"
-	li "FRIEND BALL"
-	li "MOON BALL"
-	li "LOVE BALL"
+	;li "FRIEND BALL"
+	;li "MOON BALL"
+	;li "LOVE BALL"
 	li "NORMAL BOX"
 	li "GORGEOUS BOX"
 	li "SUN STONE"
@@ -174,10 +174,10 @@ ItemNames::
 	li "UP-GRADE"
 	li "BERRY"
 	li "GOLD BERRY"
-	li "SQUIRTBOTTLE"
+	;li "SQUIRTBOTTLE"
 	li "DUBIOUS DISK"
-	li "PARK BALL"
-	li "RAINBOW WING"
+	;li "PARK BALL"
+	;li "RAINBOW WING"
 	li "TERU-SAMA"
 	li "BRICK PIECE"
 	li "SURF MAIL"
@@ -193,70 +193,48 @@ ItemNames::
 	li "DOME FOSSIL"
 	li "HELIX FOSSIL"
 	li "WING FOSSIL"
-	assert_list_length NUM_ITEMS
-	li "TM01"
-	li "TM02"
-	li "TM03"
-	li "TM04"
-	li "TM05"
-	li "TM06"
-	li "TM07"
-	li "TM08"
-	li "TM09"
-	li "TM10"
-	li "TM11"
-	li "TM12"
-	li "TM13"
-	li "TM14"
-	li "TM15"
-	li "TM16"
-	li "TM17"
-	li "TM18"
-	li "TM19"
-	li "TM20"
-	li "TM21"
-	li "TM22"
-	li "TM23"
-	li "TM24"
-	li "TM25"
-	li "TM26"
-	li "TM27"
-	li "TM28"
-	li "TM29"
-	li "TM30"
-	li "TM31"
-	li "TM32"
-	li "TM33"
-	li "TM34"
-	li "TM35"
-	li "TM36"
-	li "TM37"
-	li "TM38"
-	li "TM39"
-	li "TM40"
-	li "TM41"
-	li "TM42"
-	li "TM43"
-	li "TM44"
-	li "TM45"
-	li "TM46"
-	li "TM47"
-	li "TM48"
-	li "TM49"
-	li "TM50"
-	assert_list_length NUM_ITEMS + NUM_TMS
-	li "HM01"
-	li "HM02"
-	li "HM03"
-	li "HM04"
-	li "HM05"
-	li "HM06"
-	li "HM07"
-	assert_list_length NUM_ITEMS + NUM_TMS + NUM_HMS
-	li "TERU-SAMA"
-	li "TERU-SAMA"
-	li "TERU-SAMA"
-	li "TERU-SAMA"
-	li "TERU-SAMA"
-	li "?"
-	assert_list_length $100
+assert_list_length NUM_ITEM_POCKET
+
+KeyItemNames::
+	list_start KeyItemNames
+	li "BICYCLE"      ; 0100
+	li "COIN CASE"    ; 0101
+	li "ITEMFINDER"   ; 0102
+	li "OLD ROD"      ; 0103
+	li "GOOD ROD"     ; 0104
+	li "SUPER ROD"    ; 0105
+	li "RED SCALE"    ; 0106
+	li "SECRETPOTION" ; 0107
+	li "S.S.TICKET"   ; 0108
+	li "MYSTERY EGG"  ; 0109
+	li "CLEAR BELL"   ; 010A
+	li "SILVER WING"  ; 010B
+	li "GS BALL"      ; 010C
+	li "BLUE CARD"    ; 010D
+	li "CARD KEY"     ; 010E
+	li "MACHINE PART" ; 010F
+	li "EGG TICKET"   ; 0110
+	li "LOST ITEM"    ; 0111
+	li "BASEMENT KEY" ; 0112
+	li "PASS"         ; 0113
+	li "SQUIRTBOTTLE" ; 0114
+	li "RAINBOW WING" ; 0115
+	li "HONEY POT"
+	assert_list_length NUM_KEY_ITEM_POCKET
+
+BallNames::
+	list_start BallNames
+	li "MASTER BALL" ; 0200
+	li "ULTRA BALL"  ; 0201
+	li "GREAT BALL"  ; 0202
+	li "# BALL"      ; 0203
+	li "HEAVY BALL"  ; 0204
+	li "LEVEL BALL"  ; 0205
+	li "LURE BALL"   ; 0206
+	li "FAST BALL"   ; 0207
+	li "FRIEND BALL" ; 0208
+	li "MOON BALL"   ; 0209
+	li "LOVE BALL"   ; 020A
+	li "PARK BALL"   ; 020B
+	li "SAFARI BALL"
+	assert_list_length NUM_BALL_ITEM_POCKET
