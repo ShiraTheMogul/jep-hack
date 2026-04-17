@@ -6,7 +6,7 @@
 	db FAIRY, FLYING ; type
 	db 45 ; catch rate
 	db 137 ; base exp
-	db NO_ITEM, FAIRY_FEATHER ; items
+	dw NO_ITEM, FAIRY_FEATHER ; items
 	db GENDER_F75 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch

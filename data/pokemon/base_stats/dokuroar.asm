@@ -6,7 +6,7 @@
 	db GHOST, GROUND ; type
 	db 3 ; catch rate
 	db 203 ; base exp
-	db THICK_CLUB, THICK_CLUB ; items
+	dw THICK_CLUB, THICK_CLUB ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 100 ; unknown 1
 	db 120 ; step cycles to hatch

@@ -6,7 +6,7 @@
 	db GHOST, FIRE ; type
 	db 45 ; catch rate								; PLACEHOLDER
 	db 64 ; base exp								; PLACEHOLDER
-	db NO_ITEM, NO_ITEM ; items
+	dw NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
 	db 120 ; step cycles to hatch

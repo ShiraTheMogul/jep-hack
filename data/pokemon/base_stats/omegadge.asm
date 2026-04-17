@@ -6,7 +6,7 @@
 	db STEEL, STEEL ; type
 	db 45 ; catch rate
 	db 204 ; base exp
-	db NO_ITEM, NO_ITEM ; items
+	dw NO_ITEM, NO_ITEM ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 100 ; unknown 1
 	db 35 ; step cycles to hatch

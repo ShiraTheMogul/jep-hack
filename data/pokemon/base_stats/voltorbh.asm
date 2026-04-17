@@ -6,7 +6,7 @@
 	db ELECTRIC, GRASS ; type
 	db 190 ; catch rate
 	db 103 ; base exp
-	db NO_ITEM, BERRY ; items
+	dw NO_ITEM, BERRY ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch

@@ -6,7 +6,7 @@
 	db FIRE, ELECTRIC ; type
 	db 130 ; catch rate
 	db 110 ; base exp
-	db BURNT_BERRY, BURNT_BERRY ; items
+	dw BURNT_BERRY, BURNT_BERRY ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
