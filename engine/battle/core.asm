@@ -393,11 +393,15 @@ HandleBerserkGene:
 	callfar GetUserItem
 	ld a, [hl]
 	ld [wNamedObjectIndex], a
-	sub BERSERK_GENE
+	push hl
+	call GetItemIndexFromID
+	cphl16 BERSERK_GENE
+	pop hl
 	pop bc
 	pop de
 	ret nz
 
+	xor a
 	ld [hl], a
 
 	ld h, d
@@ -1357,6 +1361,8 @@ HandleLeftovers:
 
 	callfar GetUserItem
 	ld a, [hl]
+	and a
+	ret z ; if no item
 	ld [wNamedObjectIndex], a
 	call GetItemName
 	ld a, b
@@ -5091,19 +5097,22 @@ BattleMenu_SafariBall:
 
 .tutorial
 	farcall TutorialPack
-	ld a, POKE_BALL
+	ld hl, POKE_BALL
+	call GetItemIDFromIndex
 	ld [wCurItem], a
 	call DoItemEffect
 	jr .got_item
 
 .safari
-	ld a, SAFARI_BALL
+	ld hl, SAFARI_BALL
+	call GetItemIDFromIndex
 	ld [wCurItem], a
 	call DoItemEffect
 	jr .UseItem
 
 .contest
-	ld a, PARK_BALL
+	ld hl, PARK_BALL
+	call GetItemIDFromIndex
 	ld [wCurItem], a
 	call DoItemEffect
 
@@ -6140,7 +6149,12 @@ LoadEnemyMon:
 ; Used for Ho-Oh, Lugia and Snorlax encounters
 	ld a, [wBattleType]
 	cp BATTLETYPE_FORCEITEM
-	ld a, [wBaseItem1]
+; 16 bit
+	push af
+	ld hl, wBaseItem1
+	call GetItemIDFromHL
+	ld b, a
+	pop af
 	jr z, .UpdateItem
 
 ; Failing that, it's all up to chance
@@ -6152,17 +6166,24 @@ LoadEnemyMon:
 ; 25% chance of getting an item
 	call BattleRandom
 	cp 75 percent + 1
-	ld a, NO_ITEM
+	ld b, NO_ITEM
 	jr c, .UpdateItem
 
 ; From there, an 8% chance for Item2
+; item 1
+	ld hl, wBaseItem1
+	call GetItemIDFromHL
+	ld b, a
 	call BattleRandom
 	cp 8 percent ; 8% of 25% = 2% Item2
-	ld a, [wBaseItem1]
 	jr nc, .UpdateItem
-	ld a, [wBaseItem2]
+; item 2
+	ld hl, wBaseItem2
+	call GetItemIDFromHL
+	ld b, a
 
 .UpdateItem:
+	ld a, b
 	ld [wEnemyMonItem], a
 
 ; Initialize DVs
@@ -7264,7 +7285,8 @@ GiveExperiencePoints:
 	ld a, MON_ITEM
 	call GetPartyParamLocation
 	ld a, [hl]
-	cp LUCKY_EGG
+	call GetItemIndexFromID
+	cphl16 LUCKY_EGG
 	call z, BoostExp
 	ldh a, [hQuotient + 3]
 	ld [wStringBuffer2 + 1], a
