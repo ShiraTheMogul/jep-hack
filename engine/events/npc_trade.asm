@@ -282,7 +282,10 @@ DoNPCTrade:
 	ld bc, PARTYMON_STRUCT_LENGTH
 	call Trade_GetAttributeOfLastPartymon
 	pop hl
-	ld a, [hl]
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	call GetItemIDFromIndex
 	ld [de], a
 
 	push af
@@ -308,7 +311,7 @@ GetTradeAttr:
 	push de
 	ld a, [wJumptableIndex]
 	and $f
-	swap a
+	swap a ; multiply a * 16
 	ld e, a
 	ld d, 0
 	ld hl, NPCTrades
