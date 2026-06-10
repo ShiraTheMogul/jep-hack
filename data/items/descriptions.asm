@@ -172,9 +172,9 @@ ItemDescriptions1:
 ;	dw FastBallDesc
 	dw QuestionMarkDesc
 	dw LightBallDesc
-	dw FriendBallDesc
-	dw MoonBallDesc
-	dw LoveBallDesc
+;	dw FriendBallDesc
+;	dw MoonBallDesc
+;	dw LoveBallDesc
 	dw NormalBoxDesc
 	dw GorgeousBoxDesc
 	dw SunStoneDesc

@@ -2244,7 +2244,7 @@ wStringBuffer5:: ds STRING_BUFFER_LENGTH
 
 wBattleMenuCursorPosition:: db
 
-	ds 1
+;	ds 1
 
 wCurBattleMon::
 ; index of the player's mon currently in battle (0-5)
@@ -2262,7 +2262,7 @@ wBallsPocketCursor::    db
 wTMHMPocketCursor::     db
 
 wPCItemsScrollPosition::        db
-	ds 1
+;	ds 1
 wItemsPocketScrollPosition::    db
 wKeyItemsPocketScrollPosition:: db
 wBallsPocketScrollPosition::    db
@@ -2361,7 +2361,7 @@ wSpriteFlags:: db
 
 wHandlePlayerStep:: db
 
-	ds 1
+;	ds 1
 
 wPartyMenuActionText:: db
 
@@ -2371,7 +2371,7 @@ wCurPartyLevel:: db
 
 wScrollingMenuListSize:: db
 
-	ds 1
+;	ds 1
 
 ; used when following a map warp
 wNextWarp:: db
@@ -2787,7 +2787,7 @@ wDudeNumBalls:: db
 wDudeBalls:: ds 2 * 3 + 1
 ENDU
 
-	ds 4
+;	ds 4
 
 wd430:: ; mobile
 wBattleAction:: db
@@ -2828,7 +2828,7 @@ wScriptTextAddr::
 wWildEncounterCooldown:: db
 
 wXYComparePointer:: dw
-	ds 4
+;	ds 4
 
 wBattleScriptFlags:: db
 	ds 1
@@ -2844,7 +2844,7 @@ wMapReentryScriptQueueFlag:: db
 wMapReentryScriptBank:: db
 wMapReentryScriptAddress:: dw
 
-	ds 4
+;	ds 4
 
 wTimeCyclesSinceLastCall:: db
 wReceiveCallDelay_MinsRemaining:: db
@@ -3118,7 +3118,7 @@ wFuchsiaSafariZoneGateID:: db
 wVermilionCityID:: db
 wRoute14ID:: db
 wLavenderCryptDokuroarsRoomID:: db
-	ds 41
+	ds 39 ; Was 41, should give enough space for this to build!
 
 ; fight counts
 wJackFightCount::    db

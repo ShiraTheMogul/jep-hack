@@ -5682,10 +5682,6 @@ BattleCommand_Charge:
 	ld h, [hl]
 	ld l, a
 	pop bc
-BattleCommand_Unused5D:
-; effect0x5d
-BattleCommand_Unused3C: ; Both of these were just ret commands. moved the labels here to hopefully save space...?
-; effect0x3c
 	ret
 
 .move_messages
@@ -5721,9 +5717,9 @@ BattleCommand_Unused3C: ; Both of these were just ret commands. moved the labels
 	text_far _BattleDugText
 	text_end
 
-;BattleCommand_Unused3C:
+BattleCommand_Unused3C:
 ; effect0x3c
-;	ret
+	ret
 
 BattleCommand_TrapTarget:
 	ld a, [wAttackMissed]
@@ -6476,9 +6472,9 @@ INCLUDE "engine/battle/move_effects/sandstorm.asm"
 
 INCLUDE "engine/battle/move_effects/rollout.asm"
 
-;BattleCommand_Unused5D:
+BattleCommand_Unused5D:
 ; effect0x5d
-;	ret
+	ret
 
 INCLUDE "engine/battle/move_effects/fury_cutter.asm"
 

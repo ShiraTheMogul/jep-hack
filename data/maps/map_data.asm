@@ -1,4 +1,4 @@
-SECTION "Maps", ROMX
+SECTION "Map Headers", ROMX
 
 INCLUDE "data/maps/maps.asm"
 
