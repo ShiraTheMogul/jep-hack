@@ -7,7 +7,7 @@ ENDM
 
 ItemAttributes:
 ; entries correspond to item ids (see constants/item_constants.asm)
-indirect_table ITEMATTR_STRUCT_LENGTH, 1
+	indirect_table ITEMATTR_STRUCT_LENGTH, 1
 	indirect_entries NUM_ITEM_POCKET, ItemAttributes1
 	indirect_entries FIRST_KEY_ITEM - 1 ; sparse table
 	indirect_entries (FIRST_KEY_ITEM - 1) + NUM_KEY_ITEM_POCKET, ItemKeyAttributes
@@ -620,5 +620,4 @@ ItemMiscAttributes:
 	item_attribute $9999, HELD_NONE, 0, NO_LIMITS, ITEM, ITEMMENU_NOUSE, ITEMMENU_NOUSE
 ; $00
 	item_attribute $9999, HELD_NONE, 0, NO_LIMITS, ITEM, ITEMMENU_NOUSE, ITEMMENU_NOUSE
-	assert_table_length $100
 .IndirectEnd::

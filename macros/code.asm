@@ -102,3 +102,23 @@ MACRO changebridgeblock
 	; hard-coding the above calculation for efficiency
 	ld [hl], \3
 ENDM
+
+MACRO smartcp
+	IF \1 == 0
+		and a
+	ELSE
+		cp \1
+	ENDC
+ENDM
+	
+MACRO cphl16
+; arg1: 16 bit register
+; arg2: value to compare to
+	ld a, h
+	smartcp HIGH(\1)
+	jr c, .done\@
+	jr nz, .done\@
+	ld a, l
+	smartcp LOW(\1)
+.done\@
+ENDM

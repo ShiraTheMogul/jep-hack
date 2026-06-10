@@ -193,7 +193,7 @@ ItemNames::
 	li "DOME FOSSIL"
 	li "HELIX FOSSIL"
 	li "WING FOSSIL"
-assert_list_length NUM_ITEM_POCKET
+	assert_list_length NUM_ITEM_POCKET
 
 KeyItemNames::
 	list_start KeyItemNames

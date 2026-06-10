@@ -4,6 +4,9 @@
 	const BATTLETOWER1F_COOLTRAINER_F
 	const BATTLETOWER1F_BUG_CATCHER
 	const BATTLETOWER1F_GRANNY
+	
+	const_def 1 ; locked Pokémon ID table entries, used for item checking
+	const BATTLETOWER1F_INDEX_POTION
 
 BattleTower1F_MapScripts:
 	def_scene_scripts
@@ -11,6 +14,11 @@ BattleTower1F_MapScripts:
 	scene_script BattleTower1FNoopScene,       SCENE_BATTLETOWER1F_NOOP
 
 	def_callbacks
+	callback MAPCALLBACK_NEWMAP, BattleTower1FLoadReservedIDsCallback
+
+	BattleTower1FLoadReservedIDsCallback:
+	loaditemindex BATTLETOWER1F_INDEX_POTION, POTION
+	endcallback
 
 BattleTower1FCheckStateScene:
 	setval BATTLETOWERACTION_CHECKSAVEFILEISYOURS
@@ -123,6 +131,7 @@ Script_GivePlayerHisPrize:
 	special BattleTowerAction
 	setval BATTLETOWERACTION_GIVEREWARD
 	special BattleTowerAction
+	checkmaplockeditems
 	ifequal POTION, Script_YourPackIsStuffedFull
 	getitemname STRING_BUFFER_4, USE_SCRIPT_VAR
 	giveitem ITEM_FROM_MEM, 5

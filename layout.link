@@ -115,7 +115,7 @@ ROMX $23
 ROMX $24
 	"bank24"
 ROMX $25
-	"Maps"
+	"Map Headers"
 ROMX $26
 	"Map Scripts 11"
 ROMX $27
@@ -370,7 +370,7 @@ SRAM $00
 	"Scratch"
 	org $a600
 	"SRAM Bank 0"
-	org $ae00
+	org $ad00
 	"Saved 16-bit conversion tables"
 	"Backup Save"
 SRAM $01

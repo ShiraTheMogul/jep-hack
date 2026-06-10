@@ -1507,6 +1507,8 @@ wCurSpecies:: db
 
 wNamedObjectType:: db
 
+wItemFlags:: db
+
 wJumptableIndex::
 wBattleTowerBattleEnded::
 	db
@@ -1548,7 +1550,7 @@ wTrainerCardBadgeAttributes:: db
 NEXTU
 ; slot machine
 wSlotsDelay:: db
-	ds 1
+;	ds 1
 wUnusedSlotReelIconDelay:: db
 
 NEXTU
@@ -1977,7 +1979,7 @@ wEarthquakeMovementDataBuffer:: ds 5
 SECTION UNION "Miscellaneous WRAM 1", WRAMX
 
 ; switching items in pack
-wSwitchItemBuffer:: ds 2 ; may store 1 or 2 bytes
+wSwitchItemBuffer:: ds 3 ; may store 1 to 3 bytes
 
 
 SECTION UNION "Miscellaneous WRAM 1", WRAMX
@@ -2144,7 +2146,7 @@ NEXTU
 ; hidden item data
 wHiddenItemData::
 wHiddenItemEvent:: dw
-wHiddenItemID:: db
+wHiddenItemID:: dw
 wHiddenItemDataEnd::
 
 NEXTU
@@ -2674,14 +2676,14 @@ wBaseType2:: db
 wBaseCatchRate:: db
 wBaseExp:: db
 wBaseItems::
-wBaseItem1:: db
-wBaseItem2:: db
+wBaseItem1:: dw	; The wBaseItem variables were dbs. the tutorial removed something to account for this but oh boy wTilesetDataAddress uses it now instead.
+wBaseItem2:: dw	; Not my fault if something breaks because of this!!!!!!!!! Possible Problem RAM.
 wBaseGender:: db
 wBaseUnknown1:: db
 wBaseEggSteps:: db
 wBaseUnknown2:: db
 wBasePicSize:: db
-wBaseUnusedFrontpic:: dw
+wBaseUnusedFrontpic:: dw	; exclusively used on line 274 of home/pokemon.asm. we can **probably** axe it if we need to???
 wBaseUnusedBackpic:: dw
 wBaseGrowthRate:: db
 wBaseEggGroups:: db
@@ -2776,13 +2778,13 @@ wOTPartyDataEnd::
 NEXTU
 ; catch tutorial dude pack
 wDudeNumItems:: db
-wDudeItems:: ds 2 * 4 + 1
+wDudeItems:: ds 2 * 3 + 1
 
 wDudeNumKeyItems:: db
 wDudeKeyItems:: ds 18 + 1
 
 wDudeNumBalls:: db
-wDudeBalls:: ds 2 * 4 + 1
+wDudeBalls:: ds 2 * 3 + 1
 ENDU
 
 	ds 4
@@ -2925,7 +2927,7 @@ endr
 
 wCmdQueue:: ds CMDQUEUE_CAPACITY * CMDQUEUE_ENTRY_SIZE
 
-	ds 3
+;	ds 3 ; Possible Problem RAM. This was a ds 40. Items commit dropped it down to 4. Was already a 3 when i looked here.
 
 wMapObjects::
 wPlayerObject:: map_object wPlayer ; player is map object 0
@@ -2939,14 +2941,14 @@ wObjectMasks:: ds NUM_OBJECTS
 wVariableSprites:: ds $100 - SPRITE_VARS
 
 wEnteredMapFromContinue:: db
-	ds 2
+;	ds 2
 wTimeOfDayPal:: db
-	ds 4
+;	ds 4
 wTimeOfDayPalFlags:: db
 wTimeOfDayPalset:: db
 wCurTimeOfDay:: db
 
-	ds 1
+;	ds 1
 
 wSecretID:: dw
 wStatusFlags::
@@ -2991,7 +2993,7 @@ wNihonBadges:: flag_array NUM_NIHON_BADGES
 wTMsHMs:: ds NUM_TMS + NUM_HMS
 
 wNumItems:: db
-wItems:: ds MAX_ITEMS * 2 + 1
+wItems:: ds MAX_ITEMS * 3 + 1
 
 wNumKeyItems:: db
 wKeyItems:: ds MAX_KEY_ITEMS + 1
@@ -3000,7 +3002,7 @@ wNumBalls:: db
 wBalls:: ds MAX_BALLS * 2 + 1
 
 wNumPCItems:: db
-wPCItems:: ds MAX_PC_ITEMS * 2 + 1
+wPCItems:: ds MAX_PC_ITEMS * 3 + 1
 
 wPokegearFlags::
 ; bit 0: map
@@ -3011,21 +3013,21 @@ wPokegearFlags::
 	db
 wRadioTuningKnob:: db
 wLastDexMode:: db
-	ds 1
+;	ds 1
 wWhichRegisteredItem:: db
 wRegisteredItem:: db
 
 wPlayerState:: db
 
 wHallOfFameCount:: db
-wExpShareToggle:: db
+wExpShareToggle:: db ; Possible Problem RAM: The ds 1 that was here originally was nuked by the original item commit.
 wTradeFlags:: flag_array NUM_NPC_TRADES
-	ds 1
+;	ds 1
 wMooMooBerries:: db
 wUndergroundSwitchPositions:: db
 wFarfetchdPosition:: db
 
-	ds 13
+;	ds 13
 
 ; map scene ids
 wPokecenter2FSceneID::                            db
@@ -3447,7 +3449,8 @@ SECTION "16-bit WRAM tables", WRAMX
 ; align this section to $100
 	wram_conversion_table wPokemonIndexTable, MON_TABLE
 	wram_conversion_table wMoveIndexTable, MOVE_TABLE
-
+	wram_conversion_table wItemIndexTable, ITEM_TABLE
+	
 
 SECTION "Battle Tower RAM", WRAMX
 

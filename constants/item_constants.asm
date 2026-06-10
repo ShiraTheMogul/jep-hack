@@ -229,7 +229,7 @@ DEF FIRST_KEY_ITEM EQU const_value
 DEF NUM_KEY_ITEM_POCKET EQU const_value - FIRST_KEY_ITEM
 assert NUM_KEY_ITEM_POCKET <= $ff
 
-const_align 8; Ball items assume the value of HIGH(FIRST_BALL_ITEM) when storing in bag.
+	const_align 8; Ball items assume the value of HIGH(FIRST_BALL_ITEM) when storing in bag.
 DEF FIRST_BALL_ITEM EQU const_value
 	const MASTER_BALL  ; 0200
 	const ULTRA_BALL   ; 0201
