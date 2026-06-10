@@ -133,13 +133,22 @@ LoadBattleAnimGFX:
 	ld a, BANK(wCurItem)
 	ld [rSVBK], a
 	; store the current item in b
-	ld a, [wCurItem] ;ZETANOTE: THIS NEEDS TO BE CHANGED FOR 16 BIT. I DONT IMMEDIATELY KNOW HOW.
-	ld b, a
+	ld a, [wCurItem] 
+	
+	; Hello have some janky zetacode
+	; Usually ld a wcuritem stuff is followed by this sort of stuff in the 16 bit item branch
+	push hl
+	call GetItemIndexFromID
+	ld b, l ; should take the high(?) byte of the ball item to compare it??
+	pop hl
+	
+	;ld b, a  -- this is just. explicitly replaced lol
 	; seek for the BallColors entry matching the current item
 	ld hl, BallColors
 .loop
 	ld a, [hli]
-	cp b ; did we find the current ball?
+	inc hl ; Try and skip one of the bytes to account for the fact that the balls are words instead of single bytes now.
+	cp b
 	jr z, .done
 	cp -1 ; did we reach the end of the list?
 	jr z, .done
