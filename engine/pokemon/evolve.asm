@@ -99,10 +99,10 @@ EvolveAfterBattle_MasterLoop:
 	ld c, a
 	ld a, [wTempMonLevel]
 	cp c
-	jp c, .skip_evolution_species_parameter
+	jp c, .skip_half_species_parameter
 
 	call IsMonHoldingEverstone
-	jp z, .skip_evolution_species_parameter
+	jp z, .skip_half_species_parameter
 
 	push hl
 	ld de, wTempMonAttack
@@ -125,10 +125,10 @@ EvolveAfterBattle_MasterLoop:
 .happiness
 	ld a, [wTempMonHappiness]
 	cp HAPPINESS_TO_EVOLVE
-	jp c, .skip_evolution_species_parameter
+	jp c, .skip_half_species_parameter
 
 	call IsMonHoldingEverstone
-	jp z, .skip_evolution_species_parameter
+	jp z, .skip_half_species_parameter
 
 	call GetNextEvoAttackByte
 	cp TR_ANYTIME
@@ -151,15 +151,23 @@ EvolveAfterBattle_MasterLoop:
 .trade
 	ld a, [wLinkMode]
 	and a
-	jp z, .skip_evolution_species_parameter
+	jp z, .skip_evolution_species_parameter	; All of the other IsMonHoldingEverstone checks were changed to skip_half_species_parameter from skip_evolution_species_parameter, is this correct?
 
 	call IsMonHoldingEverstone
-	jp z, .skip_evolution_species_parameter
+	jp z, .skip_evolution_species_parameter ; These may be fine because of the added code actually. still should double check tho
 
 	call GetNextEvoAttackByte
 	ld b, a
+	call GetNextEvoAttackByte
+	push hl
+	ld h, a
+	ld l, b
+	call GetItemIDFromIndex
+	ld b, a
+	pop hl
 	inc a
 	jp z, .proceed
+	dec a
 
 	ld a, [wLinkMode]
 	cp LINK_TIMECAPSULE
@@ -176,6 +184,13 @@ EvolveAfterBattle_MasterLoop:
 .item
 	call GetNextEvoAttackByte
 	ld b, a
+	call GetNextEvoAttackByte
+	push hl
+	ld h, a
+	ld l, b
+	call GetItemIDFromIndex
+	ld b, a
+	pop hl
 	ld a, [wCurItem]
 	cp b
 	jp nz, .skip_evolution_species
@@ -396,6 +411,8 @@ EvolveAfterBattle_MasterLoop:
 	inc hl
 .skip_evolution_species_parameter
 	inc hl
+.skip_half_species_parameter
+	inc hl
 .skip_evolution_species
 	inc hl
 	inc hl
@@ -509,7 +526,8 @@ IsMonHoldingEverstone:
 	ld bc, PARTYMON_STRUCT_LENGTH
 	call AddNTimes
 	ld a, [hl]
-	cp EVERSTONE
+	call GetItemIndexFromID
+	cphl16 EVERSTONE
 	pop hl
 	ret
 
@@ -745,7 +763,12 @@ SkipEvolutions::
 	and a
 	ret z
 	cp EVOLVE_STAT
+	jr z, .inc_hl
+	cp EVOLVE_TRADE
+	jr z, .inc_hl
+	cp EVOLVE_ITEM
 	jr nz, .no_extra_skip
+.inc_hl
 	inc hl
 .no_extra_skip
 	inc hl
@@ -771,6 +794,13 @@ DetermineEvolutionItemResults::
 	jr nz, .skip_species_parameter
 	call GetNextEvoAttackByte
 	ld b, a
+	call GetNextEvoAttackByte
+	push hl
+	ld h, a
+	ld l, b
+	call GetItemIDFromIndex
+	ld b, a
+	pop hl
 	ld a, [wCurItem]
 	cp b
 	jr nz, .skip_species
@@ -783,6 +813,8 @@ DetermineEvolutionItemResults::
 .skip_species_two_parameters
 	inc hl
 .skip_species_parameter
+	inc hl
+.skip_half_species_parameter
 	inc hl
 .skip_species
 	inc hl

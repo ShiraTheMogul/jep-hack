@@ -1529,8 +1529,12 @@ GetBuenasPassword:
 .Item:
 	ld h, 0
 	ld l, c
+	add hl, hl
 	add hl, de
-	ld a, [hl]
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	call GetItemIDFromIndex
 	ld [wNamedObjectIndex], a
 	call GetItemName
 	ret
