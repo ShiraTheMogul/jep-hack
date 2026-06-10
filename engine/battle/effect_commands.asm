@@ -1269,10 +1269,10 @@ INCLUDE "data/battle/critical_hit_chances.asm"
 
 INCLUDE "engine/battle/move_effects/triple_kick.asm"
 
-;GetNextTypeMatchupsByte:
-;   ld a, BANK(TypeMatchups)
-;   call GetFarByte
-;   ret
+GetNextTypeMatchupsByte:
+   ld a, BANK(TypeMatchups)
+   call GetFarByte
+   ret
 
 BattleCommand_Stab:
 ; STAB = Same Type Attack Bonus
@@ -1358,9 +1358,9 @@ BattleCommand_Stab:
 	ld hl, TypeMatchups
 
 .TypesLoop:
-	ld a, [hli]
-;	call GetNextTypeMatchupsByte
-;	inc hl
+;	ld a, [hli]
+	call GetNextTypeMatchupsByte
+	inc hl
 
 	cp -1
 	jr z, .end
@@ -1378,8 +1378,8 @@ BattleCommand_Stab:
 .SkipForesightCheck:
 	cp b
 	jr nz, .SkipType
-	ld a, [hl]
-;	call GetNextTypeMatchupsByte
+;	ld a, [hl]
+	call GetNextTypeMatchupsByte
 	cp d
 	jr z, .GotMatchup
 	cp e
@@ -1394,7 +1394,8 @@ BattleCommand_Stab:
 	and %10000000
 	ld b, a
 ; If the target is immune to the move, treat it as a miss and calculate the damage as 0
-	ld a, [hl]
+;	ld a, [hl]
+	call GetNextTypeMatchupsByte
 	and a
 	jr nz, .NotImmune
 	inc a
@@ -1484,9 +1485,9 @@ CheckTypeMatchup:
 	ld [wTypeMatchup], a
 	ld hl, TypeMatchups
 .TypesLoop:
-	ld a, [hli]
-;	call GetNextTypeMatchupsByte
-;	inc hl
+;	ld a, [hli]
+	call GetNextTypeMatchupsByte
+	inc hl
 	cp -1
 	jr z, .End
 	cp -2
@@ -1500,9 +1501,9 @@ CheckTypeMatchup:
 .Next:
 	cp d
 	jr nz, .Nope
-	ld a, [hli]
-;	call GetNextTypeMatchupsByte
-;	inc hl
+;	ld a, [hli]
+	call GetNextTypeMatchupsByte
+	inc hl
 	cp b
 	jr z, .Yup
 	cp c
@@ -1520,9 +1521,9 @@ CheckTypeMatchup:
 	ldh [hDividend + 0], a
 	ldh [hMultiplicand + 0], a
 	ldh [hMultiplicand + 1], a
-	ld a, [hli]
-;	call GetNextTypeMatchupsByte
-;	inc hl
+;	ld a, [hli]
+	call GetNextTypeMatchupsByte
+	inc hl
 	ldh [hMultiplicand + 2], a
 	ld a, [wTypeMatchup]
 	ldh [hMultiplier], a
@@ -1564,7 +1565,7 @@ BattleCommand_ResetTypeMatchup:
 
 INCLUDE "engine/battle/ai/switch.asm"
 
-INCLUDE "data/types/type_matchups.asm"
+;INCLUDE "data/types/type_matchups.asm" - historically, there's been a massive amount of fallout related to moving this to another bank. OH FUCKING WELL, THERE'S NOT ANOTHER OPTION. Either it works or someone else cleans up the mess but this is the ONLY WAY I CAN MAKE 16 BIT ITEMS WORK. 
 
 BattleCommand_DamageVariation:
 ; Modify the damage spread between 85% and 100%.
@@ -5681,6 +5682,10 @@ BattleCommand_Charge:
 	ld h, [hl]
 	ld l, a
 	pop bc
+BattleCommand_Unused5D:
+; effect0x5d
+BattleCommand_Unused3C: ; Both of these were just ret commands. moved the labels here to hopefully save space...?
+; effect0x3c
 	ret
 
 .move_messages
@@ -5716,9 +5721,9 @@ BattleCommand_Charge:
 	text_far _BattleDugText
 	text_end
 
-BattleCommand_Unused3C:
+;BattleCommand_Unused3C:
 ; effect0x3c
-	ret
+;	ret
 
 BattleCommand_TrapTarget:
 	ld a, [wAttackMissed]
@@ -6471,9 +6476,9 @@ INCLUDE "engine/battle/move_effects/sandstorm.asm"
 
 INCLUDE "engine/battle/move_effects/rollout.asm"
 
-BattleCommand_Unused5D:
+;BattleCommand_Unused5D:
 ; effect0x5d
-	ret
+;	ret
 
 INCLUDE "engine/battle/move_effects/fury_cutter.asm"
 
