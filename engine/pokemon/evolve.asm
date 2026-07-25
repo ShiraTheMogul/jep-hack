@@ -217,7 +217,7 @@ EvolveAfterBattle_MasterLoop:
 	ld a, [wMapGroup]
 	cp MAPGROUP_BLUE_FOREST ; Placeholder. We dont have the actual group.
 	jp z, .level
-	jp .skip_evolution_species_parameter ; ...hopefully this is correct??
+	jp .skip_half_species_parameter ; ...hopefully this is correct??
 
 .level_nihon
 	; my own attempt at a region check for this shit, based on what i did for the route color check
@@ -235,7 +235,7 @@ EvolveAfterBattle_MasterLoop:
 
 	jr nc, .level ; if we're in nihon, evolve.
 
-	jp .skip_evolution_species_parameter ; ...hopefully this is correct??
+	jp .skip_half_species_parameter ; ...hopefully this is correct??
 
 .level_sevii
 	; Load up our map location shit
@@ -248,12 +248,12 @@ EvolveAfterBattle_MasterLoop:
 	
 	; check if we could be in sevii
 	cp SEVII_LANDMARK_1 ; Need to check for off by 1 errors.
-	jp c, .skip_evolution_species_parameter ; again, hoping this is correct.
+	jp c, .skip_half_species_parameter ; again, hoping this is correct.
 	
 	; check if we're actually in nihon
 	ld a, b ; put that back
 	cp NIHON_LANDMARK ; Need to check for off by 1 errors.
-	jp nc, .skip_evolution_species_parameter
+	jp nc, .skip_half_species_parameter
 	
 	; fallthrough to .level
 	
