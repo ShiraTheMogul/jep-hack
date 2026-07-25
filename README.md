@@ -127,7 +127,7 @@ If you use our implementations of anything at all, it is encouraged to submit Pu
 - Plague von Karma (Director, Kanto Expansion Pak Founder, Programming, Maps, Stat Exp. Display code)
 - Martha's Against Humanity (Kanto Expansion Pak ROM Hack Creator, Programmer, Spriter)
 - Zeta_Null (Repository Creator, Spriter, Programming, Music)
-- LadyMisticus (Writer, Documentation, Programming, Mapping, Spriter)
+- LadyMisticus (Lead Writer, Documentation, Programming, Mapping, Spriter)
 - thornAvery (Programming)
 - LuciShrimp (Music, TBA)
 - pret et al (LOTS of [Tutorials](https://github.com/pret/pokecrystal/wiki) that we used to get this off the ground!)
@@ -151,11 +151,11 @@ JEP-affiliated spriters require sprites to be used with direct credit for non-co
 - Shawesome: Alolan Geodude
 - EyeDonutz: Walking Wake (front/back, title)
 - Plague von Karma: Overworld Arbok, Koffing, Voltorb, Gengar, Diglett, and Cat sprites, adapted from the slot machine's sprites (originally made for KEP).
-- LadyMisticus: Sprite edits of Imposter Oak, Archer, Ariana, Prof.Blue, Giovanni (both), Green; Cal, Blaine (original)
+- LadyMisticus: Sprite edits of Imposter Oak, Archer, Ariana, Prof.Blue, Giovanni; Cal, Blaine (original)
 
 ### Unaffiliated
 Many sprites in this hack are taken from different artists and ROM Hacks, aggressively curated and sometimes even edited and worked upon by JEP developers. The grand aim was to get a consistent GSC artstyle. 
-- [nuuk](https://x.com/nuukiie): Azurill, Electivire, Farigiraf, Glaceon, Honchkrow, Leafeon, Magmortar, Magnezone, Mamoswine, Porygon-Z, Sylveon, Wyrdeer, Clodsire (back)
+- [nuuk](https://x.com/nuukiie): Azurill, Electivire, Farigiraf, Glaceon, Honchkrow, Leafeon, Magmortar, Magnezone, Mamoswine, Porygon-Z, Sylveon, Wyrdeer, Clodsire (back), Galarian Corsola, Cursola 
 - Scarlax, Pix, BloodlessNX, Kam, Poket, BimbelyGimbly: Animated sprites from [Pokemon October](https://github.com/pokeachromicdevs/pokeoctober): Bellignan, Caretorker (Adbarstork), Inoshika (Aggroswine), Bipulla, Sonegg (Clefling), Kolta (Coalta), Coinpur, Dodaerie, Bundra (Germifrost), Kiwooked (Kiwacki), Eucala (Koalyptus), Trebir, Burgela, Gorotora, Pockle (Shuqlour, edited by Martha), Moibelle, Molambino, Dokuroar (Necrorex), Orfry, Smujj, Stricheel, SW99 Feraligatr (edited by Plague von Karma), Belledam, Feradactyl (Gargranite)
 	- Gorotora is edited from RacieBeep's Yellow sprite in the Helix Chamber PokeThon ROM Hack. A full list of Helix Chamber sprites are available [here](https://cdn.discordapp.com/attachments/1014321591657709569/1015347305483878521/unknown.png). Helix Chamber spriters have a "must credit" policy.
 - SoupPotato et al: Various sprites from [Pokemon Gold & Silver '97 Reforged](https://github.com/SoupPotato/gold97); Palssio (Cruize), Pressio (Aquallo) Donmarin (Aquarius), Grenmar (Bombsheal, with edits), Jungela (Gelania), Elebebi (Elebabe), Mimmeo (Metto), Kazappelin (Numbpuff), Disturban (Turban), Angore (Anchorage), Folage (Silkane), Luxwan
@@ -167,6 +167,7 @@ Many sprites in this hack are taken from different artists and ROM Hacks, aggres
 - Pigu-A, RevoSucks, walle303 - Contributors to Pokemon Anniversary Red's repository, where we reused the Green/FeMC sprites.
 - ShadowOne333: Annihilape and Ursaluna sprites used in [JohtoLegends](https://github.com/aforward9600/JohtoLegends)
 - [ShadowOne333 & Rangi/polishedcrystal](https://github.com/ShadowOne333/polishedcrystal/): Alolan Dugtrio, Kleavor, Mr. Rime, Galarian Ponyta, Hisuian Sneasel, Galarian Weezing, and Galarian Zapdos. ShadowOne333's repository contained animations for some Pokemon that the [mother branch](https://github.com/Rangi42/polishedcrystal] did not.
+- SkidMarc25: Battle Girl, Blue (with Champion Jacket), Channeler, Cue Ball, Gambler, Lady, Psychic (F), Schoolgirl, Scientist (F), Tamer
 
 ## Music Credits
 
