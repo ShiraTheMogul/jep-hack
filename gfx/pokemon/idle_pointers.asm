@@ -349,6 +349,7 @@ AnimationIdlePointers:
 	dw MamoswineAnimationIdle
 	dw HirsuswineAnimationIdle
 	dw CorsolaAnimationIdle
+	dw CursolaAnimationIdle
 	dw RemoraidAnimationIdle
 	dw OctilleryAnimationIdle
 	dw StricheelAnimationIdle
@@ -436,4 +437,5 @@ AnimationIdlePointers:
 	dw HyoshuYinAnimationIdle
 	dw CelebiAnimationIdle
 	dw DeoxysAnimationIdle
+	dw CorsolaGAnimationIdle
 	assert_table_length NUM_POKEMON

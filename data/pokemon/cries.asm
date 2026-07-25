@@ -355,6 +355,7 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,     0,    0 ; MAMOSWINE	(incomplete)
 	mon_cry CRY_MAGCARGO,   -781,  512 ; HIRSUSWINE
 	mon_cry CRY_MAGCARGO,    161,  232 ; CORSOLA
+	mon_cry CRY_MAGCARGO,    161,  232 ; CURSOLA
 	mon_cry CRY_SUNFLORA,     13,  256 ; REMORAID
 	mon_cry CRY_TOTODILE,      0,  384 ; OCTILLERY
 	mon_cry CRY_NIDORAN_M,     0,    0 ; STRICHEEL	(incomplete)
@@ -441,4 +442,5 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,     0,  128 ; HYOSHU_YIN  (placeholder)
 	mon_cry CRY_ENTEI,       330,  273 ; CELEBI
 	mon_cry CRY_NIDORAN_M,     0,    0 ; DEOXYS	(incomplete)
+	mon_cry CRY_MAGCARGO,    161,  232 ; CORSOLAG
 	assert_table_length NUM_POKEMON

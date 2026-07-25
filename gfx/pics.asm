@@ -1138,6 +1138,10 @@ PapyoFrontpic:  	 INCBIN "gfx/pokemon/papyo/front.animated.2bpp.lz"
 PapyoBackpic:   	 INCBIN "gfx/pokemon/papyo/back.2bpp.lz"
 AtlansteusFrontpic:	 INCBIN "gfx/pokemon/atlansteus/front.animated.2bpp.lz"
 AtlansteusBackpic: 	 INCBIN "gfx/pokemon/atlansteus/back.2bpp.lz"
+CorsolaGFrontpic:    INCBIN "gfx/pokemon/corsolag/front.animated.2bpp.lz"
+CorsolaGBackpic:     INCBIN "gfx/pokemon/corsolag/back.2bpp.lz"
+CursolaFrontpic:     INCBIN "gfx/pokemon/cursola/front.animated.2bpp.lz"
+CursolaBackpic:      INCBIN "gfx/pokemon/cursola/back.2bpp.lz"
 
 ; spillover
 KabutopsFossilPic:   INCBIN "gfx/trainers/kabutops.2bpp.lz"

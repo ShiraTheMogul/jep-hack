@@ -369,6 +369,7 @@ DEF JOHTO_POKEMON EQU const_value
 	const MAMOSWINE
 	const HIRSUSWINE
 	const CORSOLA    ; de
+	const CURSOLA
 	const REMORAID   ; df
 	const OCTILLERY  ; e0
 	const STRICHEEL
@@ -457,6 +458,7 @@ DEF JOHTO_POKEMON EQU const_value
 	const HYOSHU_YIN
 	const CELEBI     ; fb
 	const DEOXYS
+	const CORSOLAG
 DEF NUM_POKEMON EQU const_value - 1
 
 DEF EGG EQU -3

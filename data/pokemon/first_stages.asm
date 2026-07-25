@@ -350,6 +350,7 @@ FirstEvoStages::
 	dw SWINUB
 	dw SWINUB
 	dw CORSOLA
+	dw CORSOLAG
 	dw REMORAID
 	dw REMORAID   ;e0
 	dw STRICHEEL
@@ -436,4 +437,5 @@ FirstEvoStages::
 	dw HYOSHU_YIN
 	dw CELEBI
 	dw DEOXYS
+	dw CORSOLAG
 	assert_table_length NUM_POKEMON

@@ -353,6 +353,7 @@ PokemonNames::
 	db "MAMOSWINE@"
 	db "HIRSUSWINE"
 	db "CORSOLA@@@"
+	db "CURSOLA@@@"
 	db "REMORAID@@"
 	db "OCTILLERY@"
 	db "STRICHEEL@"
@@ -440,4 +441,5 @@ PokemonNames::
 	db "HYOSHU@@@@"
 	db "CELEBI@@@@"
 	db "DEOXYS@@@@"
+	db "CORSOLA@@@"
 	assert_table_length NUM_POKEMON

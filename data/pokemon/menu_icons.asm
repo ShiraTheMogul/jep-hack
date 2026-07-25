@@ -351,6 +351,7 @@ MonMenuIcons:
 	db ICON_EQUINE      ; MAMOSWINE
 	db ICON_EQUINE      ; HIRSUSWINE
 	db ICON_SHELL       ; CORSOLA
+	db ICON_SHELL       ; CURSOLA
 	db ICON_FISH        ; REMORAID
 	db ICON_FISH        ; OCTILLERY
 	db ICON_FISH        ; STRICHEEL
@@ -437,4 +438,5 @@ MonMenuIcons:
 	db ICON_FOX         ; HYOSHU_YIN
 	db ICON_HUMANSHAPE  ; CELEBI
 	db ICON_HUMANSHAPE  ; DEOXYS
+	db ICON_SHELL       ; CORSOLAG
 	assert_table_length NUM_POKEMON

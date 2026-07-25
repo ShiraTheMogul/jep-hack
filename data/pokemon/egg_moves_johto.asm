@@ -119,6 +119,7 @@ EggMovePointers2::
 	dw NoEggMoves2 ; Mamoswine
 	dw NoEggMoves2 ; Hirsuswine
 	dw CorsolaEggMoves
+	dw NoEggMoves2 ; Cursola
 	dw RemoraidEggMoves
 	dw NoEggMoves2
 	dw StricheelEggMoves
@@ -206,6 +207,7 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw NoEggMoves2 ; Deoxys
+	dw CorsolaEggMoves ; Galarian Corsola
 .IndirectEnd::
 
 ChikoritaEggMoves:
