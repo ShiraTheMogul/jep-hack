@@ -350,6 +350,7 @@ PokedexDataPointerTable:
 	dba MamoswinePokedexEntry
 	dba HirsuswinePokedexEntry
 	dba CorsolaPokedexEntry
+	dba CursolaPokedexEntry
 	dba RemoraidPokedexEntry
 	dba OctilleryPokedexEntry
 	dba StricheelPokedexEntry
@@ -436,4 +437,5 @@ PokedexDataPointerTable:
 	dba HyoshuYinPokedexEntry
 	dba CelebiPokedexEntry
 	dba DeoxysPokedexEntry
+	dba CorsolaGPokedexEntry
 	assert_table_length NUM_POKEMON

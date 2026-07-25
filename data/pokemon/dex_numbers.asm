@@ -448,4 +448,6 @@ PokemonNumbers::
     db "433I@"
     db "434I@"
     db "435I@"
+	db "436I@"
 ;	Alt forms here?
+	db "349G@"

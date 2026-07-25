@@ -352,7 +352,9 @@ OldPokedexOrder:
 	dw PILOSWINE  
 	dw MAMOSWINE
 	dw HIRSUSWINE
-	dw CORSOLA    
+	dw CORSOLA
+	dw CORSOLAG
+	dw CURSOLA
 	dw REMORAID   
 	dw OCTILLERY  
 	dw STRICHEEL

@@ -8,12 +8,12 @@ DebugRoom_MapScripts:
 
 DebugPokemon1Script:
 	opentext
-	getmonname STRING_BUFFER_3, WARFURS
+	getmonname STRING_BUFFER_3, CORSOLAG
 	writetext ReceivedDebugPokemonText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
-	givepoke WARFURS, 23, MOON_STONE
+	givepoke CORSOLAG, 37, RARE_CANDY
 	closetext
 	end
 
@@ -39,11 +39,11 @@ DebugPokemon3Script:
 	faceplayer
 	opentext
 	writetext DebugTextA
-	cry KUWAGUARD
+	cry CORSOLAG
 	pause 15
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SHINY
-	loadwildmon KUWAGUARD, 5
+	loadwildmon CORSOLAG, 5
 	startbattle
 	reloadmapafterbattle
 	end
@@ -56,11 +56,11 @@ DebugPokemon4Script:
 	faceplayer
 	opentext
 	writetext DebugTextB
-	cry KUWAGUARD
+	cry CURSOLA
 	pause 15
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SUICUNE
-	loadwildmon KUWAGUARD, 70
+	loadwildmon CURSOLA, 70
 	startbattle
 	reloadmapafterbattle
 	end

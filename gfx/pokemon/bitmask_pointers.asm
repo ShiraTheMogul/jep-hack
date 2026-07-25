@@ -349,6 +349,7 @@ BitmasksPointers:
 	dw MamoswineBitmasks
 	dw HirsuswineBitmasks
 	dw CorsolaBitmasks
+	dw CursolaBitmasks
 	dw RemoraidBitmasks
 	dw OctilleryBitmasks
 	dw StricheelBitmasks
@@ -437,4 +438,5 @@ BitmasksPointers:
 	dw HyoshuYinBitmasks
 	dw CelebiBitmasks
 	dw DeoxysBitmasks
+	dw CorsolaGBitmasks
 	assert_table_length NUM_POKEMON

@@ -67,11 +67,13 @@ AlphabeticalPokedexOrder:
 	dw COATL
 	dw COINPUR
 	dw CORSOLA
+	dw CORSOLAG
 	dw CROAKOZUNA
 	dw CROBAT
 	dw CROCONAW
 	dw CUBBURN
 	dw CUBONE
+	dw CURSOLA
 	dw CYCLORP
 	dw CYNDAQUIL
 	dw DECILLA

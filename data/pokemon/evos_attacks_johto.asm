@@ -119,6 +119,7 @@ EvosAttacksPointers2::
 	dw MamoswineEvosAttacks
 	dw HirsuswineEvosAttacks
 	dw CorsolaEvosAttacks
+	dw CursolaEvosAttacks
 	dw RemoraidEvosAttacks
 	dw OctilleryEvosAttacks
 	dw StricheelEvosAttacks
@@ -205,6 +206,7 @@ EvosAttacksPointers2::
 	dw HyoshuYinEvosAttacks
 	dw CelebiEvosAttacks
 	dw DeoxysEvosAttacks
+	dw CorsolaGEvosAttacks
 .IndirectEnd::
 
 ChikoritaEvosAttacks:
@@ -2120,6 +2122,37 @@ CorsolaEvosAttacks:
 	dbw 43, MIRROR_COAT
 	dbw 49, ANCIENTPOWER
 	dbw 55, LIGHT_SCREEN ; 99 proto
+	db 0 ; no more level-up moves
+	
+CorsolaGEvosAttacks:
+	dbbw EVOLVE_LEVEL, 38, CURSOLA
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 7, HARDEN
+	dbw 13, NIGHT_SHADE
+	dbw 19, DISABLE
+	dbw 25, SPITE
+	dbw 31, CURSE
+	dbw 37, SHADOW_BALL
+	dbw 43, MIRROR_COAT
+	dbw 49, ANCIENTPOWER
+	dbw 55, DESTINY_BOND
+	db 0 ; no more level-up moves
+
+CursolaEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 7, HARDEN
+	dbw 13, NIGHT_SHADE
+	dbw 19, DISABLE
+	dbw 25, SPITE
+	dbw 31, CURSE
+	dbw 37, SHADOW_BALL
+	dbw 45, MIRROR_COAT
+	dbw 51, ANCIENTPOWER
+	dbw 57, DESTINY_BOND
+	dbw 61, PIN_MISSILE
+	dbw 65, PERISH_SONG
 	db 0 ; no more level-up moves
 
 RemoraidEvosAttacks:
